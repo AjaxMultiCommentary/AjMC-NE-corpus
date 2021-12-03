@@ -153,7 +153,7 @@ def read_xmi(xmi_file: str, xml_file: str, sanity_check: bool = True) -> AjmcDoc
             link = {
                 "entity_id": ent.xmiID,
                 "is_NIL": ent.is_NIL == "true",
-                "wikidata_id": None,
+                "wikidata_id": ent.wikidata_id,
             }
 
             links[ent.xmiID] = link

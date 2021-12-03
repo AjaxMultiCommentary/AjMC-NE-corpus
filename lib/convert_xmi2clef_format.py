@@ -1,12 +1,12 @@
 """
 Convert UIMA CAS XMI data from Inception into TSV-format for the shared task.
-This script is a customisation for the EpiBau corpus of the original script
-developed for Impresso in the context of HIPE2020.
+This script is a customisation of the original script developed for Impresso
+in the context of HIPE2020.
 """
 
 import sys
-
-from typing import Generator, List, Tuple
+import ipdb
+from typing import Dict, Generator, List, Tuple
 import argparse
 import logging
 from pathlib import Path
@@ -15,7 +15,7 @@ from collections import OrderedDict
 from tqdm import tqdm
 from typing import NamedTuple
 
-from epibau_utils import EpibauDocument, read_xmi
+from ajmc_utils import AjmcDocument, read_xmi
 from impresso.helpers import compute_levenshtein_distance
 
 from cassis import Cas, load_cas_from_xmi, load_typesystem
@@ -109,7 +109,7 @@ def index_inception_files(dir_data, suffix=".xmi") -> list:
     return sorted([path for path in Path(dir_data).rglob("*" + suffix)])
 
 
-def lookup_entity(tok: dict, mentions: dict, doc: EpibauDocument) -> Tuple:
+def lookup_entity(tok: dict, mentions: dict, doc: AjmcDocument) -> Tuple:
     """Get the respective IOB-label of a named entity (NE).
 
     :param dict tok: Annotation of the token.
@@ -137,8 +137,10 @@ def lookup_entity(tok: dict, mentions: dict, doc: EpibauDocument) -> Tuple:
     # thus, the first match spans potential other matches
     matches = sorted(matches, key=lambda x: (x[1]["start_offset"], -x[1]["end_offset"]))
 
-    compounds = [(iob, ent) for iob, ent in matches if ent["entity_compound"]]
-    literals = [(iob, ent) for iob, ent in matches if ent["literal"]]
+    # compounds = [(iob, ent) for iob, ent in matches if ent["entity_compound"]]
+    compounds = []
+    biblio = [(iob, ent) for iob, ent in matches if ent["entity_biblio"]]
+    literals = [(iob, ent) for iob, ent in matches if ent["literal"] and not ent["entity_biblio"]]
     non_literals = [
         (iob, ent) for iob, ent in matches if not ent["literal"] and not ent["entity_compound"]
     ]
@@ -160,7 +162,7 @@ def lookup_entity(tok: dict, mentions: dict, doc: EpibauDocument) -> Tuple:
             msg = f"Token '{tok['surface']}' of entity '{ent_surface}' has illegal entity overlappings (nesting) in file {doc.filename}"
             logging.info(msg)
 
-    return literals, non_literals, compounds
+    return literals, non_literals, biblio
 
 
 def assemble_entity_label(matches, level, nested=False) -> str:
@@ -192,20 +194,19 @@ def assemble_entity_label(matches, level, nested=False) -> str:
 
 
 def lookup_nel(
-    token, entity, doc: EpibauDocument, strip_base: bool = True, discard_time_links: bool = True
+    token, entity, doc: AjmcDocument, strip_base: bool = True, discard_time_links: bool = True
 ) -> str:
     """Get the link to wikidata entry of a named entity (NE).
 
     :param dict token: Annotation of the token.
     :param dict entity: Annotation of the main entity to look up the link.
-    :param EpibauDocument doc: Document with all the annotation information.
+    :param AjmcDocument doc: Document with all the annotation information.
     :param bool strip_base: Keep only wikidata identifier instead of entire link.
     :param bool discard_time_links: Discard the wikidata link for time mentions even if present.
     :return: A Link to corresponding wikidata of the entity.
     :rtype: str
 
     """
-
     if entity:
         nel = doc.links[entity["id"]]
 
@@ -214,14 +215,7 @@ def lookup_nel(
             #validate_link(nel, entity, doc)
             pass
 
-        #link = nel["wikidata_id"] if nel["wikidata_id"] else NIL_FLAG
-
-        if "author_uri" in nel:
-            link = nel["author_uri"]
-        elif "work_uri" in nel:
-            link = nel["work_uri"]
-        else:
-            link = NIL_FLAG
+        link = nel["wikidata_id"] if nel["wikidata_id"] else NIL_FLAG
 
         #if discard_time_links and "time" in entity["entity_coarse"]:
         #    link = NIL_FLAG
@@ -234,10 +228,10 @@ def lookup_nel(
     return link
 
 
-def get_document_metadata(doc: EpibauDocument) -> [list]:
+def get_document_metadata(doc: AjmcDocument) -> List[Dict]:
     """Set metadata on the level of segments (line).
 
-    :param ImpressoDocument doc: Document with all the annotation information.
+    :param AjmcDocument doc: Document with all the annotation information.
     :return: Nested list with various metadata
     :rtype: [list]
 
@@ -250,7 +244,7 @@ def get_document_metadata(doc: EpibauDocument) -> [list]:
 
 
 def set_special_flags(
-    tok: dict, seg: dict, ent_lit: dict, ent_meto: dict, doc: EpibauDocument
+    tok: dict, seg: dict, ent_lit: dict, ent_meto: dict, doc: AjmcDocument
 ) -> str:
     """Set a special flags if token is hyphenated or not followed by a whitespace.
 
@@ -258,7 +252,7 @@ def set_special_flags(
     :param dict seg: Annotation of the segment.
     :param dict ent_lit: Annotation of the literal entity.
     :param dict ent_meto: Annotation of the metonymic entity.
-    :param EpibauDocument doc: Document with all the annotation information.
+    :param AjmcDocument doc: Document with all the annotation information.
     :return: Flags concatenated by a '|' and sorted alphabetically.
     :rtype: str
 
@@ -308,7 +302,7 @@ def set_special_flags(
     return "|".join(sorted(flags, key=lambda x: "Z" if "LED" in x else x))
 
 
-def convert_data(doc: EpibauDocument, drop_nested: bool) -> [List]:
+def convert_data(doc: AjmcDocument, drop_nested: bool) -> List:
     """Select the relevant annotations per token for the finegrained format.
 
     :param ImpressoDocument doc: Document with all the annotation information.
@@ -319,15 +313,16 @@ def convert_data(doc: EpibauDocument, drop_nested: bool) -> [List]:
     """
 
     rows = []
+    biblio_rows = []
 
     # TODO add meta header on the level of document
     rows += get_document_metadata(doc)
 
-    for i_seg, seg in enumerate(doc.segments.values()):
+    for i_seg, seg in enumerate(doc.sentences.values()):
 
         for i_tok, tok in enumerate(seg["tokens"]):
 
-            literals, non_literals, compounds = lookup_entity(tok, doc.mentions, doc)
+            literals, non_literals, biblio = lookup_entity(tok, doc.mentions, doc)
 
             # only non-literal can be nested
             if drop_nested:
@@ -359,7 +354,7 @@ def convert_data(doc: EpibauDocument, drop_nested: bool) -> [List]:
             coarse_meto = "_"
             coarse_lit = assemble_entity_label(literals, "entity_coarse")
             fine_meto = "_"
-            fine_lit = "_"
+            fine_lit = assemble_entity_label(literals, "entity_fine")
             comp = "_"
             
 
@@ -372,7 +367,6 @@ def convert_data(doc: EpibauDocument, drop_nested: bool) -> [List]:
             nel_lit = lookup_nel(tok, main_ent_lit, doc)
 
             misc = set_special_flags(tok, seg, main_ent_lit, main_ent_nonlit, doc)
-            #misc = "_"
 
             row = [
                 tok["surface"],
@@ -387,9 +381,33 @@ def convert_data(doc: EpibauDocument, drop_nested: bool) -> [List]:
                 misc,
             ]
 
-            rows.append(row)
+            coarse_meto = "_"
+            coarse_lit = assemble_entity_label(biblio, "entity_biblio")
+            fine_meto = "_"
+            fine_lit = "_"
+            fine_2 = "_"
+            comp = "_"
+            nel_lit = "_"
+            nel_nonlit = "_"
 
-    return rows
+            biblio_row = [
+                tok["surface"],
+                coarse_lit,
+                coarse_meto,
+                fine_lit,
+                fine_meto,
+                comp,
+                fine_2,  # nested
+                nel_lit,
+                nel_nonlit,
+                misc,
+            ]
+
+            #ipdb.set_trace()
+            rows.append(row)
+            biblio_rows.append(biblio_row)
+
+    return rows, biblio_rows
 
 
 def start_batch_conversion(
@@ -408,13 +426,13 @@ def start_batch_conversion(
     """
 
     xmi_files = index_inception_files(dir_in)
-
     tsv_files = [Path(str(p).replace(dir_in, dir_out)).with_suffix(".tsv") for p in xmi_files]
+    tsv_biblio_files = [Path(str(f).replace('.tsv', '-biblio.tsv')) for f in tsv_files]
     msg = f"Start conversion of {len(xmi_files)} files."
     logging.info(msg)
     print(msg)
 
-    for f_xmi, f_tsv in tqdm(list(zip(xmi_files, tsv_files))):
+    for f_xmi, f_tsv, f_biblio_tsv in tqdm(list(zip(xmi_files, tsv_files, tsv_biblio_files))):
 
         info_msg = f"Converting {f_xmi} into {f_tsv}"
         logging.info(info_msg)
@@ -422,12 +440,18 @@ def start_batch_conversion(
         doc = read_xmi(f_xmi, f_schema, sanity_check=False)
         f_tsv.parent.mkdir(parents=True, exist_ok=True)
 
-        data = convert_data(doc, drop_nested)
+        data, biblio_data = convert_data(doc, drop_nested)
+        ipdb.set_trace()
 
         with f_tsv.open("w") as tsvfile:
             writer = csv.writer(tsvfile, delimiter="\t", quoting=csv.QUOTE_NONE, quotechar="")
             writer.writerow(COL_LABELS)
             writer.writerows(data)
+
+        with f_biblio_tsv.open("w") as tsvfile:
+            writer = csv.writer(tsvfile, delimiter="\t", quoting=csv.QUOTE_NONE, quotechar="")
+            writer.writerow(COL_LABELS)
+            writer.writerows(biblio_data)
 
     logging.info(f"Conversion completed.")
 

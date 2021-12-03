@@ -3,7 +3,7 @@ SHELL:=/bin/bash
 SCHEMA?= data/preparation/xmi/TypeSystem.xml
 DATA_DIR?=data/preparation
 RELEASE_DIR?=data/release
-VERSION?=v0.3
+VERSION?=v0.1
 
 
 all: clean download export release
