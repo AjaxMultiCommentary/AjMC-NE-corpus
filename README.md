@@ -1,8 +1,9 @@
-# EpiBau Corpus
+# AjMC NE corpus
 
-Metadata about the corpus can be found [here](https://docs.google.com/spreadsheets/d/1_CWl76JoNt5kN-NkGlg5-p2Dl8me_LDPsK9rWiysQc0/edit#gid=0).
+## Data selection
 
-The folder [`data/sample`](./data/sample/) contains a sample of four chapters, manually corrected, with output as IOB and UIMA/XMI. See the [README file there](./data/sample/README.md) for more details.
+- for each commentary, only the portion of a page marked as `introduction`, `preface` and `commentary` are kept
+- pages that contain < 100 tokens are not considered for annotation 
 
 ## Compile and release dataset
 
