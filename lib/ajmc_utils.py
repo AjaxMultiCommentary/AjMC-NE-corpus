@@ -5,10 +5,11 @@ __email__ = "matteo.romanello@unil.ch"
 __organisation__ = "UNIL, ASA"
 __status__ = "development"
 
-import pdb
+import ipdb
 import os
 import logging
 import csv
+import pandas as pd
 from pathlib import Path
 from collections import OrderedDict
 from tqdm import tqdm
@@ -24,6 +25,35 @@ BIBLIO_ENTITIES = [
     "secondary-meta"
 ]
 
+METADATA = {
+    "Wecklein1894": {
+        "author": "Wecklein, Nikolaus",
+        "title": "Sophokleus Aias",
+        "publication_date": "1894",
+        "publication_place": "München"
+    },
+    "sophokle1v3soph":{
+        "author": "Schneidewin, Friedrich Wilhelm",
+        "title": "Sophokles, erklärt",
+        "publication_date": "Leipzig",
+        "publication_place": "1853"
+    },
+    "cu31924087948174":{
+        "author": "Campbell, Lewis",
+        "title": "Sophocles",
+        "publication_date": "1881",
+        "publication_place": "Oxford"
+    },
+    "sophoclesplaysa05campgoog":{
+        "author": "Jebb, Richard Claverhouse",
+        "title": "Sophocles: The Plays and Fragments",
+        "publication_date": "1896",
+        "publication_place": "London"
+    }
+}
+
+HYPHENS = ["—", "⸗", "-"]
+
 AjmcDocument = NamedTuple(
     "AjmcDocument",
     [
@@ -32,6 +62,7 @@ AjmcDocument = NamedTuple(
         ("filepath", str),
         ("sentences", dict),
         ("mentions", dict),
+        ("hyphenated_words", list),
         ("links", list),
         ("text", str),
     ],
@@ -62,6 +93,7 @@ def read_xmi(xmi_file: str, xml_file: str, sanity_check: bool = True) -> AjmcDoc
 
     segments = OrderedDict()
     links = {}
+    hyphenated_words = []
     mentions = OrderedDict()
 
     with open(xml_file, "rb") as f:
@@ -72,6 +104,14 @@ def read_xmi(xmi_file: str, xml_file: str, sanity_check: bool = True) -> AjmcDoc
 
     #if sanity_check:
     #    check_entity_boundaries(cas.select(neType), tokenType, cas, filename)
+
+    for hyphenation_annotation in cas.select(hyphenationType):
+        hyphenated_words.append({
+            "id": hyphenation_annotation.xmiID,
+            "start_offset": hyphenation_annotation.begin,
+            "end_offset": hyphenation_annotation.end,
+            "surface": hyphenation_annotation.get_covered_text().replace(" ", "")
+        })
 
     # read in the tokens from golden sentences
     for seg in cas.select(sentenceType):
@@ -171,8 +211,32 @@ def read_xmi(xmi_file: str, xml_file: str, sanity_check: bool = True) -> AjmcDoc
         filepath,
         segments,
         mentions,
+        hyphenated_words,
         links,
         cas.sofa_string,
     )
 
     return document
+
+def read_annotation_assignments(filename: str, input_dir: str) -> pd.DataFrame:
+    """Reads a CSV export of annotation assignment spreadsheet into a DataFrame.
+
+    :param str corpus: Description of parameter `corpus`.
+    :param str input_dir: Description of parameter `input_dir`.
+    :return: A pandas DataFrame
+    :rtype: pd.DataFrame
+    """
+    def derive_document_path(row, input_dir):
+        document_name = f"{row['commentary']}_{str(row['page']).zfill(4)}.tsv"
+        split = "minireference" if row['split'] == 'miniref' else row['split']
+        return os.path.join(input_dir, split, row['lang'].strip(), "tsv", document_name)
+
+    assignments_csv_path = (
+        f"{os.path.join(input_dir, filename)}"
+    )
+    assert os.path.exists(assignments_csv_path)
+    df = pd.read_csv(assignments_csv_path, sep='\t', encoding="utf-8")
+    df.dropna(subset=['split'], inplace=True)
+    df['split'] = df['split'].map(lambda x: x.replace('-',''))
+    df['Path'] = df.apply(derive_document_path, input_dir=input_dir, axis=1)
+    return df

@@ -65,7 +65,7 @@ def main(args):
     project_id = find_project_by_name(inception_client, project_name).project_id
     print(f"Project {project_name} has ID {project_id}")
 
-    out_dir = os.path.join(out_dir, project_name)
+    #out_dir = os.path.join(out_dir, project_name)
 
     for doc in fetch_documents(project_id, user, pwd, api_endpoint):
 

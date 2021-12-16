@@ -1,35 +1,39 @@
 SHELL:=/bin/bash
 
-SCHEMA?= data/preparation/xmi/TypeSystem.xml
+SCHEMA?= data/preparation/TypeSystem.xml
 DATA_DIR?=data/preparation
 RELEASE_DIR?=data/release
 VERSION?=v0.1
+ASSIGNMENTS_TABLE=document-selection.tsv
 
 
-all: clean download export release
+#all: clean download export release
 
-clean:
-	rm -r $(DATA_DIR)/xmi/*
-	rm -r $(DATA_DIR)/tsv/*
+miniref: clean-miniref download-miniref export-miniref #release-sample
 
-download: download-epibau_band_1-revised download-epibau_band_2.1-revised download-epibau_band_2.2-revised download-epibau_band_3-revised
-#download: download-epibau_band_1 download-epibau_band_2.1 download-epibau_band_2.2 download-epibau_band_3
+clean-miniref:
+	rm -r $(DATA_DIR)/minireference/*/curated/*
+	rm -r $(DATA_DIR)/minireference/*/tsv/*
 
-download-%:
-	python scripts/inception/download_curated.py --project-name=$* --output-dir=$(DATA_DIR)/xmi
+download-miniref: download-miniref-en download-miniref-de 
 
-#export: export-epibau_band_1 export-epibau_band_2.1 export-epibau_band_2.2 export-epibau_band_3
-export: export-epibau_band_1-revised export-epibau_band_2.1-revised export-epibau_band_2.2-revised export-epibau_band_3-revised
+download-miniref-%:
+	python scripts/inception/download_curated.py --project-name=ajmc-miniref-$* --output-dir=$(DATA_DIR)/minireference/$*/curated/ 
 
-export-%:
-	python lib/convert_xmi2clef_format.py -i $(DATA_DIR)/xmi/$*/ \
-	-o $(DATA_DIR)/tsv/$*/ \
+export-miniref: export-miniref-de export-miniref-en 
+
+export-miniref-%:
+	python lib/convert_xmi2clef_format.py -i $(DATA_DIR)/minireference/$*/curated/ \
+	-o $(DATA_DIR)/minireference/$*/tsv/ \
 	-s $(SCHEMA) \
 	-l $(DATA_DIR)/logs/export-annotated-$*.log \
 
-release:
+release-%:
+	@$(eval SET=$(shell if [ "miniref" == $* ]; then echo sample; fi))
 	python lib/create_datasets.py \
+	--set=$(SET) \
 	--log-file=$(DATA_DIR)/logs/release-$*.log \
 	--input-dir=$(DATA_DIR) \
 	--output-dir=data/release/ \
-	--data-version=$(VERSION)
+	--data-version=$(VERSION) \
+	--assignments-table=$(ASSIGNMENTS_TABLE)

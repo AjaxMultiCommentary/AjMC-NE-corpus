@@ -15,7 +15,7 @@ from collections import OrderedDict
 from tqdm import tqdm
 from typing import NamedTuple
 
-from ajmc_utils import AjmcDocument, read_xmi
+from ajmc_utils import AjmcDocument, read_xmi, METADATA, HYPHENS
 from impresso.helpers import compute_levenshtein_distance
 
 from cassis import Cas, load_cas_from_xmi, load_typesystem
@@ -109,6 +109,17 @@ def index_inception_files(dir_data, suffix=".xmi") -> list:
     return sorted([path for path in Path(dir_data).rglob("*" + suffix)])
 
 
+def lookup_hyphenation(tok: dict, hyphenated_words: list, doc: AjmcDocument) -> Tuple:
+    for word in hyphenated_words:
+        if tok["start_offset"] <= word["start_offset"] < tok["end_offset"]:
+            return (True, word['surface'])
+        elif word["start_offset"] <= tok["start_offset"] < word["end_offset"]:
+            return (True, word['surface'])
+        else:
+            return (False, None)
+    return
+
+
 def lookup_entity(tok: dict, mentions: dict, doc: AjmcDocument) -> Tuple:
     """Get the respective IOB-label of a named entity (NE).
 
@@ -152,6 +163,7 @@ def lookup_entity(tok: dict, mentions: dict, doc: AjmcDocument) -> Tuple:
         # allow one nesting
         n_nested = n_nested - 1
 
+    """
     # sanity checks
     if matches:
         ent_surface = matches[0][1]["surface"]
@@ -161,6 +173,7 @@ def lookup_entity(tok: dict, mentions: dict, doc: AjmcDocument) -> Tuple:
         if n_nested > 0:
             msg = f"Token '{tok['surface']}' of entity '{ent_surface}' has illegal entity overlappings (nesting) in file {doc.filename}"
             logging.info(msg)
+    """
 
     return literals, non_literals, biblio
 
@@ -236,10 +249,15 @@ def get_document_metadata(doc: AjmcDocument) -> List[Dict]:
     :rtype: [list]
 
     """
-
+    commentary_id, page_number = doc.id.split("_")
     rows = []
     rows.append(["# document_id = " + doc.id])
-
+    if commentary_id in METADATA:
+        metadata = METADATA[commentary_id]
+        fields = ["title", "author", "publication_date", "publication_place"]
+        for field in fields:
+            rows.append([f"# {field} = " + metadata[field]])
+        rows.append([f"# page = {int(page_number)}"])
     return rows
 
 
@@ -302,6 +320,26 @@ def set_special_flags(
     return "|".join(sorted(flags, key=lambda x: "Z" if "LED" in x else x))
 
 
+def dehyphenate(tok: str) -> str:
+    hyphen_position = None
+    for char in HYPHENS:
+        try:
+            hyphen_position = tok.index(char)
+        except ValueError:
+            pass
+    
+    if hyphen_position:
+        hyphen = tok[hyphen_position]
+        dehyphenated_token = tok.replace(hyphen, "")
+        logging.info(f"Hyphenation – Removed character {hyphen} from {tok} => {dehyphenated_token}")
+        return dehyphenated_token
+    else:
+        logging.info(f"Hyphenation – No hyphen detected in {tok}")
+        return tok
+
+
+
+
 def convert_data(doc: AjmcDocument, drop_nested: bool) -> List:
     """Select the relevant annotations per token for the finegrained format.
 
@@ -315,20 +353,33 @@ def convert_data(doc: AjmcDocument, drop_nested: bool) -> List:
     rows = []
     biblio_rows = []
 
-    # TODO add meta header on the level of document
     rows += get_document_metadata(doc)
 
     for i_seg, seg in enumerate(doc.sentences.values()):
 
+        is_prev_token_hyphenated = False
+
         for i_tok, tok in enumerate(seg["tokens"]):
 
             literals, non_literals, biblio = lookup_entity(tok, doc.mentions, doc)
+            is_hyphenated, hyphenated_form = lookup_hyphenation(tok, doc.hyphenated_words, doc)
 
-            # only non-literal can be nested
+            token_surface = tok["surface"]
+
+            if is_hyphenated:
+                if is_prev_token_hyphenated:
+                    continue
+                else:
+                    token_surface = dehyphenate(hyphenated_form)
+                    is_prev_token_hyphenated = True
+            else:
+                is_prev_token_hyphenated = False
+
+
             if drop_nested:
                 fine_2 = "_"
             else:
-                fine_2 = assemble_entity_label(non_literals, "entity_fine", nested=True)
+                fine_2 = assemble_entity_label(literals, "entity_fine", nested=True)
 
             # set literal annotation as default if there is no metonymic annotation
             if not literals:
@@ -344,13 +395,8 @@ def convert_data(doc: AjmcDocument, drop_nested: bool) -> List:
             except IndexError:
                 # no precende of metonymic as there are no annotations
                 pass
-            """
-            coarse_meto = assemble_entity_label(non_literals, "entity_coarse")
-            coarse_lit = assemble_entity_label(literals, "entity_coarse")
-            fine_meto = assemble_entity_label(non_literals, "entity_fine")
-            fine_lit = assemble_entity_label(literals, "entity_fine")
-            comp = assemble_entity_label(compounds, "entity_fine")
-            """
+
+            # we don't have metonimy in our dataset
             coarse_meto = "_"
             coarse_lit = assemble_entity_label(literals, "entity_coarse")
             fine_meto = "_"
@@ -369,7 +415,7 @@ def convert_data(doc: AjmcDocument, drop_nested: bool) -> List:
             misc = set_special_flags(tok, seg, main_ent_lit, main_ent_nonlit, doc)
 
             row = [
-                tok["surface"],
+                token_surface,
                 coarse_lit,
                 coarse_meto,
                 fine_lit,
@@ -391,7 +437,7 @@ def convert_data(doc: AjmcDocument, drop_nested: bool) -> List:
             nel_nonlit = "_"
 
             biblio_row = [
-                tok["surface"],
+                token_surface,
                 coarse_lit,
                 coarse_meto,
                 fine_lit,
@@ -403,10 +449,9 @@ def convert_data(doc: AjmcDocument, drop_nested: bool) -> List:
                 misc,
             ]
 
-            #ipdb.set_trace()
             rows.append(row)
             biblio_rows.append(biblio_row)
-
+    #ipdb.set_trace()
     return rows, biblio_rows
 
 
@@ -441,7 +486,6 @@ def start_batch_conversion(
         f_tsv.parent.mkdir(parents=True, exist_ok=True)
 
         data, biblio_data = convert_data(doc, drop_nested)
-        ipdb.set_trace()
 
         with f_tsv.open("w") as tsvfile:
             writer = csv.writer(tsvfile, delimiter="\t", quoting=csv.QUOTE_NONE, quotechar="")

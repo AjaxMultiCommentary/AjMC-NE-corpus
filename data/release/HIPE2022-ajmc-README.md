@@ -8,8 +8,9 @@ List of annotated entities (coarse level):
 - Person\* (`pers`)
 - Location (`loc`)
 - Organisation (`org`)
-- Work\* (`work`)
 - Date (`date`)
+- Work\* (`work`)
+- Scope (`scope`)
 - Object\* (`object`)
 
 Entities marked with an asterisk (\*) are further classified into sub-types. For example, a *person* entity can be: a) mythological entity (`pers.myth`), b) author (`pers.author`), c) editor (`pers.editor`) or d) other (`pers.other`). See the [annotation guidelines](./annotation-guidelines-classics-KEs.pdf) for the full list of entity sub-types.

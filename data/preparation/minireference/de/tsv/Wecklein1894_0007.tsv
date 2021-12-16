@@ -1,5 +1,10 @@
 TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NESTED	NEL-LIT	NEL-METO	MISC
 # document_id = Wecklein1894_0007
+# title = Sophokleus Aias
+# author = Wecklein, Nikolaus
+# publication_date = 1894
+# publication_place = München
+# page = 7
 bald	O	_	O	_	_	O	_	_	_
 auf	O	_	O	_	_	O	_	_	_
 der	O	_	O	_	_	O	_	_	_
@@ -9,8 +14,7 @@ den	O	_	O	_	_	O	_	_	_
 Urheber	O	_	O	_	_	O	_	_	_
 feſtzuſtellen	O	_	O	_	_	O	_	_	_
 und	O	_	O	_	_	O	_	_	_
-Be—	O	_	O	_	_	O	_	_	_
-deutung	O	_	O	_	_	O	_	_	_
+Bedeutung	O	_	O	_	_	O	_	_	_
 und	O	_	O	_	_	O	_	_	_
 Zweck	O	_	O	_	_	O	_	_	_
 der	O	_	O	_	_	O	_	_	_
@@ -44,7 +48,7 @@ des	O	_	O	_	_	O	_	_	_
 Helden	O	_	O	_	_	O	_	_	_
 vorgezeichnet.	O	_	O	_	_	O	_	_	EndOfLine
 Bei	O	_	O	_	_	O	_	_	_
-Sophokles	O	_	O	_	_	O	_	_	_
+Sophokles	B-pers	_	B-pers.author	_	_	O	Q11950683	_	_
 find	O	_	O	_	_	O	_	_	_
 dieſe	O	_	O	_	_	O	_	_	_
 Züge	O	_	O	_	_	O	_	_	_
@@ -139,7 +143,7 @@ Telamon	B-pers	_	B-pers.myth	_	_	O	Q331327	_	_
 und	O	_	O	_	_	O	_	_	_
 ſeiner	O	_	O	_	_	O	_	_	_
 Mutter	O	_	O	_	_	O	_	_	_
-Eriböa	B-pers	_	B-pers.myth	_	_	O	Q1295433	_	_
+Eriböa	B-pers	_	B-pers.myth	_	_	O	Q1295435	_	_
 gemildert.	O	_	O	_	_	O	_	_	_
 —	O	_	O	_	_	O	_	_	EndOfLine
 Eine	O	_	O	_	_	O	_	_	_
@@ -179,7 +183,7 @@ Sage	O	_	O	_	_	O	_	_	_
 der	O	_	O	_	_	O	_	_	_
 Selbſtmord	O	_	O	_	_	O	_	_	_
 des	O	_	O	_	_	O	_	_	_
-Aias	O	_	O	_	_	O	_	_	_
+Aias	B-pers	_	B-pers.myth	_	_	O	Q172725	_	_
 ge-	O	_	O	_	_	O	_	_	_
 hören	O	_	O	_	_	O	_	_	_
 dem	O	_	O	_	_	O	_	_	_
@@ -191,8 +195,8 @@ der	O	_	O	_	_	O	_	_	_
 Äthiopis	B-work	_	B-work.primlit	_	_	O	Q410483	_	_
 des	O	_	O	_	_	O	_	_	_
 Arktinos	B-pers	_	B-pers.author	_	_	O	Q554683	_	_
-von	O	_	O	_	_	O	_	_	_
-Milet	B-loc	_	B-loc	_	_	O	Q169460	_	_
+von	I-pers	_	I-pers.author	_	_	O	Q554683	_	_
+Milet	I-pers	_	I-pers.author	_	_	B-loc	Q554683	_	_
 (um	B-date	_	B-date	_	_	O	NIL	_	Partial-1:3
 770	I-date	_	I-date	_	_	O	NIL	_	_
 v.	I-date	_	I-date	_	_	O	NIL	_	_
@@ -281,9 +285,9 @@ der	O	_	O	_	_	O	_	_	_
 „kleinen	B-work	_	B-work.primlit	_	_	O	Q2087365	_	Partial-1:8
 Ilias“	I-work	_	I-work.primlit	_	_	O	Q2087365	_	Partial--8:5
 des	O	_	O	_	_	O	_	_	_
-Lesches	O	_	O	_	_	O	_	_	_
-von	O	_	O	_	_	O	_	_	_
-Mytilene	B-loc	_	B-loc	_	_	O	Q42295059	_	_
+Lesches	B-pers	_	B-pers.author	_	_	O	Q2486846	_	_
+von	I-pers	_	I-pers.author	_	_	O	Q2486846	_	_
+Mytilene	I-pers	_	I-pers.author	_	_	B-loc	Q2486846	_	_
 (um	B-date	_	B-date	_	_	O	NIL	_	Partial-1:3
 660	I-date	_	I-date	_	_	O	NIL	_	_
 v.	I-date	_	I-date	_	_	O	NIL	_	_
