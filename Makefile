@@ -9,10 +9,11 @@ ASSIGNMENTS_TABLE=document-selection.tsv
 
 #all: clean download export release
 
-miniref: clean-miniref download-miniref export-miniref #release-sample
+miniref: download-miniref retokenize-miniref export-miniref release-miniref
 
-clean-miniref:
+clear-miniref:
 	rm -r $(DATA_DIR)/minireference/*/curated/*
+	rm -r $(DATA_DIR)/minireference/*/retokenized/*
 	rm -r $(DATA_DIR)/minireference/*/tsv/*
 
 download-miniref: download-miniref-en download-miniref-de 
@@ -22,8 +23,15 @@ download-miniref-%:
 
 export-miniref: export-miniref-de export-miniref-en 
 
+retokenize-miniref: retokenize-miniref-de retokenize-miniref-en
+
+retokenize-miniref-%: 
+	python lib/retokenization.py -i $(DATA_DIR)/minireference/$*/curated/ \
+	-o $(DATA_DIR)/minireference/$*/retokenized/ -s $(SCHEMA) \
+	-l data/preparation/logs/retokenization-miniref-$*.log
+
 export-miniref-%:
-	python lib/convert_xmi2clef_format.py -i $(DATA_DIR)/minireference/$*/curated/ \
+	python lib/convert_xmi2clef_format.py -i $(DATA_DIR)/minireference/$*/retokenized/ \
 	-o $(DATA_DIR)/minireference/$*/tsv/ \
 	-s $(SCHEMA) \
 	-l $(DATA_DIR)/logs/export-annotated-$*.log \

@@ -52,7 +52,7 @@ METADATA = {
     }
 }
 
-HYPHENS = ["—", "⸗", "-"]
+HYPHENS = ["—", "⸗", "-", "-"]
 
 AjmcDocument = NamedTuple(
     "AjmcDocument",
@@ -238,5 +238,6 @@ def read_annotation_assignments(filename: str, input_dir: str) -> pd.DataFrame:
     df = pd.read_csv(assignments_csv_path, sep='\t', encoding="utf-8")
     df.dropna(subset=['split'], inplace=True)
     df['split'] = df['split'].map(lambda x: x.replace('-',''))
+    df['lang'] = df['lang'].map(lambda x: x.strip())
     df['Path'] = df.apply(derive_document_path, input_dir=input_dir, axis=1)
     return df

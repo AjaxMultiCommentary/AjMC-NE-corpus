@@ -47,6 +47,7 @@ def create_datasets(input_dir, output_dir, version, assignments_table_path, set=
         return os.path.join(input_dir, "tsv", row["inception-project"], document_name)
     
     splits = ["train", "dev", "test"]
+    langs = ["en", "de"]
 
     assignments_df = read_annotation_assignments(assignments_table_path, input_dir)
     
@@ -55,36 +56,48 @@ def create_datasets(input_dir, output_dir, version, assignments_table_path, set=
         LOGGER.info(f"Created folder {basedir} as it did not exist")
         Path(basedir).mkdir(exist_ok=True)
 
-    if set == "sample":
-        document_paths = list(assignments_df[assignments_df.split == 'miniref'].Path)
-        dataset_path = create_dataset(
-            document_paths, set, version, output_dir
-        )
-    else:
-        for split in splits:
-            # dev/test for all languages
-            document_paths = list(assignments_df[assignments_df.split == split].Path)
-            dataset_path = create_dataset(
-                document_paths, split, version, output_dir
-            )
+    for lang in langs:
 
-            if split == "test":
-                # generate a version of the test dataset with ground truth values masked out
-                tsv_data = parse_tsv(dataset_path, mask_nerc=True, mask_nel=True)
-                masked_dataset_name = os.path.basename(dataset_path).replace(
-                    "-test", "-test-masked"
+        if set == "sample":
+            document_paths = list(
+                assignments_df[
+                    (assignments_df.split == 'miniref')
+                    & (assignments_df.lang == lang)
+                ].Path
+            )
+            dataset_path = create_dataset(
+                document_paths, lang, set, version, output_dir
+            )
+        else:
+            for split in splits:
+                # dev/test for all languages
+                document_paths = list(
+                    assignments_df[
+                        (assignments_df.split == split)
+                        & (assignments_df.lang == lang)
+                    ].Path
                 )
-                masked_dataset_path = os.path.join(
-                    output_dir, version, masked_dataset_name
+                dataset_path = create_dataset(
+                    document_paths, lang, split, version, output_dir
                 )
-                write_tsv(tsv_data, masked_dataset_path)
+
+                if split == "test":
+                    # generate a version of the test dataset with ground truth values masked out
+                    tsv_data = parse_tsv(dataset_path, mask_nerc=True, mask_nel=True)
+                    masked_dataset_name = os.path.basename(dataset_path).replace(
+                        "-test", "-test-masked"
+                    )
+                    masked_dataset_path = os.path.join(
+                        output_dir, version, masked_dataset_name
+                    )
+                    write_tsv(tsv_data, masked_dataset_path)
 
 
 def create_dataset(
-    files: str, split: str, version: str, output_dir: str
+    files: str, language: str, split: str, version: str, output_dir: str
 ) -> str:
 
-    tsv_filename = f"{DATASET_NAME}-data-{version}-{split}.tsv"
+    tsv_filename = f"HIPE-2022-{DATASET_NAME}-{version}-{split}-{language}.tsv"
     basedir = os.path.join(output_dir, version)
 
     if not os.path.exists(basedir):
@@ -103,7 +116,7 @@ def create_dataset(
     expected_doc_ids = [
         os.path.basename(f).replace(".tsv", "") for f in files
     ]
-    # assert is_tsv_complete(output_path, expected_doc_ids)
+    assert is_tsv_complete(output_path, expected_doc_ids)
     LOGGER.info(
         f"{output_path} contains all {len(expected_doc_ids)} expected documents"
     )

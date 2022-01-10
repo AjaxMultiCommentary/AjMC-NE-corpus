@@ -115,9 +115,7 @@ def lookup_hyphenation(tok: dict, hyphenated_words: list, doc: AjmcDocument) -> 
             return (True, word['surface'])
         elif word["start_offset"] <= tok["start_offset"] < word["end_offset"]:
             return (True, word['surface'])
-        else:
-            return (False, None)
-    return
+    return (False, None)
 
 
 def lookup_entity(tok: dict, mentions: dict, doc: AjmcDocument) -> Tuple:
@@ -370,8 +368,9 @@ def convert_data(doc: AjmcDocument, drop_nested: bool) -> List:
                 if is_prev_token_hyphenated:
                     continue
                 else:
-                    token_surface = dehyphenate(hyphenated_form)
-                    is_prev_token_hyphenated = True
+                    if len(token_surface) > 1:
+                        token_surface = dehyphenate(hyphenated_form)
+                        is_prev_token_hyphenated = True
             else:
                 is_prev_token_hyphenated = False
 

@@ -103,7 +103,6 @@ def find_missing_iiif_links(input_tsv_file: str) -> Set[str]:
 
 
 def is_tsv_complete(dataset_path: str, expected_doc_ids: List[str]) -> bool:
-
     with open(dataset_path, "r") as f:
         tsv_doc_ids = [
             line.strip().split("=")[-1].strip()
