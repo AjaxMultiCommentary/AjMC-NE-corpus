@@ -42,9 +42,6 @@ def concat_tsv_files(output_path: str, input_files: List[str]) -> None:
 
 
 def create_datasets(input_dir, output_dir, version, assignments_table_path, set="all"):
-    def derive_document_path(row, input_dir):
-        document_name = row["inception-docid"].replace(".xmi", ".tsv")
-        return os.path.join(input_dir, "tsv", row["inception-project"], document_name)
     
     splits = ["train", "dev", "test"]
     langs = ["en", "de"]
@@ -68,6 +65,11 @@ def create_datasets(input_dir, output_dir, version, assignments_table_path, set=
             dataset_path = create_dataset(
                 document_paths, lang, set, version, output_dir
             )
+
+            biblio_dataset_path = create_dataset(
+                document_paths, lang, set, version, output_dir, biblio_layer=True
+            )
+
         else:
             for split in splits:
                 # dev/test for all languages
@@ -94,10 +96,14 @@ def create_datasets(input_dir, output_dir, version, assignments_table_path, set=
 
 
 def create_dataset(
-    files: str, language: str, split: str, version: str, output_dir: str
+    files: str, language: str, split: str, version: str, output_dir: str, biblio_layer : bool = False
 ) -> str:
-
-    tsv_filename = f"HIPE-2022-{DATASET_NAME}-{version}-{split}-{language}.tsv"
+    if biblio_layer:
+        name = DATASET_NAME + "_biblio"
+    else:
+        name = DATASET_NAME
+    
+    tsv_filename = f"HIPE-2022-{name}-{version}-{split}-{language}.tsv"
     basedir = os.path.join(output_dir, version)
 
     if not os.path.exists(basedir):
@@ -105,21 +111,28 @@ def create_dataset(
 
     assert len(files) > 0
 
+    if biblio_layer:
+        files = [
+            file.replace(".tsv", "-biblio.tsv")
+            for file in files
+        ]
+
     # concatenate document TSV files into a single TSV
     # and write to disk in the specified output folder 
     output_path = os.path.join(basedir, tsv_filename)
     concat_tsv_files(output_path, files)
     LOGGER.info(f"Written {split} to {output_path}")
 
-    # verify that all documents expected are found in the
-    # output TSV file
-    expected_doc_ids = [
-        os.path.basename(f).replace(".tsv", "") for f in files
-    ]
-    assert is_tsv_complete(output_path, expected_doc_ids)
-    LOGGER.info(
-        f"{output_path} contains all {len(expected_doc_ids)} expected documents"
-    )
+    if not biblio_layer:
+        # verify that all documents expected are found in the
+        # output TSV file
+        expected_doc_ids = [
+            os.path.basename(f).replace(".tsv", "") for f in files
+        ]
+        assert is_tsv_complete(output_path, expected_doc_ids)
+        LOGGER.info(
+            f"{output_path} contains all {len(expected_doc_ids)} expected documents"
+        )
     return output_path
 
 

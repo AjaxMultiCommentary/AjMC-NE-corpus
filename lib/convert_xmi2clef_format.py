@@ -25,6 +25,8 @@ NO_SPACE_FLAG = "NoSpaceAfter"
 END_OF_LINE_FLAG = "EndOfLine"
 NIL_FLAG = "NIL"
 LEVENSHTEIN_FLAG = "LED"
+PRIMARY_REFERENCE_FLAG = "InPrimaryReference"
+SECONDARY_REFERENCE_FLAG = "InSecondaryReference"
 
 COL_LABELS = [
     "TOKEN",
@@ -38,6 +40,8 @@ COL_LABELS = [
     "NEL-METO",
     "MISC",
 ]
+
+NON_LINKABLE_ENTITY_TYPES = ['scope', 'date', 'object']
 
 def parse_args():
     """Parse the arguments given with program call"""
@@ -260,7 +264,7 @@ def get_document_metadata(doc: AjmcDocument) -> List[Dict]:
 
 
 def set_special_flags(
-    tok: dict, seg: dict, ent_lit: dict, ent_meto: dict, doc: AjmcDocument
+    tok: dict, seg: dict, ent_lit: dict, ent_meto: dict, ent_biblio: dict, doc: AjmcDocument
 ) -> str:
     """Set a special flags if token is hyphenated or not followed by a whitespace.
 
@@ -268,6 +272,7 @@ def set_special_flags(
     :param dict seg: Annotation of the segment.
     :param dict ent_lit: Annotation of the literal entity.
     :param dict ent_meto: Annotation of the metonymic entity.
+    :param dict ent_biblio: Annotation of the outer bibliographic entity.
     :param AjmcDocument doc: Document with all the annotation information.
     :return: Flags concatenated by a '|' and sorted alphabetically.
     :rtype: str
@@ -301,15 +306,13 @@ def set_special_flags(
             start = ent_lit["start_offset"] - tok["start_offset"]
             end = min(len(tok["surface"]), ent_lit["end_offset"] - tok["start_offset"])
             flags.append(f"{PARTIAL_FLAG}-{start}:{end}")
-        """
-        try:
-            # sometimes the transcript is recorded for the metonymic entity instead of the literal one
-            levenshtein_dist = max(ent_lit["levenshtein_norm"], ent_meto["levenshtein_norm"])
-        except TypeError:
-            levenshtein_dist = ent_lit["levenshtein_norm"]
 
-        flags.append(f"{LEVENSHTEIN_FLAG}{levenshtein_dist:.2f}")
-        """
+    if ent_biblio:
+        if "primary" in ent_biblio['entity_fine']:
+            flags.append(PRIMARY_REFERENCE_FLAG)
+        elif "secondary" in ent_biblio['entity_fine']:
+            flags.append(SECONDARY_REFERENCE_FLAG)
+
 
     if not flags:
         flags.append("_")
@@ -351,7 +354,9 @@ def convert_data(doc: AjmcDocument, drop_nested: bool) -> List:
     rows = []
     biblio_rows = []
 
-    rows += get_document_metadata(doc)
+    document_metadata = get_document_metadata(doc)
+    rows += document_metadata
+    biblio_rows += document_metadata
 
     for i_seg, seg in enumerate(doc.sentences.values()):
 
@@ -407,11 +412,22 @@ def convert_data(doc: AjmcDocument, drop_nested: bool) -> List:
             # to look up NEL
             main_ent_nonlit = non_literals[0][1] if non_literals else None
             main_ent_lit = literals[0][1] if literals else None
+            main_ent_biblio = biblio[0][1] if biblio else None
 
-            nel_nonlit = lookup_nel(tok, main_ent_nonlit, doc)
-            nel_lit = lookup_nel(tok, main_ent_lit, doc)
-
-            misc = set_special_flags(tok, seg, main_ent_lit, main_ent_nonlit, doc)
+            nel_nonlit = "_"
+            if main_ent_lit and main_ent_lit['entity_coarse'] in NON_LINKABLE_ENTITY_TYPES:
+                nel_lit = "_"
+            elif main_ent_biblio and "secondary" in main_ent_biblio['entity_coarse']:
+                nel_lit = "_"
+            else:
+                nel_lit = lookup_nel(tok, main_ent_lit, doc)
+            
+            # DEBUG
+            #if main_ent_biblio:
+            #    import ipdb
+            #    ipdb.set_trace()
+            
+            misc = set_special_flags(tok, seg, main_ent_lit, main_ent_nonlit, main_ent_biblio, doc)
 
             row = [
                 token_surface,
