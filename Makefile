@@ -3,11 +3,25 @@ SHELL:=/bin/bash
 SCHEMA?= data/preparation/TypeSystem.xml
 DATA_DIR?=data/preparation
 RELEASE_DIR?=data/release
-VERSION?=v0.1
+VERSION?=v1.0
 ASSIGNMENTS_TABLE=document-selection.tsv
 
+##########################################
+# Make commands for full corpus release  #
+##########################################
 
-#all: clean download export release
+
+corpus: download-corpus
+
+download-corpus: download-corpus-en
+
+download-corpus-%:
+	python scripts/inception/download_curated.py --project-name=ajmc-corpus-$* --output-dir=$(DATA_DIR)/corpus/$*/curated/
+
+
+##########################################
+# Make commands for sample data release  #
+##########################################
 
 miniref: download-miniref retokenize-miniref export-miniref release-miniref
 

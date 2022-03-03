@@ -1,10 +1,18 @@
 TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NESTED	NEL-LIT	NEL-METO	MISC
-# document_id = Wecklein1894_0007
-# title = Sophokleus Aias
-# author = Wecklein, Nikolaus
-# publication_date = 1894
-# publication_place = München
-# page = 7
+# hipe2022:original_source = data/preparation/minireference/de/retokenized/Wecklein1894_0007.xmi
+# hipe2022:license = CC-BY
+# hipe2022:language = de
+# hipe2022:document_type = commentary
+# hipe2022:document_id = Wecklein1894_0007
+# hipe2022:date = 1894-01-01
+# hipe2022:dataset = ajmc
+# hipe2022:applicable_columns = TOKEN NE-COARSE-LIT NE-FINE-LIT NE-NESTED NEL-LIT MISC
+# ajmc:version = v0.2
+# ajmc:title = Sophokleus Aias
+# ajmc:publication_place = München
+# ajmc:publication_date = 1894
+# ajmc:page = 7
+# ajmc:author = Wecklein, Nikolaus
 bald	O	_	O	_	_	O	_	_	_
 auf	O	_	O	_	_	O	_	_	_
 der	O	_	O	_	_	O	_	_	_
@@ -21,12 +29,12 @@ Zweck	O	_	O	_	_	O	_	_	_
 der	O	_	O	_	_	O	_	_	_
 That	O	_	O	_	_	O	_	_	_
 auszukundſchaften	O	_	O	_	_	O	_	_	NoSpaceAfter
-.	O	_	O	_	_	O	_	_	EndOfLine
+.	O	_	O	_	_	O	_	_	EndOfSentence
 Damit	O	_	O	_	_	O	_	_	_
 beginnt	O	_	O	_	_	O	_	_	_
 die	O	_	O	_	_	O	_	_	_
 Handlung	O	_	O	_	_	O	_	_	NoSpaceAfter
-.	O	_	O	_	_	O	_	_	EndOfLine
+.	O	_	O	_	_	O	_	_	EndOfSentence
 Schon	O	_	O	_	_	O	_	_	_
 bei	O	_	O	_	_	O	_	_	_
 Homer	B-pers	_	B-pers.author	_	_	O	Q6691	_	_
@@ -55,7 +63,7 @@ Charakteriſtik	O	_	O	_	_	O	_	_	_
 des	O	_	O	_	_	O	_	_	_
 Helden	O	_	O	_	_	O	_	_	_
 vorgezeichnet	O	_	O	_	_	O	_	_	NoSpaceAfter
-.	O	_	O	_	_	O	_	_	EndOfLine
+.	O	_	O	_	_	O	_	_	EndOfSentence
 Bei	O	_	O	_	_	O	_	_	_
 Sophokles	B-pers	_	B-pers.author	_	_	O	Q11950683	_	_
 find	O	_	O	_	_	O	_	_	_
@@ -106,7 +114,7 @@ welche	O	_	O	_	_	O	_	_	_
 die	O	_	O	_	_	O	_	_	_
 Mitwelt	O	_	O	_	_	O	_	_	_
 ſetzt	O	_	O	_	_	O	_	_	NoSpaceAfter
-.	O	_	O	_	_	O	_	_	EndOfLine
+.	O	_	O	_	_	O	_	_	EndOfSentence
 Dafür	O	_	O	_	_	O	_	_	_
 hat	O	_	O	_	_	O	_	_	_
 Sophokles	B-pers	_	B-pers.author	_	_	O	Q11950683	_	NoSpaceAfter
@@ -164,7 +172,7 @@ Mutter	O	_	O	_	_	O	_	_	_
 Eriböa	B-pers	_	B-pers.myth	_	_	O	Q1295435	_	_
 gemildert	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-—	O	_	O	_	_	O	_	_	EndOfLine
+—	O	_	O	_	_	O	_	_	EndOfSentence
 Eine	O	_	O	_	_	O	_	_	_
 Homeriſche	O	_	O	_	_	O	_	_	_
 Überlieferung	O	_	O	_	_	O	_	_	_
@@ -193,7 +201,7 @@ ff	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
 .	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
 )	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-—	O	_	O	_	_	O	_	_	EndOfLine
+—	O	_	O	_	_	O	_	_	EndOfSentence
 Die	O	_	O	_	_	O	_	_	_
 weitere	O	_	O	_	_	O	_	_	_
 Ausſchmückung	O	_	O	_	_	O	_	_	_
@@ -214,7 +222,7 @@ dem	O	_	O	_	_	O	_	_	_
 nachhomeriſchen	O	_	O	_	_	O	_	_	_
 Epos	O	_	O	_	_	O	_	_	_
 an	O	_	O	_	_	O	_	_	NoSpaceAfter
-.	O	_	O	_	_	O	_	_	EndOfLine
+.	O	_	O	_	_	O	_	_	EndOfSentence
 Nach	O	_	O	_	_	O	_	_	_
 der	O	_	O	_	_	O	_	_	_
 Äthiopis	B-work	_	B-work.primlit	_	_	O	Q410483	_	_
@@ -249,7 +257,7 @@ Odyſſeus	B-pers	_	B-pers.myth	_	_	O	Q47231	_	_
 die	O	_	O	_	_	O	_	_	_
 Feinde	O	_	O	_	_	O	_	_	_
 abwehrt	O	_	O	_	_	O	_	_	NoSpaceAfter
-.	O	_	O	_	_	O	_	_	EndOfLine
+.	O	_	O	_	_	O	_	_	EndOfSentence
 Nach	O	_	O	_	_	O	_	_	_
 den	O	_	O	_	_	O	_	_	_
 Leichenſpielen	O	_	O	_	_	O	_	_	_
@@ -272,7 +280,7 @@ Odyſſeus	B-pers	_	B-pers.myth	_	_	O	Q47231	_	_
 bewerben	O	_	O	_	_	O	_	_	_
 ſich	O	_	O	_	_	O	_	_	_
 darum	O	_	O	_	_	O	_	_	NoSpaceAfter
-.	O	_	O	_	_	O	_	_	EndOfLine
+.	O	_	O	_	_	O	_	_	EndOfSentence
 Man	O	_	O	_	_	O	_	_	_
 überträgt	O	_	O	_	_	O	_	_	_
 die	O	_	O	_	_	O	_	_	_
@@ -294,12 +302,12 @@ mehr	O	_	O	_	_	O	_	_	_
 Unheil	O	_	O	_	_	O	_	_	_
 zugefügt	O	_	O	_	_	O	_	_	_
 habe	O	_	O	_	_	O	_	_	NoSpaceAfter
-.	O	_	O	_	_	O	_	_	EndOfLine
+.	O	_	O	_	_	O	_	_	EndOfSentence
 Dieſe	O	_	O	_	_	O	_	_	_
 nennen	O	_	O	_	_	O	_	_	_
 den	O	_	O	_	_	O	_	_	_
 Odyſjeus	B-pers	_	B-pers.myth	_	_	O	Q47231	_	NoSpaceAfter
-.	O	_	O	_	_	O	_	_	EndOfLine
+.	O	_	O	_	_	O	_	_	EndOfSentence
 Der	O	_	O	_	_	O	_	_	_
 gekränkte	O	_	O	_	_	O	_	_	NoSpaceAfter
 Aias	B-pers	_	B-pers.myth	_	_	O	Q172725	_	_
@@ -316,7 +324,7 @@ mit	O	_	O	_	_	O	_	_	_
 feinem	O	_	O	_	_	O	_	_	_
 Schwerte	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-—	O	_	O	_	_	O	_	_	EndOfLine
+—	O	_	O	_	_	O	_	_	EndOfSentence
 In	O	_	O	_	_	O	_	_	_
 der	O	_	O	_	_	O	_	_	_
 „	O	_	O	_	_	O	_	_	NoSpaceAfter
@@ -366,4 +374,4 @@ Verdienſt	O	_	O	_	_	O	_	_	_
 bei	O	_	O	_	_	O	_	_	_
 der	O	_	O	_	_	O	_	_	_
 Rettung	O	_	O	_	_	O	_	_	_
-der	O	_	O	_	_	O	_	_	EndOfLine
+der	O	_	O	_	_	O	_	_	EndOfSentence

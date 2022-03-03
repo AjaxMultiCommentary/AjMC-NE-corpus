@@ -103,7 +103,7 @@ def create_dataset(
     else:
         name = DATASET_NAME
     
-    tsv_filename = f"HIPE-2022-{name}-{version}-{split}-{language}.tsv"
+    tsv_filename = f"HIPE-2022-{version}-{name}-{split}-{language}.tsv"
     basedir = os.path.join(output_dir, version)
 
     if not os.path.exists(basedir):

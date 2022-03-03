@@ -4,6 +4,7 @@ This script is a customisation of the original script developed for Impresso
 in the context of HIPE2020.
 """
 
+from audioop import reverse
 import sys
 import ipdb
 from typing import Dict, Generator, List, Tuple
@@ -23,6 +24,7 @@ from cassis import Cas, load_cas_from_xmi, load_typesystem
 PARTIAL_FLAG = "Partial"
 NO_SPACE_FLAG = "NoSpaceAfter"
 END_OF_LINE_FLAG = "EndOfLine"
+END_OF_SENTENCE_FLAG = "EndOfSentence"
 NIL_FLAG = "NIL"
 LEVENSHTEIN_FLAG = "LED"
 PRIMARY_REFERENCE_FLAG = "InPrimaryReference"
@@ -40,6 +42,8 @@ COL_LABELS = [
     "NEL-METO",
     "MISC",
 ]
+
+DATASET_VERSION = 'v0.2'
 
 NON_LINKABLE_ENTITY_TYPES = ['scope', 'date', 'object']
 
@@ -251,16 +255,40 @@ def get_document_metadata(doc: AjmcDocument) -> List[Dict]:
     :rtype: [list]
 
     """
-    commentary_id, page_number = doc.id.split("_")
+    # metadata namespaces
+    hipe_ns = "hipe2022"
+    project_ns = "ajmc"
+
+    # get language of document from path
+    lang = doc.filepath.split('/')[3]
+
+    # in `rows` we store all document metadata, one per line
     rows = []
-    rows.append(["# document_id = " + doc.id])
+    
+    rows.append([f"# {hipe_ns}:document_id = " + doc.id])
+    rows.append([f"# {hipe_ns}:document_type = commentary"])
+    rows.append([f"# {hipe_ns}:dataset = {project_ns}"])
+    rows.append([f"# {hipe_ns}:language = {lang}"])
+    rows.append([f"# {project_ns}:version = {DATASET_VERSION}"])
+    rows.append([f"# {hipe_ns}:original_source = {doc.filepath}"])
+    rows.append([f"# {hipe_ns}:license = CC-BY"])
+
+    applicable_columns = "TOKEN NE-COARSE-LIT NE-FINE-LIT NE-NESTED NEL-LIT MISC"
+    rows.append([f"# {hipe_ns}:applicable_columns = {applicable_columns}"])
+    
+    commentary_id, page_number = doc.id.split("_")
+    
     if commentary_id in METADATA:
         metadata = METADATA[commentary_id]
         fields = ["title", "author", "publication_date", "publication_place"]
         for field in fields:
-            rows.append([f"# {field} = " + metadata[field]])
-        rows.append([f"# page = {int(page_number)}"])
-    return rows
+            if field == "publication_date":
+                rows.append([f"# {project_ns}:{field} = {metadata[field]}"])
+                rows.append([f"# {hipe_ns}:date = {metadata[field]}-01-01"])
+            else:
+                rows.append([f"# {project_ns}:{field} = " + metadata[field]])
+        rows.append([f"# {project_ns}:page = {int(page_number)}"])
+    return sorted(rows, reverse=True)
 
 
 def set_special_flags(
@@ -293,7 +321,7 @@ def set_special_flags(
 
     # set flag if token is at the end of a segment (line)
     if tok == seg["tokens"][-1]:
-        flags.append(END_OF_LINE_FLAG)
+        flags.append(END_OF_SENTENCE_FLAG)
 
     if ent_lit:
         # set flag if entity boundary doesn't match token boundary
