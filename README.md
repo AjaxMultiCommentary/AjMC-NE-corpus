@@ -1,16 +1,13 @@
 # AjMC NE corpus
 
-## Data selection
-
-- for each commentary, only the portion of a page marked as `introduction`, `preface` and `commentary` are kept
-- pages that contain < 100 tokens are not considered for annotation 
-
 ## Compile and release dataset
 
-Run
+The `Makefile` contains two main instructions for compile the corpus and preparing the dataset for release:
 
-    make all
+1. `make miniref` will compile and release the sample corpus (= mini-reference annotations, EN and DE)
+2. `make corpus` will do the same but for the entire corpus (EN, FR, DE) 
 
-which is equivalent to
+This process consists of the following sub-steps:
 
-    make clean download export release
+1. ...
+2. ...

@@ -47,7 +47,6 @@ def create_datasets(input_dir, output_dir, version, assignments_table_path, set=
     langs = ["en", "de"]
 
     assignments_df = read_annotation_assignments(assignments_table_path, input_dir)
-    
     basedir = os.path.join(output_dir, version)
     if not os.path.exists(basedir):
         LOGGER.info(f"Created folder {basedir} as it did not exist")
@@ -77,6 +76,7 @@ def create_datasets(input_dir, output_dir, version, assignments_table_path, set=
                     assignments_df[
                         (assignments_df.split == split)
                         & (assignments_df.lang == lang)
+                        & (assignments_df.annotated == True)
                     ].Path
                 )
                 dataset_path = create_dataset(

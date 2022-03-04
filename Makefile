@@ -3,7 +3,7 @@ SHELL:=/bin/bash
 SCHEMA?= data/preparation/TypeSystem.xml
 DATA_DIR?=data/preparation
 RELEASE_DIR?=data/release
-VERSION?=v1.0
+HIPE_VERSION?=v2.0
 ASSIGNMENTS_TABLE=document-selection.tsv
 
 ##########################################
@@ -11,12 +11,38 @@ ASSIGNMENTS_TABLE=document-selection.tsv
 ##########################################
 
 
-corpus: download-corpus
+corpus: corpus-en release-corpus-all
 
-download-corpus: download-corpus-en
+corpus-en: download-corpus-en retokenize-corpus-en convert-corpus-en
+
+corpus-fr: download-corpus-fr retokenize-corpus-fr convert-corpus-fr
+
+corpus-de: download-corpus-de retokenize-corpus-de convert-corpus-de
 
 download-corpus-%:
 	python scripts/inception/download_curated.py --project-name=ajmc-corpus-$* --output-dir=$(DATA_DIR)/corpus/$*/curated/
+	python scripts/inception/download_curated.py --project-name=ajmc-miniref-$* --output-dir=$(DATA_DIR)/corpus/$*/curated/
+
+retokenize-corpus-%: 
+	python lib/retokenization.py -i $(DATA_DIR)/corpus/$*/curated/ \
+	-o $(DATA_DIR)/corpus/$*/retokenized/ -s $(SCHEMA) \
+	-l data/preparation/logs/retokenization-corpus-$*.log
+
+convert-corpus-%:
+	python lib/convert_xmi2clef_format.py -i $(DATA_DIR)/corpus/$*/retokenized/ \
+	-o $(DATA_DIR)/corpus/$*/tsv/ \
+	-s $(SCHEMA) \
+	-l $(DATA_DIR)/logs/export-annotated-corpus-$*.log \
+
+release-corpus-%:
+	@$(eval SET=$(shell if [ "miniref" == $* ]; then echo sample; else echo all ; fi))
+	python lib/create_datasets.py \
+	--set=$(SET) \
+	--log-file=$(DATA_DIR)/logs/release-$*.log \
+	--input-dir=$(DATA_DIR) \
+	--output-dir=data/release/ \
+	--data-version=$(HIPE_VERSION) \
+	--assignments-table=$(ASSIGNMENTS_TABLE)
 
 
 ##########################################

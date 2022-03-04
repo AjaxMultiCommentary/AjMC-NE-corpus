@@ -228,7 +228,7 @@ def read_annotation_assignments(filename: str, input_dir: str) -> pd.DataFrame:
     """
     def derive_document_path(row, input_dir):
         document_name = f"{row['commentary']}_{str(row['page']).zfill(4)}.tsv"
-        split = "minireference" if row['split'] == 'miniref' else row['split']
+        split = "minireference" if row['split'] == 'miniref' else "corpus"
         return os.path.join(input_dir, split, row['lang'].strip(), "tsv", document_name)
 
     assignments_csv_path = (
