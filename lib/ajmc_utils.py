@@ -35,8 +35,8 @@ METADATA = {
     "sophokle1v3soph":{
         "author": "Schneidewin, Friedrich Wilhelm",
         "title": "Sophokles, erklärt",
-        "publication_date": "Leipzig",
-        "publication_place": "1853"
+        "publication_date": "1853",
+        "publication_place": "Leipzig"
     },
     "cu31924087948174":{
         "author": "Campbell, Lewis",
