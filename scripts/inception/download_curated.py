@@ -60,23 +60,27 @@ def main(args):
     name_filter = args['--name-contains']
     api_endpoint = args['--api-endpoint'] if args['--api-endpoint'] else os.path.join(os.environ['INCEPTION_HOST'], 'api/aero/v1/')
 
-    # find the project id by looking up the project name in inception API
-    inception_client = make_inception_client()
-    project_id = find_project_by_name(inception_client, project_name).project_id
-    print(f"Project {project_name} has ID {project_id}")
+    try:
 
-    #out_dir = os.path.join(out_dir, project_name)
+        # find the project id by looking up the project name in inception API
+        inception_client = make_inception_client()
+        project_id = find_project_by_name(inception_client, project_name).project_id
+        print(f"Project {project_name} has ID {project_id}")
 
-    for doc in fetch_documents(project_id, user, pwd, api_endpoint):
+        #out_dir = os.path.join(out_dir, project_name)
 
-        if name_filter is not None:
-            if name_filter not in doc['name']:
-                continue
+        for doc in fetch_documents(project_id, user, pwd, api_endpoint):
 
-        if doc['state'] == 'CURATION-COMPLETE':
-            print(f"Doc {doc['id']} {doc['name']} is" f"{doc['state']} and will be downloaded")
-            success = download_curated_document(project_id, doc['id'], user, pwd, out_dir, api_endpoint)
-            assert success
+            if name_filter is not None:
+                if name_filter not in doc['name']:
+                    continue
+
+            if doc['state'] == 'CURATION-COMPLETE':
+                print(f"Doc {doc['id']} {doc['name']} is" f"{doc['state']} and will be downloaded")
+                success = download_curated_document(project_id, doc['id'], user, pwd, out_dir, api_endpoint)
+                assert success
+    except Exception as e:
+        print("Something went wrong and no documents were downloaded.")
 
 
 if __name__ == '__main__':
