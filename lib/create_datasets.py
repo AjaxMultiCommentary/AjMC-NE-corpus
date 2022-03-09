@@ -44,7 +44,7 @@ def concat_tsv_files(output_path: str, input_files: List[str]) -> None:
 def create_datasets(input_dir, output_dir, version, assignments_table_path, set="all"):
     
     splits = ["train", "dev", "test"]
-    langs = ["en", "de"]
+    langs = ["en", "de", "fr"]
 
     assignments_df = read_annotation_assignments(assignments_table_path, input_dir)
     basedir = os.path.join(output_dir, version)
