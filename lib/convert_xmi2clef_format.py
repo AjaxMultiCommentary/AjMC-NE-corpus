@@ -386,7 +386,7 @@ def convert_data(doc: AjmcDocument, drop_nested: bool) -> List:
     rows += document_metadata
     biblio_rows += document_metadata
 
-    if len(doc.sentences.values()) == 0:
+    if len(doc.sentences.values()) <= 1:
         logging.warning(f"Document {doc.id} suspiciously contains 0 sentences")
 
     for i_seg, seg in enumerate(doc.sentences.values()):
