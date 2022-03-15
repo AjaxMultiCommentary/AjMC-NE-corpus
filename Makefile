@@ -20,6 +20,8 @@ corpus-fr: download-corpus-fr retokenize-corpus-fr convert-corpus-fr
 
 corpus-de: download-corpus-de retokenize-corpus-de convert-corpus-de
 
+retokenize-corpus: retokenize-corpus-fr retokenize-corpus-de retokenize-corpus-en 
+
 download-corpus-%:
 	python scripts/inception/download_curated.py --project-name=ajmc-corpus-$* --output-dir=$(DATA_DIR)/corpus/$*/curated/
 	python scripts/inception/download_curated.py --project-name=ajmc-miniref-$* --output-dir=$(DATA_DIR)/corpus/$*/curated/

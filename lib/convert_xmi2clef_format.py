@@ -334,6 +334,9 @@ def set_special_flags(
             start = ent_lit["start_offset"] - tok["start_offset"]
             end = min(len(tok["surface"]), ent_lit["end_offset"] - tok["start_offset"])
             flags.append(f"{PARTIAL_FLAG}-{start}:{end}")
+            
+        levenshtein_dist = ent_lit["levenshtein_norm"]
+        flags.append(f"{LEVENSHTEIN_FLAG}{levenshtein_dist:.2f}")
 
     if ent_biblio:
         if "primary" in ent_biblio['entity_fine']:

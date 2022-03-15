@@ -8,7 +8,7 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # hipe2022:applicable_columns = TOKEN NE-COARSE-LIT NE-FINE-LIT NE-NESTED NEL-LIT MISC
 # ajmc:version = v0.2
 lon	O	_	O	_	_	O	_	_	_
-Wander	B-pers	_	B-pers.author	_	_	O	Q15438962	_	_
+Wander	B-pers	_	B-pers.author	_	_	O	Q15438962	_	LED0.17
 :	O	_	O	_	_	O	_	_	_
 «	O	_	O	_	_	O	_	_	_
 Revereor	O	_	O	_	_	O	_	_	_
@@ -46,7 +46,7 @@ erat	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 »	O	_	O	_	_	O	_	_	EndOfSentence
 Selon	O	_	O	_	_	O	_	_	_
-Schneidewin	B-pers	_	B-pers.editor	_	_	O	Q70043	_	_
+Schneidewin	B-pers	_	B-pers.editor	_	_	O	Q70043	_	LED0.00
 :	O	_	O	_	_	O	_	_	_
 TIodù	O	_	O	_	_	O	_	_	_
 xçeisσων	O	_	O	_	_	O	_	_	NoSpaceAfter
@@ -59,7 +59,7 @@ xçeisσων	O	_	O	_	_	O	_	_	NoSpaceAfter
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
 εί	O	_	O	_	_	O	_	_	NoSpaceAfter
 ͵	O	_	O	_	_	O	_	_	_
-4834	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
+4834	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.50
 )	O	_	O	_	_	O	_	_	_
 :	O	_	O	_	_	O	_	_	_
 πολύ	O	_	O	_	_	O	_	_	_
@@ -153,10 +153,10 @@ pag	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 »	O	_	O	_	_	O	_	_	_
 [	O	_	O	_	_	O	_	_	NoSpaceAfter
-Dindorf	B-pers	_	B-pers.author	_	_	O	Q67533	_	NoSpaceAfter
+Dindorf	B-pers	_	B-pers.author	_	_	O	Q67533	_	NoSpaceAfter|LED0.00
 .	O	_	O	_	_	O	_	_	NoSpaceAfter
 ]	O	_	O	_	_	O	_	_	EndOfSentence
-Passow	B-pers	_	B-pers.author	_	_	O	Q91344	_	_
+Passow	B-pers	_	B-pers.author	_	_	O	Q91344	_	LED0.00
 explique	O	_	O	_	_	O	_	_	_
 cette	O	_	O	_	_	O	_	_	_
 acception	O	_	O	_	_	O	_	_	_
@@ -184,11 +184,11 @@ après	O	_	O	_	_	O	_	_	_
 .	O	_	O	_	_	O	_	_	_
 ΟἹ	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
-OEdipe	B-work	_	B-work.primlit	_	_	O	Q294001	_	InPrimaryReference
-à	I-work	_	I-work.primlit	_	_	O	Q294001	_	InPrimaryReference
-Colone	I-work	_	I-work.primlit	_	_	O	Q294001	_	InPrimaryReference|NoSpaceAfter
+OEdipe	B-work	_	B-work.primlit	_	_	O	Q294001	_	InPrimaryReference|LED0.00
+à	I-work	_	I-work.primlit	_	_	O	Q294001	_	InPrimaryReference|LED0.00
+Colone	I-work	_	I-work.primlit	_	_	O	Q294001	_	InPrimaryReference|NoSpaceAfter|LED0.00
 ,	O	_	O	_	_	O	_	_	InPrimaryReference
-284	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference
+284	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|LED0.33
 :	O	_	O	_	_	O	_	_	_
 Φωτὸς	O	_	O	_	_	O	_	_	_
 &vociou	O	_	O	_	_	O	_	_	_
@@ -215,7 +215,7 @@ xépra	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 elloug	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-Ulysse	B-pers	_	B-pers.myth	_	_	O	Q47231	_	_
+Ulysse	B-pers	_	B-pers.myth	_	_	O	Q47231	_	LED0.00
 paraît	O	_	O	_	_	O	_	_	_
 faire	O	_	O	_	_	O	_	_	_
 allusion	O	_	O	_	_	O	_	_	_
@@ -229,14 +229,14 @@ que	O	_	O	_	_	O	_	_	_
 vient	O	_	O	_	_	O	_	_	_
 de	O	_	O	_	_	O	_	_	_
 prononcer	O	_	O	_	_	O	_	_	_
-À	B-pers	_	B-pers.myth	_	_	O	Q128176	_	_
-gamemnon	I-pers	_	I-pers.myth	_	_	O	Q128176	_	_
+À	B-pers	_	B-pers.myth	_	_	O	Q128176	_	LED0.20
+gamemnon	I-pers	_	I-pers.myth	_	_	O	Q128176	_	LED0.20
 ;	O	_	O	_	_	O	_	_	_
-Agamemnon	B-pers	_	B-pers.myth	_	_	O	Q128176	_	_
+Agamemnon	B-pers	_	B-pers.myth	_	_	O	Q128176	_	LED0.00
 répond	O	_	O	_	_	O	_	_	_
 comme	O	_	O	_	_	O	_	_	_
 si	O	_	O	_	_	O	_	_	_
-Ulysse	B-pers	_	B-pers.myth	_	_	O	Q47231	_	_
+Ulysse	B-pers	_	B-pers.myth	_	_	O	Q47231	_	LED0.00
 avait	O	_	O	_	_	O	_	_	_
 eu	O	_	O	_	_	O	_	_	_
 en	O	_	O	_	_	O	_	_	_
@@ -273,7 +273,7 @@ je	O	_	O	_	_	O	_	_	_
 mourrai	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-Dindorf	B-pers	_	B-pers.editor	_	_	O	Q67533	_	_
+Dindorf	B-pers	_	B-pers.editor	_	_	O	Q67533	_	LED0.00
 :	O	_	O	_	_	O	_	_	_
 Kai	O	_	O	_	_	O	_	_	_
 ᾿	O	_	O	_	_	O	_	_	_
@@ -321,10 +321,10 @@ ainsi	O	_	O	_	_	O	_	_	_
 qu	O	_	O	_	_	O	_	_	NoSpaceAfter
 ’	O	_	O	_	_	O	_	_	NoSpaceAfter
 à	O	_	O	_	_	O	_	_	_
-Botbe	B-pers	_	B-pers.editor	_	_	O	NIL	_	_
+Botbe	B-pers	_	B-pers.editor	_	_	O	NIL	_	LED0.20
 et	O	_	O	_	_	O	_	_	_
 à	O	_	O	_	_	O	_	_	_
-Reisig	B-pers	_	B-pers.editor	_	_	O	Q90245	_	NoSpaceAfter
+Reisig	B-pers	_	B-pers.editor	_	_	O	Q90245	_	NoSpaceAfter|LED0.00
 ,	O	_	O	_	_	O	_	_	_
 équivaloir	O	_	O	_	_	O	_	_	_
 ici	O	_	O	_	_	O	_	_	_
@@ -333,11 +333,11 @@ ici	O	_	O	_	_	O	_	_	_
 .	O	_	O	_	_	O	_	_	_
 Οἵ	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-Eschyle	B-pers	_	B-pers.author	_	_	O	Q40939	_	InPrimaryReference|NoSpaceAfter
+Eschyle	B-pers	_	B-pers.author	_	_	O	Q40939	_	InPrimaryReference|NoSpaceAfter|LED0.00
 ,	O	_	O	_	_	O	_	_	InPrimaryReference
-Eum	B-work	_	B-work.primlit	_	_	O	Q1233164	_	InPrimaryReference|NoSpaceAfter
-.	I-work	_	I-work.primlit	_	_	O	Q1233164	_	InPrimaryReference
-240	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference
+Eum	B-work	_	B-work.primlit	_	_	O	Q1233164	_	InPrimaryReference|NoSpaceAfter|LED0.00
+.	I-work	_	I-work.primlit	_	_	O	Q1233164	_	InPrimaryReference|LED0.00
+240	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|LED0.00
 :	O	_	O	_	_	O	_	_	_
 "Opoia	O	_	O	_	_	O	_	_	_
 χέρσον	O	_	O	_	_	O	_	_	_
