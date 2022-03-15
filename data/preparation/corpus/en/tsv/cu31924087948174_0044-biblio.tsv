@@ -13,7 +13,9 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # ajmc:publication_date = 1881
 # ajmc:page = 44
 # ajmc:author = Campbell, Lewis
-1-3	O	_	_	_	_	_	_	_	NoSpaceAfter
+1	O	_	_	_	_	_	_	_	NoSpaceAfter
+-	O	_	_	_	_	_	_	_	NoSpaceAfter
+3	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 Athena	O	_	_	_	_	_	_	_	NoSpaceAfter
 '	O	_	_	_	_	_	_	_	NoSpaceAfter
@@ -57,8 +59,7 @@ i	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	NoSpaceAfter
 e	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
-‘	O	_	_	_	_	_	_	_	NoSpaceAfter
-As	O	_	_	_	_	_	_	_	_
+‘As	O	_	_	_	_	_	_	_	_
 I	O	_	_	_	_	_	_	_	_
 have	O	_	_	_	_	_	_	_	_
 ever	O	_	_	_	_	_	_	_	_
@@ -71,7 +72,10 @@ so	O	_	_	_	_	_	_	_	_
 now	O	_	_	_	_	_	_	_	_
 I	O	_	_	_	_	_	_	_	_
 see	O	_	_	_	_	_	_	_	_
-thee...	O	_	_	_	_	_	_	_	NoSpaceAfter
+thee	O	_	_	_	_	_	_	_	NoSpaceAfter
+.	O	_	_	_	_	_	_	_	NoSpaceAfter
+.	O	_	_	_	_	_	_	_	NoSpaceAfter
+.	O	_	_	_	_	_	_	_	NoSpaceAfter
 ’	O	_	_	_	_	_	_	_	_
 Essay	B-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference
 on	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference
@@ -87,9 +91,9 @@ p	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|NoSpaceAfter
 2	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-1)	O	_	_	_	_	_	_	_	_
-‘	O	_	_	_	_	_	_	_	NoSpaceAfter
-In	O	_	_	_	_	_	_	_	_
+1	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	_
+‘In	O	_	_	_	_	_	_	_	_
 quest	O	_	_	_	_	_	_	_	_
 to	O	_	_	_	_	_	_	_	_
 snatch	O	_	_	_	_	_	_	_	_
@@ -97,7 +101,8 @@ some	O	_	_	_	_	_	_	_	_
 exploit	O	_	_	_	_	_	_	_	_
 on	O	_	_	_	_	_	_	_	_
 a	O	_	_	_	_	_	_	_	_
-foe,	O	_	_	_	_	_	_	_	NoSpaceAfter
+foe	O	_	_	_	_	_	_	_	NoSpaceAfter
+,	O	_	_	_	_	_	_	_	NoSpaceAfter
 ’	O	_	_	_	_	_	_	_	_
 i	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	NoSpaceAfter
@@ -115,7 +120,8 @@ foe	O	_	_	_	_	_	_	_	NoSpaceAfter
 Or	O	_	_	_	_	_	_	_	NoSpaceAfter
 ,	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-2)	O	_	_	_	_	_	_	_	_
+2	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	_
 ¢	O	_	_	_	_	_	_	_	_
 Seeking	O	_	_	_	_	_	_	_	_
 to	O	_	_	_	_	_	_	_	_
@@ -128,12 +134,14 @@ some	O	_	_	_	_	_	_	_	_
 enemy	O	_	_	_	_	_	_	_	NoSpaceAfter
 '	O	_	_	_	_	_	_	_	NoSpaceAfter
 s	O	_	_	_	_	_	_	_	_
-attempt.	O	_	_	_	_	_	_	_	NoSpaceAfter
+attempt	O	_	_	_	_	_	_	_	NoSpaceAfter
+.	O	_	_	_	_	_	_	_	NoSpaceAfter
 ”	O	_	_	_	_	_	_	_	EndOfSentence
 The	O	_	_	_	_	_	_	_	_
 latter	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-2)	O	_	_	_	_	_	_	_	_
+2	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	_
 is	O	_	_	_	_	_	_	_	_
 simpler	O	_	_	_	_	_	_	_	NoSpaceAfter
 ,	O	_	_	_	_	_	_	_	_
@@ -157,7 +165,8 @@ but	O	_	_	_	_	_	_	_	_
 the	O	_	_	_	_	_	_	_	_
 former	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-1)	O	_	_	_	_	_	_	_	_
+1	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	_
 is	O	_	_	_	_	_	_	_	_
 on	O	_	_	_	_	_	_	_	_
 the	O	_	_	_	_	_	_	_	_
@@ -220,8 +229,7 @@ infr	O	_	_	_	_	_	_	_	NoSpaceAfter
 εὖ	O	_	_	_	_	_	_	_	_
 μ	O	_	_	_	_	_	_	_	NoSpaceAfter
 ’	O	_	_	_	_	_	_	_	_
-ἐπ	O	_	_	_	_	_	_	_	NoSpaceAfter
-᾽	O	_	_	_	_	_	_	_	_
+ἐπ᾽	O	_	_	_	_	_	_	_	_
 ἀνδρὶ	O	_	_	_	_	_	_	_	_
 δυσμεν	O	_	_	_	_	_	_	_	_
 εἴ	O	_	_	_	_	_	_	_	_
@@ -238,10 +246,10 @@ i	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	NoSpaceAfter
 e	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
-‘	O	_	_	_	_	_	_	_	NoSpaceAfter
-to	O	_	_	_	_	_	_	_	_
+‘to	O	_	_	_	_	_	_	_	_
 effect	O	_	_	_	_	_	_	_	_
-suddenly.	O	_	_	_	_	_	_	_	NoSpaceAfter
+suddenly	O	_	_	_	_	_	_	_	NoSpaceAfter
+.	O	_	_	_	_	_	_	_	NoSpaceAfter
 ”	O	_	_	_	_	_	_	_	EndOfSentence
 Onpdpevov	O	_	_	_	_	_	_	_	_
 introduces	O	_	_	_	_	_	_	_	_
@@ -308,7 +316,8 @@ of	O	_	_	_	_	_	_	_	_
 ἁρπάσαι	O	_	_	_	_	_	_	_	_
 in	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-2)	O	_	_	_	_	_	_	_	_
+2	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	_
 supr	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 viz	O	_	_	_	_	_	_	_	NoSpaceAfter
@@ -325,7 +334,9 @@ that	O	_	_	_	_	_	_	_	_
 given	O	_	_	_	_	_	_	_	_
 in	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-1).	O	_	_	_	_	_	_	_	EndOfSentence
+1	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	NoSpaceAfter
+.	O	_	_	_	_	_	_	_	EndOfSentence
 3	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 σκηναῖς	O	_	_	_	_	_	_	_	NoSpaceAfter
@@ -341,7 +352,9 @@ Cp	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 infr	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
-192-3	B-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+192	B-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+-	I-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+3	I-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 .	O	_	_	_	_	_	_	_	EndOfSentence
 .	O	_	_	_	_	_	_	_	_
 ἔνθα	O	_	_	_	_	_	_	_	NoSpaceAfter
@@ -350,7 +363,13 @@ infr	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 ἔχει	O	_	_	_	_	_	_	_	NoSpaceAfter
 ]	O	_	_	_	_	_	_	_	_
-Il.11.%,8	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|Partial-0:3
+Il	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+.	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+11	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+.	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+%	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+,	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+8	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 ;	O	_	_	_	_	_	_	_	_
 Eur	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 .	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
@@ -398,7 +417,8 @@ resumes	O	_	_	_	_	_	_	_	_
 ]	O	_	_	_	_	_	_	_	_
 *	O	_	_	_	_	_	_	_	_
 Scanning	O	_	_	_	_	_	_	_	_
-attentively.	O	_	_	_	_	_	_	_	NoSpaceAfter
+attentively	O	_	_	_	_	_	_	_	NoSpaceAfter
+.	O	_	_	_	_	_	_	_	NoSpaceAfter
 ’	O	_	_	_	_	_	_	_	EndOfSentence
 The	O	_	_	_	_	_	_	_	_
 middle	O	_	_	_	_	_	_	_	_
@@ -455,7 +475,9 @@ confused	O	_	_	_	_	_	_	_	_
 struggle	O	_	_	_	_	_	_	_	_
 at	O	_	_	_	_	_	_	_	_
 the	O	_	_	_	_	_	_	_	_
-tent-door	O	_	_	_	_	_	_	_	_
+tent	O	_	_	_	_	_	_	_	NoSpaceAfter
+-	O	_	_	_	_	_	_	_	NoSpaceAfter
+door	O	_	_	_	_	_	_	_	_
 has	O	_	_	_	_	_	_	_	_
 made	O	_	_	_	_	_	_	_	_
 it	O	_	_	_	_	_	_	_	_
@@ -474,8 +496,7 @@ again	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 εὖ	O	_	_	_	_	_	_	_	_
 δέ	O	_	_	_	_	_	_	_	_
-σ	O	_	_	_	_	_	_	_	NoSpaceAfter
-᾽	O	_	_	_	_	_	_	_	_
+σ᾽	O	_	_	_	_	_	_	_	_
 ἐκφέρει	O	_	_	_	_	_	_	_	NoSpaceAfter
 ,	O	_	_	_	_	_	_	_	_
 kT	O	_	_	_	_	_	_	_	_
@@ -521,12 +542,14 @@ infr	O	_	_	_	_	_	_	_	NoSpaceAfter
 Is	O	_	_	_	_	_	_	_	_
 elpwos	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-1)	O	_	_	_	_	_	_	_	_
+1	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	_
 nom	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 or	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-2)	O	_	_	_	_	_	_	_	_
+2	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	_
 gen	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 ?	O	_	_	_	_	_	_	_	_

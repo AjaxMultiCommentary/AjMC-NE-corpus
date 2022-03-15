@@ -15,8 +15,7 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # ajmc:author = Schneidewin, Friedrich Wilhelm
 wie	O	_	O	_	_	O	_	_	_
 in	O	_	O	_	_	O	_	_	_
-«	O	_	O	_	_	O	_	_	NoSpaceAfter
-ei	O	_	O	_	_	O	_	_	_
+«ei	O	_	O	_	_	O	_	_	_
 ποτὲ	O	_	O	_	_	O	_	_	_
 320	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
@@ -38,7 +37,8 @@ der	O	_	O	_	_	O	_	_	_
 Tragödien	O	_	O	_	_	O	_	_	NoSpaceAfter
 sich	O	_	O	_	_	O	_	_	_
 öfter	O	_	O	_	_	O	_	_	_
-findet.	O	_	O	_	_	O	_	_	NoSpaceAfter
+findet	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	NoSpaceAfter
 )	O	_	O	_	_	O	_	_	EndOfSentence
 196	O	_	O	_	_	O	_	_	_
 8	O	_	O	_	_	O	_	_	NoSpaceAfter
@@ -85,7 +85,8 @@ Zugwind	O	_	O	_	_	O	_	_	_
 genährter	O	_	O	_	_	O	_	_	_
 Waldbrand	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-vgl.	O	_	O	_	_	O	_	_	_
+vgl	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	_
 N	B-work	_	B-work.primlit	_	_	O	Q8275	_	InPrimaryReference|NoSpaceAfter
 .	I-work	_	I-work.primlit	_	_	O	Q8275	_	InPrimaryReference
 14	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
@@ -94,7 +95,8 @@ N	B-work	_	B-work.primlit	_	_	O	Q8275	_	InPrimaryReference|NoSpaceAfter
 .	O	_	O	_	_	O	_	_	InPrimaryReference
 16	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
 ,	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference
-765)	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|Partial--4:3
+765	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 und	O	_	O	_	_	O	_	_	_
 dieses	O	_	O	_	_	O	_	_	_
@@ -115,11 +117,13 @@ sitzt	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
 Bild	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-πῦρ)	O	_	O	_	_	O	_	_	_
+πῦρ	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	_
 und	O	_	O	_	_	O	_	_	_
 Sache	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-ὕβοις)	O	_	O	_	_	O	_	_	_
+ὕβοις	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	_
 fliesst	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 wie	O	_	O	_	_	O	_	_	_
@@ -156,7 +160,8 @@ ferae	O	_	O	_	_	O	_	_	_
 talibus	O	_	O	_	_	O	_	_	_
 locis	O	_	O	_	_	O	_	_	_
 lalere	O	_	O	_	_	O	_	_	_
-amant.	O	_	O	_	_	O	_	_	NoSpaceAfter
+amant	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	NoSpaceAfter
 )	O	_	O	_	_	O	_	_	EndOfSentence
 197	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
@@ -183,8 +188,7 @@ C	I-work	_	I-work.primlit	_	_	O	Q294001	_	InPrimaryReference|NoSpaceAfter
 .	I-work	_	I-work.primlit	_	_	O	Q294001	_	InPrimaryReference
 1696	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference
 οὐ	O	_	O	_	_	O	_	_	_
-κατάμεμπτ	O	_	O	_	_	O	_	_	NoSpaceAfter
-᾽	O	_	O	_	_	O	_	_	_
+κατάμεμπτ᾽	O	_	O	_	_	O	_	_	_
 ἔβητον	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
@@ -194,7 +198,8 @@ arag	O	_	O	_	_	O	_	_	NoSpaceAfter
 Anta	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 Dindorf	B-pers	_	B-pers.other	_	_	O	Q67533	_	NoSpaceAfter
-ἀτάρβητος.	O	_	O	_	_	O	_	_	NoSpaceAfter
+ἀτάρβητος	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	NoSpaceAfter
 )	O	_	O	_	_	O	_	_	EndOfSentence
 199	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
@@ -225,7 +230,8 @@ R	I-work	_	I-work.primlit	_	_	O	Q148643	_	InPrimaryReference|NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 ἕστακεν	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-κεῖται,	O	_	O	_	_	O	_	_	_
+κεῖται	O	_	O	_	_	O	_	_	NoSpaceAfter
+,	O	_	O	_	_	O	_	_	_
 πέπηγεν),	O	_	O	_	_	O	_	_	NoSpaceAfter
 wurzelt	O	_	O	_	_	O	_	_	_
 fest	O	_	O	_	_	O	_	_	NoSpaceAfter
@@ -279,8 +285,7 @@ ll	B-work	_	B-work.primlit	_	_	O	Q8275	_	InPrimaryReference|NoSpaceAfter
 Hesych	B-pers	_	B-pers.author	_	_	O	NIL	_	NoSpaceAfter
 .	I-pers	_	I-pers.author	_	_	O	NIL	_	_
 χϑονίους	O	_	O	_	_	O	_	_	_
-Ἰναχίϑας	O	_	O	_	_	O	_	_	NoSpaceAfter
-"	O	_	O	_	_	O	_	_	_
+Ἰναχίϑας"	O	_	O	_	_	O	_	_	_
 αὐτόχϑονας	O	_	O	_	_	O	_	_	_
 καὶ	O	_	O	_	_	O	_	_	_
 οὐκ	O	_	O	_	_	O	_	_	_
@@ -371,8 +376,7 @@ nach	O	_	O	_	_	O	_	_	_
 dem	O	_	O	_	_	O	_	_	_
 Homerischen	O	_	O	_	_	O	_	_	_
 ἔξοχος	O	_	O	_	_	O	_	_	_
-᾿	O	_	O	_	_	O	_	_	NoSpaceAfter
-Αργείων	O	_	O	_	_	O	_	_	_
+᾿Αργείων	O	_	O	_	_	O	_	_	_
 κεφαλὴν	O	_	O	_	_	O	_	_	_
 nd	O	_	O	_	_	O	_	_	NoSpaceAfter
 ’	O	_	O	_	_	O	_	_	_

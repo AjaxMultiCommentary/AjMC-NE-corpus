@@ -13,7 +13,9 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # ajmc:publication_date = 1894
 # ajmc:page = 31
 # ajmc:author = Wecklein, Nikolaus
-Tage“)	O	_	O	_	_	O	_	_	NoSpaceAfter
+Tage	O	_	O	_	_	O	_	_	NoSpaceAfter
+“	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
 Über	O	_	O	_	_	O	_	_	_
 die	O	_	O	_	_	O	_	_	_
@@ -69,14 +71,16 @@ Hom	B-pers	_	B-pers.author	_	_	O	Q6691	_	InPrimaryReference|NoSpaceAfter
 φίλεον	O	_	O	_	_	O	_	_	_
 δουοικτητήν	O	_	O	_	_	O	_	_	_
 πεο	O	_	O	_	_	O	_	_	_
-¿	O	_	O	_	_	O	_	_	NoSpaceAfter
-odoav.	O	_	O	_	_	O	_	_	EndOfSentence
+¿odoav	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	EndOfSentence
 ἀνέχει	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 τιμᾷ	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-hod)	O	_	O	_	_	O	_	_	_
-hält)	O	_	O	_	_	O	_	_	NoSpaceAfter
+hod	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	_
+hält	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
 918	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
@@ -104,7 +108,10 @@ hält)	O	_	O	_	_	O	_	_	NoSpaceAfter
 dicendo	O	_	O	_	_	O	_	_	_
 suggeras	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-Herm.).	B-pers	_	B-pers.author	_	_	O	Q77616	_	EndOfSentence|Partial-0:5
+Herm	B-pers	_	B-pers.author	_	_	O	Q77616	_	NoSpaceAfter
+.	I-pers	_	I-pers.author	_	_	O	Q77616	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	EndOfSentence
 215	O	_	O	_	_	O	_	_	_
 Mit	O	_	O	_	_	O	_	_	_
 ϑανάτῳ	O	_	O	_	_	O	_	_	_
@@ -118,8 +125,7 @@ K	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
 529	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference
 ϑάνατος	O	_	O	_	_	O	_	_	_
 μὲν	O	_	O	_	_	O	_	_	_
-τάδ	O	_	O	_	_	O	_	_	NoSpaceAfter
-᾽	O	_	O	_	_	O	_	_	_
+τάδ᾽	O	_	O	_	_	O	_	_	_
 ἀκούειν	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
 216f	O	_	O	_	_	O	_	_	NoSpaceAfter
@@ -129,7 +135,7 @@ K	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
 gibt	O	_	O	_	_	O	_	_	_
 eine	O	_	O	_	_	O	_	_	_
 nähere	O	_	O	_	_	O	_	_	_
-Beſtimmung	O	_	O	_	_	O	_	_	NoSpaceAfter
+Beſtimmung	O	_	O	_	_	O	_	_	_
 zu	O	_	O	_	_	O	_	_	_
 ἀπελωβήϑη	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
@@ -189,7 +195,7 @@ aus	O	_	O	_	_	O	_	_	_
 Daktylen	O	_	O	_	_	O	_	_	_
 und	O	_	O	_	_	O	_	_	_
 Trochäen	O	_	O	_	_	O	_	_	_
-zuſammengeſetzte	O	_	O	_	_	O	_	_	NoSpaceAfter
+zuſammengeſetzte	O	_	O	_	_	O	_	_	_
 Versmaß	O	_	O	_	_	O	_	_	_
 entſpricht	O	_	O	_	_	O	_	_	_
 in	O	_	O	_	_	O	_	_	_

@@ -13,7 +13,10 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # ajmc:publication_date = 1894
 # ajmc:page = 15
 # ajmc:author = Wecklein, Nikolaus
-1--133	O	_	O	_	_	O	_	_	_
+1	O	_	O	_	_	O	_	_	NoSpaceAfter
+-	O	_	O	_	_	O	_	_	NoSpaceAfter
+-	O	_	O	_	_	O	_	_	NoSpaceAfter
+133	O	_	O	_	_	O	_	_	_
 Prolog	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 welcher	O	_	O	_	_	O	_	_	_
@@ -68,7 +71,8 @@ Größe	O	_	O	_	_	O	_	_	_
 unterſucht	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
 μετρούμενον	O	_	O	_	_	O	_	_	_
-5)	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|Partial-0:1
+5	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 von	O	_	O	_	_	O	_	_	_
 Zeit	O	_	O	_	_	O	_	_	_
@@ -126,8 +130,7 @@ Form	O	_	O	_	_	O	_	_	_
 “	O	_	O	_	_	O	_	_	NoSpaceAfter
 αέοτιος	O	_	O	_	_	O	_	_	_
 und	O	_	O	_	_	O	_	_	_
-«	O	_	O	_	_	O	_	_	NoSpaceAfter
-Τάοτιος	O	_	O	_	_	O	_	_	_
+«Τάοτιος	O	_	O	_	_	O	_	_	_
 vei	O	_	O	_	_	O	_	_	_
 Sophokles	B-pers	_	B-pers.author	_	_	O	Q11950683	_	_
 und	O	_	O	_	_	O	_	_	_
@@ -137,8 +140,7 @@ Euripides	B-pers	_	B-pers.author	_	_	O	Q48305	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 Odyſſeus	B-pers	_	B-pers.myth	_	_	O	Q47231	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
-τῶν	O	_	O	_	_	O	_	_	NoSpaceAfter
-»	O	_	O	_	_	O	_	_	_
+τῶν»	O	_	O	_	_	O	_	_	_
 ἀδήλων	O	_	O	_	_	O	_	_	_
 ϑηρατής	O	_	O	_	_	O	_	_	_
 wie	O	_	O	_	_	O	_	_	_
@@ -165,7 +167,8 @@ auch	O	_	O	_	_	O	_	_	_
 immer	O	_	O	_	_	O	_	_	_
 ſei	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-τινά)	O	_	O	_	_	O	_	_	_
+τινά	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	_
 wegzuraffen	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 ὃ	O	_	O	_	_	O	_	_	NoSpaceAfter
@@ -269,11 +272,12 @@ plagis	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
 4	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-¿	O	_	O	_	_	O	_	_	NoSpaceAfter
-rda	O	_	O	_	_	O	_	_	_
+¿rda	O	_	O	_	_	O	_	_	_
 Αἴαντος	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-oxnyri;)	O	_	O	_	_	O	_	_	_
+oxnyri	O	_	O	_	_	O	_	_	NoSpaceAfter
+;	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	_
 ἐσχάτην	O	_	O	_	_	O	_	_	_
 τάξιν	O	_	O	_	_	O	_	_	_
 ἔχει	O	_	O	_	_	O	_	_	_
@@ -301,7 +305,8 @@ Homer	B-pers	_	B-pers.author	_	_	O	Q6691	_	InPrimaryReference
 (	O	_	O	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
 4	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference
 5	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference
-ff.	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
+ff	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
+.	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
 )	O	_	O	_	_	O	_	_	_
 wohl	O	_	O	_	_	O	_	_	_
 bekannt	O	_	O	_	_	O	_	_	_

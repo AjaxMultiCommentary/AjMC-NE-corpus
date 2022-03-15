@@ -9,7 +9,9 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # ajmc:version = v0.2
 loppement	O	_	_	_	_	_	_	_	_
 de	O	_	_	_	_	_	_	_	_
-l’idée	O	_	_	_	_	_	_	_	_
+l	O	_	_	_	_	_	_	_	NoSpaceAfter
+’	O	_	_	_	_	_	_	_	NoSpaceAfter
+idée	O	_	_	_	_	_	_	_	_
 exprimée	O	_	_	_	_	_	_	_	_
 sommuirement	O	_	_	_	_	_	_	_	NoSpaceAfter
 par	O	_	_	_	_	_	_	_	_
@@ -17,8 +19,8 @@ par	O	_	_	_	_	_	_	_	_
 .	O	_	_	_	_	_	_	_	EndOfSentence
 -	O	_	_	_	_	_	_	_	NoSpaceAfter
 -	O	_	_	_	_	_	_	_	_
-᾿	O	_	_	_	_	_	_	_	NoSpaceAfter
-Ἀφορμᾷ:	O	_	_	_	_	_	_	_	_
+᾿Ἀφορμᾷ	O	_	_	_	_	_	_	_	NoSpaceAfter
+:	O	_	_	_	_	_	_	_	_
 πεῖραν	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 ’	O	_	_	_	_	_	_	_	NoSpaceAfter
@@ -46,8 +48,7 @@ plus	O	_	_	_	_	_	_	_	NoSpaceAfter
 492	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 Ἀεὶ	O	_	_	_	_	_	_	_	_
-δ	O	_	_	_	_	_	_	_	NoSpaceAfter
-᾽	O	_	_	_	_	_	_	_	_
+δ᾽	O	_	_	_	_	_	_	_	_
 ὑμνούμενα	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 Ουδλῃὰ	O	_	_	_	_	_	_	_	_
@@ -59,7 +60,9 @@ qualifient	O	_	_	_	_	_	_	_	_
 un	O	_	_	_	_	_	_	_	_
 même	O	_	_	_	_	_	_	_	_
 substantif	O	_	_	_	_	_	_	_	_
-sous-entendu	O	_	_	_	_	_	_	_	NoSpaceAfter
+sous	O	_	_	_	_	_	_	_	NoSpaceAfter
+-	O	_	_	_	_	_	_	_	NoSpaceAfter
+entendu	O	_	_	_	_	_	_	_	NoSpaceAfter
 ,	O	_	_	_	_	_	_	_	_
 Ëc	O	_	_	_	_	_	_	_	_
 est	O	_	_	_	_	_	_	_	_
@@ -73,7 +76,8 @@ ainsi	O	_	_	_	_	_	_	_	_
 dans	O	_	_	_	_	_	_	_	_
 Euripide	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference
 (	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
-Médée,	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|Partial-0:5
+Médée	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+,	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
 970	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 )	O	_	_	_	_	_	_	_	_
 :	O	_	_	_	_	_	_	_	_
@@ -82,8 +86,7 @@ Médée,	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|Partial-0:5
 γυναῖχα	O	_	_	_	_	_	_	_	NoSpaceAfter
 ,	O	_	_	_	_	_	_	_	_
 δέσποτιν	O	_	_	_	_	_	_	_	_
-δ	O	_	_	_	_	_	_	_	NoSpaceAfter
-᾽	O	_	_	_	_	_	_	_	_
+δ᾽	O	_	_	_	_	_	_	_	_
 ἐμήν	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
 εἰ	O	_	_	_	_	_	_	_	_
@@ -136,8 +139,7 @@ ces	O	_	_	_	_	_	_	_	_
 deux	O	_	_	_	_	_	_	_	_
 emplois	O	_	_	_	_	_	_	_	NoSpaceAfter
 de	O	_	_	_	_	_	_	_	_
-&	O	_	_	_	_	_	_	_	NoSpaceAfter
-é	O	_	_	_	_	_	_	_	_
+&é	O	_	_	_	_	_	_	_	_
 Matthiæ	B-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|NoSpaceAfter
 ,	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference
 pages	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference
@@ -168,8 +170,7 @@ jpèv	O	_	_	_	_	_	_	_	_
 oùv	O	_	_	_	_	_	_	_	_
 duvnbiv	O	_	_	_	_	_	_	_	NoSpaceAfter
 ,	O	_	_	_	_	_	_	_	_
-ἀλλ	O	_	_	_	_	_	_	_	NoSpaceAfter
-᾽	O	_	_	_	_	_	_	_	_
+ἀλλ᾽	O	_	_	_	_	_	_	_	_
 ὅμως	O	_	_	_	_	_	_	_	_
 ἐρῶ	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	EndOfSentence
@@ -213,12 +214,13 @@ Suidas	O	_	_	_	_	_	_	_	_
 τράχηλον	O	_	_	_	_	_	_	_	_
 ἀπέχοπτεν	O	_	_	_	_	_	_	_	NoSpaceAfter
 ,	O	_	_	_	_	_	_	_	_
-ἐλαιμοτόμε’	O	_	_	_	_	_	_	_	NoSpaceAfter
+ἐλαιμοτόμε	O	_	_	_	_	_	_	_	NoSpaceAfter
+’	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	EndOfSentence
 299	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
-"	O	_	_	_	_	_	_	_	NoSpaceAfter
-Ecpate.	O	_	_	_	_	_	_	_	_
+"Ecpate	O	_	_	_	_	_	_	_	NoSpaceAfter
+.	O	_	_	_	_	_	_	_	_
 Voir	O	_	_	_	_	_	_	_	_
 la	O	_	_	_	_	_	_	_	_
 note	O	_	_	_	_	_	_	_	_
@@ -288,5 +290,6 @@ lui	O	_	_	_	_	_	_	_	_
 faisait	O	_	_	_	_	_	_	_	_
 voir	O	_	_	_	_	_	_	_	_
 son	O	_	_	_	_	_	_	_	_
-délire)	O	_	_	_	_	_	_	_	NoSpaceAfter
+délire	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	EndOfSentence

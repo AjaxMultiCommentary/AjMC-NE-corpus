@@ -29,7 +29,8 @@ voice	O	_	O	_	_	O	_	_	_
 falls	O	_	O	_	_	O	_	_	_
 distinctly	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-εὐμαθὲς)	O	_	O	_	_	O	_	_	_
+εὐμαθὲς	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	_
 on	O	_	O	_	_	O	_	_	_
 his	O	_	O	_	_	O	_	_	_
 ear	O	_	O	_	_	O	_	_	NoSpaceAfter
@@ -78,7 +79,9 @@ Flor	B-work	_	B-work.primlit	_	_	O	Q107029507	_	InPrimaryReference|NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 The	O	_	O	_	_	O	_	_	_
 trumE:2a	O	_	O	_	_	O	_	_	NoSpaceAfter
-R3Pr,kk	O	_	O	_	_	O	_	_	_
+R3Pr	O	_	O	_	_	O	_	_	NoSpaceAfter
+,	O	_	O	_	_	O	_	_	NoSpaceAfter
+kk	O	_	O	_	_	O	_	_	_
 in	O	_	O	_	_	O	_	_	_
 diameter	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
@@ -86,12 +89,18 @@ and	O	_	O	_	_	O	_	_	_
 ending	O	_	O	_	_	O	_	_	_
 in	O	_	O	_	_	O	_	_	_
 a	O	_	O	_	_	O	_	_	_
-bel-shaped	O	_	O	_	_	O	_	_	_
+bel	O	_	O	_	_	O	_	_	NoSpaceAfter
+-	O	_	O	_	_	O	_	_	NoSpaceAfter
+shaped	O	_	O	_	_	O	_	_	_
 aperture	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-κώδων).	O	_	O	_	_	O	_	_	EndOfSentence
+κώδων	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	EndOfSentence
 “	O	_	O	_	_	O	_	_	NoSpaceAfter
-Tyrrhenian,’	O	_	O	_	_	O	_	_	_
+Tyrrhenian	O	_	O	_	_	O	_	_	NoSpaceAfter
+,	O	_	O	_	_	O	_	_	NoSpaceAfter
+’	O	_	O	_	_	O	_	_	_
 a	O	_	O	_	_	O	_	_	_
 frequent	O	_	O	_	_	O	_	_	NoSpaceAfter
 epithet	O	_	O	_	_	O	_	_	_
@@ -99,7 +108,8 @@ of	O	_	O	_	_	O	_	_	_
 the	O	_	O	_	_	O	_	_	_
 trumpet	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-Aesch.	B-pers	_	B-pers.author	_	_	O	Q40939	_	InPrimaryReference
+Aesch	B-pers	_	B-pers.author	_	_	O	Q40939	_	InPrimaryReference|NoSpaceAfter
+.	I-pers	_	I-pers.author	_	_	O	Q40939	_	InPrimaryReference
 Eum	B-pers	_	B-pers.author	_	_	O	Q1233164	_	InPrimaryReference|NoSpaceAfter
 .	I-pers	_	I-pers.author	_	_	O	Q1233164	_	InPrimaryReference
 567	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
@@ -118,7 +128,9 @@ Aen	B-work	_	B-work.primlit	_	_	O	Q60220	_	InPrimaryReference|NoSpaceAfter
 .	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference
 526	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
 ,	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference
-etc.)	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|Partial--8:4
+etc	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
+.	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 perhaps	O	_	O	_	_	O	_	_	_
 means	O	_	O	_	_	O	_	_	_
@@ -141,10 +153,12 @@ the	O	_	O	_	_	O	_	_	_
 ληστοσαλπιγκταίof	O	_	O	_	_	O	_	_	_
 Menander	B-pers	_	B-pers.author	_	_	O	Q118992	_	InPrimaryReference
 (	O	_	O	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
-frag.	B-work	_	B-work.fragm	_	_	O	NIL	_	InPrimaryReference
+frag	B-work	_	B-work.fragm	_	_	O	NIL	_	InPrimaryReference|NoSpaceAfter
+.	I-work	_	I-work.fragm	_	_	O	NIL	_	InPrimaryReference
 incert	I-work	_	I-work.fragm	_	_	O	NIL	_	InPrimaryReference|NoSpaceAfter
 .	I-work	_	I-work.fragm	_	_	O	NIL	_	InPrimaryReference
-399)	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|Partial-0:3
+399	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
 The	O	_	O	_	_	O	_	_	_
 Tyrheni	O	_	O	_	_	O	_	_	NoSpaceAfter
@@ -163,8 +177,10 @@ the	O	_	O	_	_	O	_	_	_
 earliest	O	_	O	_	_	O	_	_	_
 witnes	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-I.	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference
-94)	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|Partial--3:2
+I	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
+.	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference
+94	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 were	O	_	O	_	_	O	_	_	_
 of	O	_	O	_	_	O	_	_	_
@@ -188,7 +204,10 @@ Dict	B-work	_	B-work.seclit	_	_	O	_	_	InSecondaryReference|NoSpaceAfter
 Ant	I-work	_	I-work.seclit	_	_	O	_	_	InSecondaryReference|NoSpaceAfter
 .	I-work	_	I-work.seclit	_	_	O	_	_	InSecondaryReference
 “	O	_	O	_	_	O	_	_	InSecondaryReference|NoSpaceAfter
-Tuba’).	B-work	_	B-work.seclit	_	_	O	_	_	EndOfSentence|InSecondaryReference|Partial-0:4
+Tuba	B-work	_	B-work.seclit	_	_	O	_	_	InSecondaryReference|NoSpaceAfter
+’	O	_	O	_	_	O	_	_	InSecondaryReference|NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	EndOfSentence
 Homer	B-pers	_	B-pers.author	_	_	O	Q6691	_	_
 mentions	O	_	O	_	_	O	_	_	_
 the	O	_	O	_	_	O	_	_	_
@@ -208,7 +227,8 @@ likened	O	_	O	_	_	O	_	_	_
 to	O	_	O	_	_	O	_	_	_
 it	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-Il.	B-work	_	B-work.primlit	_	_	O	Q8275	_	InPrimaryReference
+Il	B-work	_	B-work.primlit	_	_	O	Q8275	_	InPrimaryReference|NoSpaceAfter
+.	I-work	_	I-work.primlit	_	_	O	Q8275	_	InPrimaryReference
 18	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
 .	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference
 219	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
@@ -247,7 +267,8 @@ Pausanias	B-pers	_	B-pers.author	_	_	O	Q192931	_	NoSpaceAfter
 at	O	_	O	_	_	O	_	_	_
 Agos	B-loc	_	B-loc	_	_	O	Q13533353	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-2.	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference
+2	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
+.	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference
 21	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
 ,	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference
 8	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference
@@ -260,7 +281,9 @@ a	O	_	O	_	_	O	_	_	_
 shrine	O	_	O	_	_	O	_	_	_
 of	O	_	O	_	_	O	_	_	_
 Ἀθηνᾷ	O	_	O	_	_	O	_	_	_
-Σάλπιγξ. See	O	_	O	_	_	O	_	_	_
+Σάλπιγξ	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	_
+ See	O	_	O	_	_	O	_	_	_
 Appendix	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
 As	O	_	O	_	_	O	_	_	_
@@ -284,7 +307,9 @@ has	O	_	O	_	_	O	_	_	_
 τῆς	O	_	O	_	_	O	_	_	_
 κώδωνος	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-bel).	B-pers	_	B-pers.editor	_	_	O	NIL	_	EndOfSentence|Partial-0:3
+bel	B-pers	_	B-pers.editor	_	_	O	NIL	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	EndOfSentence
 In	O	_	O	_	_	O	_	_	_
 Ar	B-pers	_	B-pers.author	_	_	O	Q43353	_	InPrimaryReference|NoSpaceAfter
 .	I-pers	_	I-pers.author	_	_	O	Q43353	_	InPrimaryReference
@@ -307,12 +332,14 @@ hound	O	_	O	_	_	O	_	_	NoSpaceAfter
 But	O	_	O	_	_	O	_	_	_
 κώδων	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-bel)	B-pers	_	B-pers.editor	_	_	O	NIL	_	Partial-0:3
+bel	B-pers	_	B-pers.editor	_	_	O	NIL	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	_
 is	O	_	O	_	_	O	_	_	_
 masc	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 with	O	_	O	_	_	O	_	_	_
-Thuc.	B-pers	_	B-pers.author	_	_	O	Q41683	_	NoSpaceAfter
+Thuc	B-pers	_	B-pers.author	_	_	O	Q41683	_	NoSpaceAfter
+.	I-pers	_	I-pers.author	_	_	O	Q41683	_	NoSpaceAfter
 ,	I-pers	_	I-pers.author	_	_	O	Q41683	_	_
 Strabo	B-pers	_	B-pers.author	_	_	O	Q45936	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
@@ -342,13 +369,18 @@ I	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
 ἐπέγνως	O	_	O	_	_	O	_	_	_
 δ	O	_	O	_	_	O	_	_	NoSpaceAfter
 ’	O	_	O	_	_	O	_	_	_
-ἂν..οὐδένα	O	_	O	_	_	O	_	_	_
+ἂν	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	NoSpaceAfter
+οὐδένα	O	_	O	_	_	O	_	_	_
 οὔτε	O	_	O	_	_	O	_	_	_
 ὀργιζόμενον	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
 2	O	_	O	_	_	O	_	_	_
-2S, Eea2	O	_	O	_	_	O	_	_	_
+2S	O	_	O	_	_	O	_	_	NoSpaceAfter
+,	O	_	O	_	_	O	_	_	_
+ Eea2	O	_	O	_	_	O	_	_	_
 :	O	_	O	_	_	O	_	_	NoSpaceAfter
 4	O	_	O	_	_	O	_	_	_
 1296	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
@@ -382,7 +414,8 @@ Ant	B-work	_	B-work.primlit	_	_	O	Q241077	_	InPrimaryReference|NoSpaceAfter
 -	O	_	O	_	_	O	_	_	EndOfSentence
 19	O	_	O	_	_	O	_	_	_
 βόσιν	O	_	O	_	_	O	_	_	_
-κυκλοῶντ’	O	_	O	_	_	O	_	_	NoSpaceAfter
+κυκλοῶντ	O	_	O	_	_	O	_	_	NoSpaceAfter
+’	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 moving	O	_	O	_	_	O	_	_	_
 round	O	_	O	_	_	O	_	_	_
@@ -440,7 +473,9 @@ to	O	_	O	_	_	O	_	_	_
 and	O	_	O	_	_	O	_	_	_
 fro	O	_	O	_	_	O	_	_	_
 in	O	_	O	_	_	O	_	_	_
-meditation’)	O	_	O	_	_	O	_	_	NoSpaceAfter
+meditation	O	_	O	_	_	O	_	_	NoSpaceAfter
+’	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 ‖	O	_	O	_	_	O	_	_	_
 διπλῆς	O	_	O	_	_	O	_	_	_
@@ -458,6 +493,8 @@ Il	B-work	_	B-work.primlit	_	_	O	Q8275	_	InPrimaryReference|NoSpaceAfter
 .	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference
 219	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference
 Αἴας	O	_	O	_	_	O	_	_	_
+δ	O	_	O	_	_	O	_	_	NoSpaceAfter
+’	O	_	O	_	_	O	_	_	NoSpaceAfter
 δ’ἐγγύθεν	O	_	O	_	_	O	_	_	NoSpaceAfter
 ἦλθε	O	_	O	_	_	O	_	_	_
 φέρων	O	_	O	_	_	O	_	_	_
@@ -465,11 +502,13 @@ Il	B-work	_	B-work.primlit	_	_	O	Q8275	_	InPrimaryReference|NoSpaceAfter
 ἠύτε	O	_	O	_	_	O	_	_	_
 πύργον	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
-‖	O	_	O	_	_	O	_	_	NoSpaceAfter
-‖χάλκέον,	O	_	O	_	_	O	_	_	_
+‖χάλκέον,	O	_	O	_	_	O	_	_	NoSpaceAfter
 ἐπταβόειον	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	NoSpaceAfter
--.ε.	O	_	O	_	_	O	_	_	NoSpaceAfter
+-	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	NoSpaceAfter
+ε	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 made	O	_	O	_	_	O	_	_	_
 by	O	_	O	_	_	O	_	_	_
@@ -478,7 +517,9 @@ together	O	_	O	_	_	O	_	_	_
 seven	O	_	O	_	_	O	_	_	_
 layers	O	_	O	_	_	O	_	_	_
 of	O	_	O	_	_	O	_	_	_
-ox-hide	O	_	O	_	_	O	_	_	NoSpaceAfter
+ox	O	_	O	_	_	O	_	_	NoSpaceAfter
+-	O	_	O	_	_	O	_	_	NoSpaceAfter
+hide	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 and	O	_	O	_	_	O	_	_	_
 then	O	_	O	_	_	O	_	_	_
@@ -511,7 +552,11 @@ f	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 ἀσκόπου	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
-inconceivable, -of	O	_	O	_	_	O	_	_	_
+inconceivable	O	_	O	_	_	O	_	_	NoSpaceAfter
+,	O	_	O	_	_	O	_	_	_
+ 	O	_	O	_	_	O	_	_	NoSpaceAfter
+-	O	_	O	_	_	O	_	_	NoSpaceAfter
+of	O	_	O	_	_	O	_	_	_
 unimaginable	O	_	O	_	_	O	_	_	_
 horror	O	_	O	_	_	O	_	_	NoSpaceAfter
 :	O	_	O	_	_	O	_	_	_
@@ -521,22 +566,25 @@ El	B-work	_	B-work.primlit	_	_	O	Q733444	_	InPrimaryReference|NoSpaceAfter
 .	I-work	_	I-work.primlit	_	_	O	Q733444	_	InPrimaryReference
 864	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference
 ἄσκοπος	O	_	O	_	_	O	_	_	NoSpaceAfter
-λώβα. ἔκει	O	_	O	_	_	O	_	_	_
- 	O	_	O	_	_	O	_	_	NoSpaceAfter
-περάνας	O	_	O	_	_	O	_	_	_
- 	O	_	O	_	_	O	_	_	NoSpaceAfter
-sa	O	_	O	_	_	O	_	_	_
+λώβα	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	_
+ ἔκει	O	_	O	_	_	O	_	_	_
+ περάνας sa	O	_	O	_	_	O	_	_	_
 perfect	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-O.	B-work	_	B-work.primlit	_	_	O	Q148643	_	InPrimaryReference
+O	B-work	_	B-work.primlit	_	_	O	Q148643	_	InPrimaryReference|NoSpaceAfter
+.	I-work	_	I-work.primlit	_	_	O	Q148643	_	InPrimaryReference
 T	I-work	_	I-work.primlit	_	_	O	Q148643	_	InPrimaryReference|NoSpaceAfter
 .	I-work	_	I-work.primlit	_	_	O	Q148643	_	InPrimaryReference
 577	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference
-n.)	O	_	O	_	_	O	_	_	NoSpaceAfter
+n	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
 :	O	_	O	_	_	O	_	_	_
 the	O	_	O	_	_	O	_	_	_
 double	O	_	O	_	_	O	_	_	_
-acc.	O	_	O	_	_	O	_	_	NoSpaceAfter
+acc	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 as	O	_	O	_	_	O	_	_	_
 with	O	_	O	_	_	O	_	_	EndOfSentence

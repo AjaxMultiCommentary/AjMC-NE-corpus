@@ -9,8 +9,8 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # ajmc:version = v0.2
 695	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-‘	O	_	O	_	_	O	_	_	NoSpaceAfter
-Apti,	O	_	O	_	_	O	_	_	_
+‘Apti	O	_	O	_	_	O	_	_	NoSpaceAfter
+,	O	_	O	_	_	O	_	_	_
 chez	O	_	O	_	_	O	_	_	_
 Sophocle	B-pers	_	B-pers.author	_	_	O	Q11950683	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
@@ -76,10 +76,13 @@ lui	O	_	O	_	_	O	_	_	_
 pardonner	O	_	O	_	_	O	_	_	_
 cet	O	_	O	_	_	O	_	_	_
 anachronisme.	O	_	O	_	_	O	_	_	NoSpaceAfter
-602-604	O	_	O	_	_	O	_	_	NoSpaceAfter
+602	O	_	O	_	_	O	_	_	NoSpaceAfter
+-	O	_	O	_	_	O	_	_	NoSpaceAfter
+604	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-"	O	_	O	_	_	O	_	_	NoSpaceAfter
-124%(,	O	_	O	_	_	O	_	_	_
+"124%	O	_	O	_	_	O	_	_	NoSpaceAfter
+(	O	_	O	_	_	O	_	_	NoSpaceAfter
+,	O	_	O	_	_	O	_	_	_
 comme	O	_	O	_	_	O	_	_	_
 dv	O	_	O	_	_	O	_	_	_
 rÿ	O	_	O	_	_	O	_	_	_
@@ -91,7 +94,8 @@ y7	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 Ζι	B-work	_	B-work.primlit	_	_	O	Q733444	_	InPrimaryReference|NoSpaceAfter
 .	I-work	_	I-work.primlit	_	_	O	Q733444	_	InPrimaryReference
-414.	B-scope	_	B-scope	_	_	O	_	_	EndOfSentence|InPrimaryReference|NoSpaceAfter|Partial-0:3
+414	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
+.	O	_	O	_	_	O	_	_	EndOfSentence|NoSpaceAfter
 -	O	_	O	_	_	O	_	_	NoSpaceAfter
 -	O	_	O	_	_	O	_	_	_
 Χειμῶνι	O	_	O	_	_	O	_	_	_
@@ -106,8 +110,7 @@ en	O	_	O	_	_	O	_	_	_
 Cf	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 Ἐστρατόωντο	O	_	O	_	_	O	_	_	_
- 	O	_	O	_	_	O	_	_	NoSpaceAfter
-χείματά	O	_	O	_	_	O	_	_	_
+ χείματά	O	_	O	_	_	O	_	_	_
 τε	O	_	O	_	_	O	_	_	_
 ποίας	O	_	O	_	_	O	_	_	_
 τε	O	_	O	_	_	O	_	_	_
@@ -115,9 +118,15 @@ Cf	O	_	O	_	_	O	_	_	NoSpaceAfter
 καὶ	O	_	O	_	_	O	_	_	_
 εἴχοσι	O	_	O	_	_	O	_	_	_
 πάσας	O	_	O	_	_	O	_	_	_
-(	O	_	O	_	_	O	_	_	EndOfSentence|NoSpaceAfter
+(	O	_	O	_	_	O	_	_	NoSpaceAfter
+Β	B-pers	_	B-pers.author	_	_	O	Q2319055	_	NoSpaceAfter
+}	I-pers	_	I-pers.author	_	_	O	Q2319055	_	NoSpaceAfter
+ιδηυ5	I-pers	_	I-pers.author	_	_	O	Q2319055	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	EndOfSentence|NoSpaceAfter
 “	O	_	O	_	_	O	_	_	NoSpaceAfter
----	O	_	O	_	_	O	_	_	_
+-	O	_	O	_	_	O	_	_	NoSpaceAfter
+-	O	_	O	_	_	O	_	_	NoSpaceAfter
+-	O	_	O	_	_	O	_	_	_
 ηνῶν	O	_	O	_	_	O	_	_	_
 ἀνήριθμος	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
@@ -132,8 +141,12 @@ Trach	B-work	_	B-work.primlit	_	_	O	Q945342	_	InPrimaryReference|NoSpaceAfter
 247	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 [	O	_	O	_	_	O	_	_	NoSpaceAfter
-Schneidewin.]	B-pers	_	B-pers.other	_	_	O	Q70043	_	EndOfSentence|Partial-0:11
-606-607	O	_	O	_	_	O	_	_	NoSpaceAfter
+Schneidewin	B-pers	_	B-pers.other	_	_	O	Q70043	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	NoSpaceAfter
+]	O	_	O	_	_	O	_	_	EndOfSentence
+606	O	_	O	_	_	O	_	_	NoSpaceAfter
+-	O	_	O	_	_	O	_	_	NoSpaceAfter
+607	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 Καχὰν	O	_	O	_	_	O	_	_	_
 .	O	_	O	_	_	O	_	_	NoSpaceAfter
@@ -155,7 +168,8 @@ jarriverai	O	_	O	_	_	O	_	_	_
 un	O	_	O	_	_	O	_	_	_
 jour	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-Eru,	O	_	O	_	_	O	_	_	_
+Eru	O	_	O	_	_	O	_	_	NoSpaceAfter
+,	O	_	O	_	_	O	_	_	_
 οἵ	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 Électre	B-work	_	B-work.primlit	_	_	O	Q733444	_	InPrimaryReference|NoSpaceAfter
@@ -202,8 +216,11 @@ page	B-scope	_	B-scope	_	_	O	_	_	InSecondaryReference
 610	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 ”	O	_	O	_	_	O	_	_	NoSpaceAfter
-Epeôpos,	O	_	O	_	_	O	_	_	_
-l’achlète	O	_	O	_	_	O	_	_	_
+Epeôpos	O	_	O	_	_	O	_	_	NoSpaceAfter
+,	O	_	O	_	_	O	_	_	_
+l	O	_	O	_	_	O	_	_	NoSpaceAfter
+’	O	_	O	_	_	O	_	_	NoSpaceAfter
+achlète	O	_	O	_	_	O	_	_	_
 de	O	_	O	_	_	O	_	_	_
 rés	O	_	O	_	_	O	_	_	_
 rve	O	_	O	_	_	O	_	_	_

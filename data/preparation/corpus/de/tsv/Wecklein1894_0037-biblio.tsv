@@ -14,8 +14,7 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # ajmc:page = 37
 # ajmc:author = Wecklein, Nikolaus
 εἴσω	O	_	_	_	_	_	_	_	_
-δ	O	_	_	_	_	_	_	_	NoSpaceAfter
-᾽	O	_	_	_	_	_	_	_	_
+δ᾽	O	_	_	_	_	_	_	_	_
 ἀποστείχουσα	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	EndOfSentence
 808	O	_	_	_	_	_	_	_	NoSpaceAfter
@@ -26,7 +25,7 @@ wie	O	_	_	_	_	_	_	_	_
 ;	O	_	_	_	_	_	_	_	_
 ϑωύσσειν	O	_	_	_	_	_	_	_	_
 bezeichnet	O	_	_	_	_	_	_	_	_
-vorzugsweiſe	O	_	_	_	_	_	_	_	NoSpaceAfter
+vorzugsweiſe	O	_	_	_	_	_	_	_	_
 den	O	_	_	_	_	_	_	_	_
 lauten	O	_	_	_	_	_	_	_	_
 Ruf	O	_	_	_	_	_	_	_	_
@@ -39,7 +38,8 @@ Eur	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 .	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
 Hipp	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 .	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
-219)	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|Partial-0:3
+219	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+)	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	EndOfSentence
 309	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
@@ -58,7 +58,8 @@ Vgl	O	_	_	_	_	_	_	_	NoSpaceAfter
 Hom	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 .	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
 S	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
-437.	I-primary-full	_	_	_	_	_	_	_	EndOfSentence|InPrimaryReference|NoSpaceAfter|Partial--2:3
+437	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+.	O	_	_	_	_	_	_	_	EndOfSentence|NoSpaceAfter
 -	O	_	_	_	_	_	_	_	NoSpaceAfter
 -	O	_	_	_	_	_	_	_	_
 ἀονείου	O	_	_	_	_	_	_	_	_
@@ -143,7 +144,9 @@ Form	O	_	_	_	_	_	_	_	_
 φανοίην	O	_	_	_	_	_	_	_	_
 ſ	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
-Kr.1	B-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|Partial-0:3
+Kr	B-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|NoSpaceAfter
+.	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|NoSpaceAfter
+1	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference
 30	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|NoSpaceAfter
 ,	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference
 9	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|NoSpaceAfter
@@ -156,7 +159,7 @@ Optat	O	_	_	_	_	_	_	_	NoSpaceAfter
 Fut	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 in	O	_	_	_	_	_	_	_	_
-obliquer	O	_	_	_	_	_	_	_	NoSpaceAfter
+obliquer	O	_	_	_	_	_	_	_	_
 Rede	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	EndOfSentence
 314	O	_	_	_	_	_	_	_	NoSpaceAfter
@@ -176,8 +179,7 @@ Trach	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 .	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
 3759	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
 ποῦ	O	_	_	_	_	_	_	_	_
-ποτ	O	_	_	_	_	_	_	_	NoSpaceAfter
-᾽	O	_	_	_	_	_	_	_	_
+ποτ᾽	O	_	_	_	_	_	_	_	_
 eini	O	_	_	_	_	_	_	_	_
 πράγματος	O	_	_	_	_	_	_	_	NoSpaceAfter
 ;	O	_	_	_	_	_	_	_	_
@@ -199,8 +201,10 @@ statu	O	_	_	_	_	_	_	_	_
 8uo	O	_	_	_	_	_	_	_	_
 dubitantem	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-M.	O	_	_	_	_	_	_	_	_
-Seyffert)	O	_	_	_	_	_	_	_	NoSpaceAfter|Partial--3:8
+M	O	_	_	_	_	_	_	_	NoSpaceAfter
+.	O	_	_	_	_	_	_	_	_
+Seyffert	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	EndOfSentence
 315	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
@@ -227,7 +231,9 @@ veniam	O	_	_	_	_	_	_	_	_
 videtur	O	_	_	_	_	_	_	_	_
 captare	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-Hermann).	O	_	_	_	_	_	_	_	EndOfSentence|Partial-0:7
+Hermann	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	NoSpaceAfter
+.	O	_	_	_	_	_	_	_	EndOfSentence
 317f	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 Der	O	_	_	_	_	_	_	_	_
@@ -248,7 +254,9 @@ Schmerz	O	_	_	_	_	_	_	_	_
 ἀεί	O	_	_	_	_	_	_	_	_
 ποτε	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-„immerdar“	O	_	_	_	_	_	_	_	_
+„	O	_	_	_	_	_	_	_	NoSpaceAfter
+immerdar	O	_	_	_	_	_	_	_	NoSpaceAfter
+“	O	_	_	_	_	_	_	_	_
 wie	O	_	_	_	_	_	_	_	_
 Ant	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 .	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
@@ -256,7 +264,8 @@ Ant	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 )	O	_	_	_	_	_	_	_	_
 ἐξηγεῖτο	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-declarabat)	O	_	_	_	_	_	_	_	_
+declarabat	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	_
 ποὸς	O	_	_	_	_	_	_	_	_
 κακοῦ	O	_	_	_	_	_	_	_	_
 τε	O	_	_	_	_	_	_	_	_
@@ -266,7 +275,8 @@ declarabat)	O	_	_	_	_	_	_	_	_
 καταπεπτωκότος	O	_	_	_	_	_	_	_	_
 τὴν	O	_	_	_	_	_	_	_	_
 φυχήν	O	_	_	_	_	_	_	_	_
-Schol.	O	_	_	_	_	_	_	_	NoSpaceAfter
+Schol	O	_	_	_	_	_	_	_	NoSpaceAfter
+.	O	_	_	_	_	_	_	_	NoSpaceAfter
 ;	O	_	_	_	_	_	_	_	_
 der	O	_	_	_	_	_	_	_	_
 Begriff	O	_	_	_	_	_	_	_	_
@@ -300,10 +310,11 @@ entwickelt	O	_	_	_	_	_	_	_	_
 zu	O	_	_	_	_	_	_	_	_
 haben	O	_	_	_	_	_	_	_	NoSpaceAfter
 )	O	_	_	_	_	_	_	_	_
-«	O	_	_	_	_	_	_	_	NoSpaceAfter
-»ö0o65	O	_	_	_	_	_	_	_	_
+«»ö0o65	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-εἶναι),	O	_	_	_	_	_	_	_	_
+εἶναι	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	NoSpaceAfter
+,	O	_	_	_	_	_	_	_	_
 τοιούσδε	O	_	_	_	_	_	_	_	_
 ydous	O	_	_	_	_	_	_	_	_
 ἔχειν	O	_	_	_	_	_	_	_	_
@@ -320,14 +331,17 @@ wie	O	_	_	_	_	_	_	_	_
 Hom	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 .	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
 X	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
-495).	I-primary-full	_	_	_	_	_	_	_	EndOfSentence|InPrimaryReference|NoSpaceAfter|Partial--2:3
+495	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+)	O	_	_	_	_	_	_	_	NoSpaceAfter
+.	O	_	_	_	_	_	_	_	EndOfSentence|NoSpaceAfter
 —	O	_	_	_	_	_	_	_	_
 πρὸς	O	_	_	_	_	_	_	_	_
 in	O	_	_	_	_	_	_	_	_
 dieſem	O	_	_	_	_	_	_	_	NoSpaceAfter
 Sinne	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-gemäß)	O	_	_	_	_	_	_	_	_
+gemäß	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	_
 auh	O	_	_	_	_	_	_	_	_
 581	B-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_

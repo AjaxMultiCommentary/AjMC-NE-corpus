@@ -15,8 +15,7 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # ajmc:author = Wecklein, Nikolaus
 πῶς	O	_	O	_	_	O	_	_	_
 ἂν	O	_	O	_	_	O	_	_	_
-ἔπειτ	O	_	O	_	_	O	_	_	NoSpaceAfter
-᾽	O	_	O	_	_	O	_	_	_
+ἔπειτ᾽	O	_	O	_	_	O	_	_	_
 ἀπὸ	O	_	O	_	_	O	_	_	_
 σεῖο	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
@@ -25,7 +24,9 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 ,	O	_	O	_	_	O	_	_	_
 αὖϑι	O	_	O	_	_	O	_	_	_
 λιποίμην	O	_	O	_	_	O	_	_	_
-0:05	O	_	O	_	_	O	_	_	NoSpaceAfter
+0	O	_	O	_	_	O	_	_	NoSpaceAfter
+:	O	_	O	_	_	O	_	_	NoSpaceAfter
+05	O	_	O	_	_	O	_	_	NoSpaceAfter
 ;	O	_	O	_	_	O	_	_	_
 Ebenſo	O	_	O	_	_	O	_	_	_
 ſteht	O	_	O	_	_	O	_	_	_
@@ -35,7 +36,9 @@ im	O	_	O	_	_	O	_	_	_
 Sinne	O	_	O	_	_	O	_	_	_
 von	O	_	O	_	_	O	_	_	_
 „	O	_	O	_	_	O	_	_	NoSpaceAfter
-verlaſſen“.	O	_	O	_	_	O	_	_	EndOfSentence
+verlaſſen	O	_	O	_	_	O	_	_	NoSpaceAfter
+“	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	EndOfSentence
 463	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 πῶς	O	_	O	_	_	O	_	_	_
@@ -91,7 +94,8 @@ auh	O	_	O	_	_	O	_	_	_
 μέγαν	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 nicht	O	_	O	_	_	O	_	_	_
-μεγάλης)	O	_	O	_	_	O	_	_	NoSpaceAfter
+μεγάλης	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
 466	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
@@ -135,8 +139,7 @@ letztes	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
 471	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-ἀφ	O	_	O	_	_	O	_	_	NoSpaceAfter
-᾽	O	_	O	_	_	O	_	_	_
+ἀφ᾽	O	_	O	_	_	O	_	_	_
 ἧς	O	_	O	_	_	O	_	_	_
 δηλώσω	O	_	O	_	_	O	_	_	NoSpaceAfter
 :	O	_	O	_	_	O	_	_	_
@@ -232,10 +235,8 @@ in	O	_	O	_	_	O	_	_	_
 εὐτυχέστερος	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 τὰ	O	_	O	_	_	O	_	_	_
-δ	O	_	O	_	_	O	_	_	NoSpaceAfter
-᾽	O	_	O	_	_	O	_	_	_
-ἄλλ	O	_	O	_	_	O	_	_	NoSpaceAfter
-᾽	O	_	O	_	_	O	_	_	_
+δ᾽	O	_	O	_	_	O	_	_	_
+ἄλλ᾽	O	_	O	_	_	O	_	_	_
 ὅμοιος	O	_	O	_	_	O	_	_	_
 ausgedrückt	O	_	O	_	_	O	_	_	_
 iſt	O	_	O	_	_	O	_	_	NoSpaceAfter
@@ -246,7 +247,7 @@ iſt	O	_	O	_	_	O	_	_	NoSpaceAfter
 :	O	_	O	_	_	O	_	_	_
 in	O	_	O	_	_	O	_	_	_
 dem	O	_	O	_	_	O	_	_	_
-Vorausgehenden	O	_	O	_	_	O	_	_	NoSpaceAfter
+Vorausgehenden	O	_	O	_	_	O	_	_	_
 liegt	O	_	O	_	_	O	_	_	_
 der	O	_	O	_	_	O	_	_	_
 Gedanke	O	_	O	_	_	O	_	_	NoSpaceAfter
@@ -254,7 +255,8 @@ Gedanke	O	_	O	_	_	O	_	_	NoSpaceAfter
 „	O	_	O	_	_	O	_	_	NoSpaceAfter
 ich	O	_	O	_	_	O	_	_	_
 will	O	_	O	_	_	O	_	_	_
-ſterben“	O	_	O	_	_	O	_	_	NoSpaceAfter
+ſterben	O	_	O	_	_	O	_	_	NoSpaceAfter
+“	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
 —	O	_	O	_	_	O	_	_	_
 τοῦ	O	_	O	_	_	O	_	_	_
@@ -292,8 +294,7 @@ wie	O	_	O	_	_	O	_	_	_
 οἶνος	O	_	O	_	_	O	_	_	_
 ὁ	O	_	O	_	_	O	_	_	_
 πολύς	O	_	O	_	_	O	_	_	_
-ἐστ	O	_	O	_	_	O	_	_	NoSpaceAfter
-᾽	O	_	O	_	_	O	_	_	_
+ἐστ᾽	O	_	O	_	_	O	_	_	_
 ἀεί	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 ὀχληοὸν	O	_	O	_	_	O	_	_	_
@@ -323,7 +324,9 @@ commutantur	O	_	O	_	_	O	_	_	_
 cum	O	_	O	_	_	O	_	_	_
 bonis	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-Hermann).	B-pers	_	B-pers.author	_	_	O	Q77616	_	EndOfSentence|Partial-0:7
+Hermann	B-pers	_	B-pers.author	_	_	O	Q77616	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	EndOfSentence
 Der	O	_	O	_	_	O	_	_	_
 Dativ	O	_	O	_	_	O	_	_	_
 wie	O	_	O	_	_	O	_	_	_
@@ -367,7 +370,8 @@ den	O	_	O	_	_	O	_	_	_
 Stein	O	_	O	_	_	O	_	_	_
 hinſetzen	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
-zurückſetzen)	O	_	O	_	_	O	_	_	NoSpaceAfter
+zurückſetzen	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
 :	O	_	O	_	_	O	_	_	_
 „	O	_	O	_	_	O	_	_	NoSpaceAfter
 welche	O	_	O	_	_	O	_	_	_

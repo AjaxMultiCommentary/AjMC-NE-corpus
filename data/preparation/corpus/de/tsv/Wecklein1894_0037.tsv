@@ -14,8 +14,7 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # ajmc:page = 37
 # ajmc:author = Wecklein, Nikolaus
 εἴσω	O	_	O	_	_	O	_	_	_
-δ	O	_	O	_	_	O	_	_	NoSpaceAfter
-᾽	O	_	O	_	_	O	_	_	_
+δ᾽	O	_	O	_	_	O	_	_	_
 ἀποστείχουσα	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
 808	O	_	O	_	_	O	_	_	NoSpaceAfter
@@ -26,7 +25,7 @@ wie	O	_	O	_	_	O	_	_	_
 ;	O	_	O	_	_	O	_	_	_
 ϑωύσσειν	O	_	O	_	_	O	_	_	_
 bezeichnet	O	_	O	_	_	O	_	_	_
-vorzugsweiſe	O	_	O	_	_	O	_	_	NoSpaceAfter
+vorzugsweiſe	O	_	O	_	_	O	_	_	_
 den	O	_	O	_	_	O	_	_	_
 lauten	O	_	O	_	_	O	_	_	_
 Ruf	O	_	O	_	_	O	_	_	_
@@ -39,7 +38,8 @@ Eur	B-pers	_	B-pers.author	_	_	O	Q48305	_	InPrimaryReference|NoSpaceAfter
 .	I-pers	_	I-pers.author	_	_	O	Q48305	_	InPrimaryReference
 Hipp	B-work	_	B-work.primlit	_	_	O	Q375786	_	InPrimaryReference|NoSpaceAfter
 .	I-work	_	I-work.primlit	_	_	O	Q375786	_	InPrimaryReference
-219)	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|Partial-0:3
+219	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
 309	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
@@ -58,7 +58,8 @@ Vgl	O	_	O	_	_	O	_	_	NoSpaceAfter
 Hom	B-pers	_	B-pers.author	_	_	O	Q6691	_	InPrimaryReference|NoSpaceAfter
 .	I-pers	_	I-pers.author	_	_	O	Q6691	_	InPrimaryReference
 S	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference
-437.	I-scope	_	I-scope	_	_	O	_	_	EndOfSentence|InPrimaryReference|NoSpaceAfter|Partial--2:3
+437	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
+.	O	_	O	_	_	O	_	_	EndOfSentence|NoSpaceAfter
 -	O	_	O	_	_	O	_	_	NoSpaceAfter
 -	O	_	O	_	_	O	_	_	_
 ἀονείου	O	_	O	_	_	O	_	_	_
@@ -143,7 +144,9 @@ Form	O	_	O	_	_	O	_	_	_
 φανοίην	O	_	O	_	_	O	_	_	_
 ſ	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-Kr.1	B-pers	_	B-pers.author	_	_	B-scope	_	_	InSecondaryReference|Partial-0:3
+Kr	B-pers	_	B-pers.author	_	_	O	_	_	InSecondaryReference|NoSpaceAfter
+.	I-pers	_	I-pers.author	_	_	O	_	_	InSecondaryReference|NoSpaceAfter
+1	B-scope	_	B-scope	_	_	O	_	_	InSecondaryReference
 30	I-scope	_	I-scope	_	_	O	_	_	InSecondaryReference|NoSpaceAfter
 ,	I-scope	_	I-scope	_	_	O	_	_	InSecondaryReference
 9	I-scope	_	I-scope	_	_	O	_	_	InSecondaryReference|NoSpaceAfter
@@ -156,7 +159,7 @@ Optat	O	_	O	_	_	O	_	_	NoSpaceAfter
 Fut	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 in	O	_	O	_	_	O	_	_	_
-obliquer	O	_	O	_	_	O	_	_	NoSpaceAfter
+obliquer	O	_	O	_	_	O	_	_	_
 Rede	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
 314	O	_	O	_	_	O	_	_	NoSpaceAfter
@@ -176,8 +179,7 @@ Trach	B-work	_	B-work.primlit	_	_	O	Q945342	_	InPrimaryReference|NoSpaceAfter
 .	I-work	_	I-work.primlit	_	_	O	Q945342	_	InPrimaryReference
 3759	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference
 ποῦ	O	_	O	_	_	O	_	_	_
-ποτ	O	_	O	_	_	O	_	_	NoSpaceAfter
-᾽	O	_	O	_	_	O	_	_	_
+ποτ᾽	O	_	O	_	_	O	_	_	_
 eini	O	_	O	_	_	O	_	_	_
 πράγματος	O	_	O	_	_	O	_	_	NoSpaceAfter
 ;	O	_	O	_	_	O	_	_	_
@@ -199,8 +201,10 @@ statu	O	_	O	_	_	O	_	_	_
 8uo	O	_	O	_	_	O	_	_	_
 dubitantem	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-M.	B-pers	_	B-pers.author	_	_	O	Q27596300	_	_
-Seyffert)	I-pers	_	I-pers.author	_	_	O	Q27596300	_	NoSpaceAfter|Partial--3:8
+M	B-pers	_	B-pers.author	_	_	O	Q27596300	_	NoSpaceAfter
+.	I-pers	_	I-pers.author	_	_	O	Q27596300	_	_
+Seyffert	I-pers	_	I-pers.author	_	_	O	Q27596300	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
 315	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
@@ -227,7 +231,9 @@ veniam	O	_	O	_	_	O	_	_	_
 videtur	O	_	O	_	_	O	_	_	_
 captare	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-Hermann).	B-pers	_	B-pers.author	_	_	O	Q77616	_	EndOfSentence|Partial-0:7
+Hermann	B-pers	_	B-pers.author	_	_	O	Q77616	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	EndOfSentence
 317f	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 Der	O	_	O	_	_	O	_	_	_
@@ -248,7 +254,9 @@ Schmerz	O	_	O	_	_	O	_	_	_
 ἀεί	O	_	O	_	_	O	_	_	_
 ποτε	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-„immerdar“	O	_	O	_	_	O	_	_	_
+„	O	_	O	_	_	O	_	_	NoSpaceAfter
+immerdar	O	_	O	_	_	O	_	_	NoSpaceAfter
+“	O	_	O	_	_	O	_	_	_
 wie	O	_	O	_	_	O	_	_	_
 Ant	B-work	_	B-work.primlit	_	_	O	Q241077	_	InPrimaryReference|NoSpaceAfter
 .	I-work	_	I-work.primlit	_	_	O	Q241077	_	InPrimaryReference
@@ -256,7 +264,8 @@ Ant	B-work	_	B-work.primlit	_	_	O	Q241077	_	InPrimaryReference|NoSpaceAfter
 )	O	_	O	_	_	O	_	_	_
 ἐξηγεῖτο	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-declarabat)	O	_	O	_	_	O	_	_	_
+declarabat	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	_
 ποὸς	O	_	O	_	_	O	_	_	_
 κακοῦ	O	_	O	_	_	O	_	_	_
 τε	O	_	O	_	_	O	_	_	_
@@ -266,7 +275,8 @@ declarabat)	O	_	O	_	_	O	_	_	_
 καταπεπτωκότος	O	_	O	_	_	O	_	_	_
 τὴν	O	_	O	_	_	O	_	_	_
 φυχήν	O	_	O	_	_	O	_	_	_
-Schol.	O	_	O	_	_	O	_	_	NoSpaceAfter
+Schol	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	NoSpaceAfter
 ;	O	_	O	_	_	O	_	_	_
 der	O	_	O	_	_	O	_	_	_
 Begriff	O	_	O	_	_	O	_	_	_
@@ -300,10 +310,11 @@ entwickelt	O	_	O	_	_	O	_	_	_
 zu	O	_	O	_	_	O	_	_	_
 haben	O	_	O	_	_	O	_	_	NoSpaceAfter
 )	O	_	O	_	_	O	_	_	_
-«	O	_	O	_	_	O	_	_	NoSpaceAfter
-»ö0o65	O	_	O	_	_	O	_	_	_
+«»ö0o65	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-εἶναι),	O	_	O	_	_	O	_	_	_
+εἶναι	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
+,	O	_	O	_	_	O	_	_	_
 τοιούσδε	O	_	O	_	_	O	_	_	_
 ydous	O	_	O	_	_	O	_	_	_
 ἔχειν	O	_	O	_	_	O	_	_	_
@@ -320,14 +331,17 @@ wie	O	_	O	_	_	O	_	_	_
 Hom	B-pers	_	B-pers.author	_	_	O	Q6691	_	InPrimaryReference|NoSpaceAfter
 .	I-pers	_	I-pers.author	_	_	O	Q6691	_	InPrimaryReference
 X	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference
-495).	I-scope	_	I-scope	_	_	O	_	_	EndOfSentence|InPrimaryReference|NoSpaceAfter|Partial--2:3
+495	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	EndOfSentence|NoSpaceAfter
 —	O	_	O	_	_	O	_	_	_
 πρὸς	O	_	O	_	_	O	_	_	_
 in	O	_	O	_	_	O	_	_	_
 dieſem	O	_	O	_	_	O	_	_	NoSpaceAfter
 Sinne	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-gemäß)	O	_	O	_	_	O	_	_	_
+gemäß	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	_
 auh	O	_	O	_	_	O	_	_	_
 581	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_

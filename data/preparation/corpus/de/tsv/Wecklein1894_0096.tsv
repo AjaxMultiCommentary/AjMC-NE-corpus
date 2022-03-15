@@ -14,7 +14,8 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # ajmc:page = 96
 # ajmc:author = Wecklein, Nikolaus
 hin	O	_	O	_	_	O	_	_	_
-fahrend.	O	_	O	_	_	O	_	_	NoSpaceAfter
+fahrend	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	NoSpaceAfter
 “	O	_	O	_	_	O	_	_	EndOfSentence
 1221f	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
@@ -114,7 +115,8 @@ denkt	O	_	O	_	_	O	_	_	NoSpaceAfter
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
 Aſſimilation	O	_	O	_	_	O	_	_	_
 des	O	_	O	_	_	O	_	_	_
-Modus)	O	_	O	_	_	O	_	_	NoSpaceAfter
+Modus	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
 :	O	_	O	_	_	O	_	_	_
 Kr	B-pers	_	B-pers.author	_	_	O	_	_	InSecondaryReference|NoSpaceAfter
 .	I-pers	_	I-pers.author	_	_	O	_	_	InSecondaryReference
@@ -216,8 +218,7 @@ von	O	_	O	_	_	O	_	_	_
 .	O	_	O	_	_	O	_	_	EndOfSentence
 1227	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-ὧδ	O	_	O	_	_	O	_	_	NoSpaceAfter
-᾽	O	_	O	_	_	O	_	_	_
+ὧδ᾽	O	_	O	_	_	O	_	_	_
 ἀνοιμωκτί	O	_	O	_	_	O	_	_	_
 D	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
@@ -265,7 +266,9 @@ hiscere	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 δακτύλων	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-Zehen).	O	_	O	_	_	O	_	_	EndOfSentence
+Zehen	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	EndOfSentence
 1231	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 ὅτε	O	_	O	_	_	O	_	_	NoSpaceAfter
@@ -284,7 +287,9 @@ El	B-work	_	B-work.primlit	_	_	O	Q733444	_	InPrimaryReference|NoSpaceAfter
 τὴν	O	_	O	_	_	O	_	_	_
 μηδέν	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-οὖσαν).	O	_	O	_	_	O	_	_	_
+οὖσαν	O	_	O	_	_	O	_	_	NoSpaceAfter
+)	O	_	O	_	_	O	_	_	NoSpaceAfter
+.	O	_	O	_	_	O	_	_	_
 Vgl	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 1275	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference

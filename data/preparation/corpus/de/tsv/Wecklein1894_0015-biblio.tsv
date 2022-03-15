@@ -13,7 +13,10 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # ajmc:publication_date = 1894
 # ajmc:page = 15
 # ajmc:author = Wecklein, Nikolaus
-1--133	O	_	_	_	_	_	_	_	_
+1	O	_	_	_	_	_	_	_	NoSpaceAfter
+-	O	_	_	_	_	_	_	_	NoSpaceAfter
+-	O	_	_	_	_	_	_	_	NoSpaceAfter
+133	O	_	_	_	_	_	_	_	_
 Prolog	O	_	_	_	_	_	_	_	NoSpaceAfter
 ,	O	_	_	_	_	_	_	_	_
 welcher	O	_	_	_	_	_	_	_	_
@@ -68,7 +71,8 @@ Größe	O	_	_	_	_	_	_	_	_
 unterſucht	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
 μετρούμενον	O	_	_	_	_	_	_	_	_
-5)	B-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|Partial-0:1
+5	B-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+)	O	_	_	_	_	_	_	_	NoSpaceAfter
 ,	O	_	_	_	_	_	_	_	_
 von	O	_	_	_	_	_	_	_	_
 Zeit	O	_	_	_	_	_	_	_	_
@@ -126,8 +130,7 @@ Form	O	_	_	_	_	_	_	_	_
 “	O	_	_	_	_	_	_	_	NoSpaceAfter
 αέοτιος	O	_	_	_	_	_	_	_	_
 und	O	_	_	_	_	_	_	_	_
-«	O	_	_	_	_	_	_	_	NoSpaceAfter
-Τάοτιος	O	_	_	_	_	_	_	_	_
+«Τάοτιος	O	_	_	_	_	_	_	_	_
 vei	O	_	_	_	_	_	_	_	_
 Sophokles	O	_	_	_	_	_	_	_	_
 und	O	_	_	_	_	_	_	_	_
@@ -137,8 +140,7 @@ Euripides	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 Odyſſeus	O	_	_	_	_	_	_	_	NoSpaceAfter
 ,	O	_	_	_	_	_	_	_	_
-τῶν	O	_	_	_	_	_	_	_	NoSpaceAfter
-»	O	_	_	_	_	_	_	_	_
+τῶν»	O	_	_	_	_	_	_	_	_
 ἀδήλων	O	_	_	_	_	_	_	_	_
 ϑηρατής	O	_	_	_	_	_	_	_	_
 wie	O	_	_	_	_	_	_	_	_
@@ -165,7 +167,8 @@ auch	O	_	_	_	_	_	_	_	_
 immer	O	_	_	_	_	_	_	_	_
 ſei	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-τινά)	O	_	_	_	_	_	_	_	_
+τινά	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	_
 wegzuraffen	O	_	_	_	_	_	_	_	NoSpaceAfter
 ,	O	_	_	_	_	_	_	_	_
 ὃ	O	_	_	_	_	_	_	_	NoSpaceAfter
@@ -269,11 +272,12 @@ plagis	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	EndOfSentence
 4	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
-¿	O	_	_	_	_	_	_	_	NoSpaceAfter
-rda	O	_	_	_	_	_	_	_	_
+¿rda	O	_	_	_	_	_	_	_	_
 Αἴαντος	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-oxnyri;)	O	_	_	_	_	_	_	_	_
+oxnyri	O	_	_	_	_	_	_	_	NoSpaceAfter
+;	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	_
 ἐσχάτην	O	_	_	_	_	_	_	_	_
 τάξιν	O	_	_	_	_	_	_	_	_
 ἔχει	O	_	_	_	_	_	_	_	_
@@ -301,7 +305,8 @@ Homer	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference
 (	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 4	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
 5	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
-ff.	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+ff	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+.	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 )	O	_	_	_	_	_	_	_	_
 wohl	O	_	_	_	_	_	_	_	_
 bekannt	O	_	_	_	_	_	_	_	_

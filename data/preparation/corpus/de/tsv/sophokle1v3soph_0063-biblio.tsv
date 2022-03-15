@@ -15,8 +15,7 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # ajmc:author = Schneidewin, Friedrich Wilhelm
 wie	O	_	_	_	_	_	_	_	_
 in	O	_	_	_	_	_	_	_	_
-«	O	_	_	_	_	_	_	_	NoSpaceAfter
-ei	O	_	_	_	_	_	_	_	_
+«ei	O	_	_	_	_	_	_	_	_
 ποτὲ	O	_	_	_	_	_	_	_	_
 320	B-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
@@ -38,7 +37,8 @@ der	O	_	_	_	_	_	_	_	_
 Tragödien	O	_	_	_	_	_	_	_	NoSpaceAfter
 sich	O	_	_	_	_	_	_	_	_
 öfter	O	_	_	_	_	_	_	_	_
-findet.	O	_	_	_	_	_	_	_	NoSpaceAfter
+findet	O	_	_	_	_	_	_	_	NoSpaceAfter
+.	O	_	_	_	_	_	_	_	NoSpaceAfter
 )	O	_	_	_	_	_	_	_	EndOfSentence
 196	O	_	_	_	_	_	_	_	_
 8	O	_	_	_	_	_	_	_	NoSpaceAfter
@@ -85,7 +85,8 @@ Zugwind	O	_	_	_	_	_	_	_	_
 genährter	O	_	_	_	_	_	_	_	_
 Waldbrand	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-vgl.	O	_	_	_	_	_	_	_	_
+vgl	O	_	_	_	_	_	_	_	NoSpaceAfter
+.	O	_	_	_	_	_	_	_	_
 N	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 .	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
 14	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
@@ -94,7 +95,8 @@ N	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 .	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
 16	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 ,	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
-765)	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|Partial--4:3
+765	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
+)	O	_	_	_	_	_	_	_	NoSpaceAfter
 ,	O	_	_	_	_	_	_	_	_
 und	O	_	_	_	_	_	_	_	_
 dieses	O	_	_	_	_	_	_	_	_
@@ -115,11 +117,13 @@ sitzt	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	EndOfSentence
 Bild	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-πῦρ)	O	_	_	_	_	_	_	_	_
+πῦρ	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	_
 und	O	_	_	_	_	_	_	_	_
 Sache	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-ὕβοις)	O	_	_	_	_	_	_	_	_
+ὕβοις	O	_	_	_	_	_	_	_	NoSpaceAfter
+)	O	_	_	_	_	_	_	_	_
 fliesst	O	_	_	_	_	_	_	_	NoSpaceAfter
 ,	O	_	_	_	_	_	_	_	_
 wie	O	_	_	_	_	_	_	_	_
@@ -156,7 +160,8 @@ ferae	O	_	_	_	_	_	_	_	_
 talibus	O	_	_	_	_	_	_	_	_
 locis	O	_	_	_	_	_	_	_	_
 lalere	O	_	_	_	_	_	_	_	_
-amant.	O	_	_	_	_	_	_	_	NoSpaceAfter
+amant	O	_	_	_	_	_	_	_	NoSpaceAfter
+.	O	_	_	_	_	_	_	_	NoSpaceAfter
 )	O	_	_	_	_	_	_	_	EndOfSentence
 197	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
@@ -183,8 +188,7 @@ C	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 .	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
 1696	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference
 οὐ	O	_	_	_	_	_	_	_	_
-κατάμεμπτ	O	_	_	_	_	_	_	_	NoSpaceAfter
-᾽	O	_	_	_	_	_	_	_	_
+κατάμεμπτ᾽	O	_	_	_	_	_	_	_	_
 ἔβητον	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	EndOfSentence
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
@@ -194,7 +198,8 @@ arag	O	_	_	_	_	_	_	_	NoSpaceAfter
 Anta	O	_	_	_	_	_	_	_	NoSpaceAfter
 ,	O	_	_	_	_	_	_	_	_
 Dindorf	O	_	_	_	_	_	_	_	NoSpaceAfter
-ἀτάρβητος.	O	_	_	_	_	_	_	_	NoSpaceAfter
+ἀτάρβητος	O	_	_	_	_	_	_	_	NoSpaceAfter
+.	O	_	_	_	_	_	_	_	NoSpaceAfter
 )	O	_	_	_	_	_	_	_	EndOfSentence
 199	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
@@ -225,7 +230,8 @@ R	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 ἕστακεν	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-κεῖται,	O	_	_	_	_	_	_	_	_
+κεῖται	O	_	_	_	_	_	_	_	NoSpaceAfter
+,	O	_	_	_	_	_	_	_	_
 πέπηγεν),	O	_	_	_	_	_	_	_	NoSpaceAfter
 wurzelt	O	_	_	_	_	_	_	_	_
 fest	O	_	_	_	_	_	_	_	NoSpaceAfter
@@ -279,8 +285,7 @@ ll	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter
 Hesych	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 χϑονίους	O	_	_	_	_	_	_	_	_
-Ἰναχίϑας	O	_	_	_	_	_	_	_	NoSpaceAfter
-"	O	_	_	_	_	_	_	_	_
+Ἰναχίϑας"	O	_	_	_	_	_	_	_	_
 αὐτόχϑονας	O	_	_	_	_	_	_	_	_
 καὶ	O	_	_	_	_	_	_	_	_
 οὐκ	O	_	_	_	_	_	_	_	_
@@ -371,8 +376,7 @@ nach	O	_	_	_	_	_	_	_	_
 dem	O	_	_	_	_	_	_	_	_
 Homerischen	O	_	_	_	_	_	_	_	_
 ἔξοχος	O	_	_	_	_	_	_	_	_
-᾿	O	_	_	_	_	_	_	_	NoSpaceAfter
-Αργείων	O	_	_	_	_	_	_	_	_
+᾿Αργείων	O	_	_	_	_	_	_	_	_
 κεφαλὴν	O	_	_	_	_	_	_	_	_
 nd	O	_	_	_	_	_	_	_	NoSpaceAfter
 ’	O	_	_	_	_	_	_	_	_

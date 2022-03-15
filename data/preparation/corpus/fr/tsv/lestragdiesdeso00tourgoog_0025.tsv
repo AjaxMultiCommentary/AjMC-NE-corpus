@@ -7,7 +7,9 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # hipe2022:dataset = ajmc
 # hipe2022:applicable_columns = TOKEN NE-COARSE-LIT NE-FINE-LIT NE-NESTED NEL-LIT MISC
 # ajmc:version = v0.2
-n’étonnerons	O	_	O	_	_	O	_	_	_
+n	O	_	O	_	_	O	_	_	NoSpaceAfter
+’	O	_	O	_	_	O	_	_	NoSpaceAfter
+étonnerons	O	_	O	_	_	O	_	_	_
 pas	O	_	O	_	_	O	_	_	_
 ceux	O	_	O	_	_	O	_	_	_
 qui	O	_	O	_	_	O	_	_	_
@@ -58,7 +60,9 @@ reproche	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 relativement	O	_	O	_	_	O	_	_	_
 à	O	_	O	_	_	O	_	_	_
-l’usage	O	_	O	_	_	O	_	_	_
+l	O	_	O	_	_	O	_	_	NoSpaceAfter
+’	O	_	O	_	_	O	_	_	NoSpaceAfter
+usage	O	_	O	_	_	O	_	_	_
 que	O	_	O	_	_	O	_	_	_
 nous	O	_	O	_	_	O	_	_	_
 avons	O	_	O	_	_	O	_	_	_
@@ -297,7 +301,9 @@ l	O	_	O	_	_	O	_	_	NoSpaceAfter
 '	O	_	O	_	_	O	_	_	NoSpaceAfter
 édition	O	_	O	_	_	O	_	_	_
 à	O	_	O	_	_	O	_	_	_
-l’usage	O	_	O	_	_	O	_	_	_
+l	O	_	O	_	_	O	_	_	NoSpaceAfter
+’	O	_	O	_	_	O	_	_	NoSpaceAfter
+usage	O	_	O	_	_	O	_	_	_
 des	O	_	O	_	_	O	_	_	_
 classes	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
@@ -329,7 +335,9 @@ titre	O	_	O	_	_	O	_	_	NoSpaceAfter
 qui	O	_	O	_	_	O	_	_	_
 a	O	_	O	_	_	O	_	_	_
 nui	O	_	O	_	_	O	_	_	_
-peut-être	O	_	O	_	_	O	_	_	_
+peut	O	_	O	_	_	O	_	_	NoSpaceAfter
+-	O	_	O	_	_	O	_	_	NoSpaceAfter
+être	O	_	O	_	_	O	_	_	_
 à	O	_	O	_	_	O	_	_	_
 sa	O	_	O	_	_	O	_	_	_
 renommée	O	_	O	_	_	O	_	_	NoSpaceAfter
@@ -368,7 +376,9 @@ c	O	_	O	_	_	O	_	_	NoSpaceAfter
 est	O	_	O	_	_	O	_	_	_
 une	O	_	O	_	_	O	_	_	_
 méthode	O	_	O	_	_	O	_	_	_
-d’explication	O	_	O	_	_	O	_	_	_
+d	O	_	O	_	_	O	_	_	NoSpaceAfter
+’	O	_	O	_	_	O	_	_	NoSpaceAfter
+explication	O	_	O	_	_	O	_	_	_
 qui	O	_	O	_	_	O	_	_	_
 consiste	O	_	O	_	_	O	_	_	NoSpaceAfter
 à	O	_	O	_	_	O	_	_	_
@@ -393,7 +403,9 @@ de	O	_	O	_	_	O	_	_	_
 Sophocle	B-pers	_	B-pers.author	_	_	O	Q7235	_	_
 à	O	_	O	_	_	O	_	_	_
 Sophocle	B-pers	_	B-pers.author	_	_	O	Q7235	_	_
-lui-même	O	_	O	_	_	O	_	_	NoSpaceAfter
+lui	O	_	O	_	_	O	_	_	NoSpaceAfter
+-	O	_	O	_	_	O	_	_	NoSpaceAfter
+même	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 qui	O	_	O	_	_	O	_	_	_
 devient	O	_	O	_	_	O	_	_	_
@@ -420,11 +432,15 @@ les	O	_	O	_	_	O	_	_	_
 commentateurs	O	_	O	_	_	O	_	_	_
 la	O	_	O	_	_	O	_	_	_
 pratiquent	O	_	O	_	_	O	_	_	_
-aujourd’hui	O	_	O	_	_	O	_	_	_
+aujourd	O	_	O	_	_	O	_	_	NoSpaceAfter
+’	O	_	O	_	_	O	_	_	NoSpaceAfter
+hui	O	_	O	_	_	O	_	_	_
 :	O	_	O	_	_	O	_	_	_
 mais	O	_	O	_	_	O	_	_	_
 aucun	O	_	O	_	_	O	_	_	_
-peut-être	O	_	O	_	_	O	_	_	_
+peut	O	_	O	_	_	O	_	_	NoSpaceAfter
+-	O	_	O	_	_	O	_	_	NoSpaceAfter
+être	O	_	O	_	_	O	_	_	_
 ne	O	_	O	_	_	O	_	_	_
 l	O	_	O	_	_	O	_	_	NoSpaceAfter
 '	O	_	O	_	_	O	_	_	NoSpaceAfter
