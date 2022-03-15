@@ -97,7 +97,8 @@ class Retokenizer:
             self.cas = load_cas_from_xmi(f, typesystem=self.typesystem)
 
         self.split_off_apostrophes()
-        #self.split_off_hyphens()
+        self.split_off_parenthesis()
+        self.split_off_hyphens()
         self.split_off_punctuation()
         self.remove_unprintable_tokens()
 
@@ -117,8 +118,42 @@ class Retokenizer:
             tok_text = tok.get_covered_text()
             if "'" in tok_text and len(tok_text) > 1:
                 tokens += self.splitting_at_symbol(tok, "'")
-
         cas.add_all(tokens)
+
+        tokens = []
+        for tok in cas.select(tokenType):
+            tok_text = tok.get_covered_text()
+            if "’" in tok_text and len(tok_text) > 1:
+                tokens += self.splitting_at_symbol(tok, "’")
+        cas.add_all(tokens)
+
+    def split_off_parenthesis(self):
+        """
+        Split off apostrophes when glued together with token
+        Example:
+        2022-03-15 11:36:27,908 - root - INFO - Token '(Martin' was tokenized into ['(', 'Martin']
+        
+        """
+
+        cas = self.cas
+        tokenType = self.tokenType
+
+        splitting_signs = [
+            "(",
+            ")",
+            "[",
+            "]",
+            "{",
+            "}"
+        ]
+
+        for splitting_sign in splitting_signs:
+            tokens = []
+            for tok in cas.select(tokenType):
+                tok_text = tok.get_covered_text()
+                if splitting_sign in tok_text and len(tok_text) > 1:
+                    tokens += self.splitting_at_symbol(tok, splitting_sign)
+            cas.add_all(tokens)
 
     def split_off_hyphens(self):
         """
@@ -131,34 +166,51 @@ class Retokenizer:
         cas = self.cas
         tokenType = self.tokenType
 
-        tokens = []
-        for tok in cas.select(tokenType):
-            tok_text = tok.get_covered_text()
-            if "-" in tok_text and len(tok_text) > 1:
-                tokens += self.splitting_at_symbol(tok, "-")
-
-        cas.add_all(tokens)
+        splitting_signs = [
+            "-",
+            "—"
+        ]
+        for splitting_sign in splitting_signs:
+            tokens = []
+            for tok in cas.select(tokenType):
+                tok_text = tok.get_covered_text()
+                if splitting_sign in tok_text and len(tok_text) > 1:
+                    tokens += self.splitting_at_symbol(tok, splitting_sign)
+            cas.add_all(tokens)
 
     def split_off_punctuation(self):
         """
         Split off punctuation when glued together with token
 
         Example:
-        2020-02-17 10:20:28,568 - root - INFO - Token 'Finanz-Budger' was tokenized into ['Finanz', '-', 'Budger']
+        2022-03-15 11:26:16,585 - root - INFO - Token 'Chevaliers,' was tokenized into ['Chevaliers', ',']
+        2022-03-15 11:26:16,767 - root - INFO - Token 'σιωπῇ.' was tokenized into ['σιωπῇ', '.']
         """
 
         cas = self.cas
         tokenType = self.tokenType
 
-        tokens = []
-        for tok in cas.select(tokenType):
-            tok_text = tok.get_covered_text()
-            if len(tok_text) > 1 and (not tok_text[0].isalnum()):
-                tokens += self.splitting_at_symbol(tok, tok_text[0])
-            elif (len(tok_text) > 1 and (not tok_text[-1].isalnum())):
-                tokens += self.splitting_at_symbol(tok, tok_text[-1])
+        splitting_signs = [
+            ".",
+            ",",
+            ":",
+            ";",
+            "=",
+            "͵",
+            "„",
+            "“",
+            "‚",
+            "?",
+            "”"
+        ]
 
-        cas.add_all(tokens)
+        for splitting_sign in splitting_signs:
+            tokens = []
+            for tok in cas.select(tokenType):
+                tok_text = tok.get_covered_text()
+                if splitting_sign in tok_text and len(tok_text) > 1:
+                    tokens += self.splitting_at_symbol(tok, splitting_sign)
+            cas.add_all(tokens)
 
     def remove_unprintable_tokens(self):
         """
