@@ -386,6 +386,7 @@ def extract_noisy_entities(doc: AjmcDocument):
                     "orig_token": mention['surface'],
                     "gold_transcript": mention['transcript'],
                     "levenshtein_norm": mention['levenshtein_norm'],
+                    #"document_id": doc.id,
                     "entity_fine_type": mention['entity_fine'],
                     "wikidata_id": entity_linking_info['wikidata_id'] if not entity_linking_info['is_NIL'] else "NIL"
                 })
@@ -415,6 +416,11 @@ def convert_data(doc: AjmcDocument, drop_nested: bool) -> List:
     for i_seg, seg in enumerate(doc.sentences.values()):
 
         is_prev_token_hyphenated = False
+
+        if seg['corrupted']:
+            corrupted_sentence_text = " ".join([tok['surface'] for tok in seg['tokens']])
+            logging.info(f"Removed corrupted sentence from document {doc.id}. Text: {corrupted_sentence_text}")
+            continue
 
         for i_tok, tok in enumerate(seg["tokens"]):
 
