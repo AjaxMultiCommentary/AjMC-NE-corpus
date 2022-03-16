@@ -4,9 +4,11 @@ This script is a customisation of the original script developed for Impresso
 in the context of HIPE2020.
 """
 
+import os
+import pandas
 from audioop import reverse
-import sys
 import ipdb
+import json
 from typing import Dict, Generator, List, Tuple
 import argparse
 import logging
@@ -370,6 +372,24 @@ def dehyphenate(tok: str) -> str:
         return tok
 
 
+def extract_noisy_entities(doc: AjmcDocument):
+    entities = []
+    for mention in doc.mentions.values():
+        if (
+            "-full" not in mention['entity_fine'] and
+            "-partial" not in mention['entity_fine'] and
+            mention['entity_fine'] != "scope"
+            ):
+            if mention['levenshtein_norm'] > 0.0:
+                entity_linking_info = doc.links[mention['id']]
+                entities.append({
+                    "orig_token": mention['surface'],
+                    "gold_transcript": mention['transcript'],
+                    "levenshtein_norm": mention['levenshtein_norm'],
+                    "entity_fine_type": mention['entity_fine'],
+                    "wikidata_id": entity_linking_info['wikidata_id'] if not entity_linking_info['is_NIL'] else "NIL"
+                })
+    return entities
 
 
 def convert_data(doc: AjmcDocument, drop_nested: bool) -> List:
@@ -520,11 +540,15 @@ def start_batch_conversion(
     """
 
     xmi_files = index_inception_files(dir_in)
+    language = dir_out.split('/')[3] # hacky, but needed for noisy entities mapping files
+    dir_base = os.path.join(*dir_out.split('/')[:3])
     tsv_files = [Path(str(p).replace(dir_in, dir_out)).with_suffix(".tsv") for p in xmi_files]
     tsv_biblio_files = [Path(str(f).replace('.tsv', '-biblio.tsv')) for f in tsv_files]
     msg = f"Start conversion of {len(xmi_files)} files."
     logging.info(msg)
     print(msg)
+
+    noisy_entities = []
 
     for f_xmi, f_tsv, f_biblio_tsv in tqdm(list(zip(xmi_files, tsv_files, tsv_biblio_files))):
 
@@ -533,6 +557,8 @@ def start_batch_conversion(
 
         doc = read_xmi(f_xmi, f_schema, sanity_check=False)
         f_tsv.parent.mkdir(parents=True, exist_ok=True)
+
+        noisy_entities += extract_noisy_entities(doc)
 
         data, biblio_data = convert_data(doc, drop_nested)
 
@@ -547,6 +573,28 @@ def start_batch_conversion(
             writer.writerows(biblio_data)
 
     logging.info(f"Conversion completed.")
+
+    if len(noisy_entities) > 0:
+            noisy_entities_df = pandas.DataFrame(noisy_entities)
+            noisy_entities_mapping_fname = f"ajmc-entity-ocr-correction-{language}.tsv"
+            noisy_entities_mapping_path = f"{os.path.join(dir_base, noisy_entities_mapping_fname)}"
+            
+            duplicates_df = noisy_entities_df.groupby(
+                ['orig_token', 'gold_transcript', 'levenshtein_norm'],
+                as_index=False
+            ).size().sort_values(by='size', ascending=False)
+
+            unique_noisy_entities_df = pandas.merge(
+                noisy_entities_df,
+                duplicates_df,
+                how='left',
+                on=['orig_token', 'gold_transcript', 'levenshtein_norm']
+            ).drop_duplicates().rename(columns={'size': 'frequency'})
+
+            unique_noisy_entities_df.sort_values(
+                by='frequency',
+                ascending=False
+            ).to_csv(noisy_entities_mapping_path, sep="\t", index=False)
 
 def main():
 
