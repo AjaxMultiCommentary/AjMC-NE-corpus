@@ -386,7 +386,7 @@ def extract_noisy_entities(doc: AjmcDocument):
                     "orig_token": mention['surface'],
                     "gold_transcript": mention['transcript'],
                     "levenshtein_norm": mention['levenshtein_norm'],
-                    #"document_id": doc.id,
+                    "document_id": doc.id,
                     "entity_fine_type": mention['entity_fine'],
                     "wikidata_id": entity_linking_info['wikidata_id'] if not entity_linking_info['is_NIL'] else "NIL"
                 })
@@ -584,23 +584,7 @@ def start_batch_conversion(
             noisy_entities_df = pandas.DataFrame(noisy_entities)
             noisy_entities_mapping_fname = f"ajmc-entity-ocr-correction-{language}.tsv"
             noisy_entities_mapping_path = f"{os.path.join(dir_base, noisy_entities_mapping_fname)}"
-            
-            duplicates_df = noisy_entities_df.groupby(
-                ['orig_token', 'gold_transcript', 'levenshtein_norm'],
-                as_index=False
-            ).size().sort_values(by='size', ascending=False)
-
-            unique_noisy_entities_df = pandas.merge(
-                noisy_entities_df,
-                duplicates_df,
-                how='left',
-                on=['orig_token', 'gold_transcript', 'levenshtein_norm']
-            ).drop_duplicates().rename(columns={'size': 'frequency'})
-
-            unique_noisy_entities_df.sort_values(
-                by='frequency',
-                ascending=False
-            ).to_csv(noisy_entities_mapping_path, sep="\t", index=False)
+            noisy_entities_df.to_csv(noisy_entities_mapping_path, sep="\t", index=False)
 
 def main():
 

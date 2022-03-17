@@ -40,6 +40,38 @@ def concat_tsv_files(output_path: str, input_files: List[str]) -> None:
 
         out_tsv_file.write("\n".join(data))
 
+def create_entity_ocr_mapping_file(input_path, output_path, language, annotation_assignments_df):
+
+    noisy_entities_mapping_df = pd.read_csv(input_path, sep='\t')
+    duplicates_df = noisy_entities_mapping_df.groupby(
+        ['orig_token', 'gold_transcript', 'levenshtein_norm'],
+        as_index=False
+    ).size().sort_values(by='size', ascending=False)
+
+    unique_noisy_entities_df = pd.merge(
+        noisy_entities_mapping_df,
+        duplicates_df,
+        how='left',
+        on=['orig_token', 'gold_transcript', 'levenshtein_norm']
+    ).drop_duplicates().rename(columns={'size': 'frequency'})
+
+    doc_ids_test_set = [
+        p.split('/')[-1].split('.')[0] 
+        for p in annotation_assignments_df[
+            (annotation_assignments_df.split=='test') & (annotation_assignments_df.lang == language)
+        ].Path.tolist()
+    ]
+
+    unique_noisy_entities_df = unique_noisy_entities_df[
+        ~unique_noisy_entities_df['document_id'].isin(doc_ids_test_set)
+    ]
+
+    unique_noisy_entities_df.drop('document_id', inplace=True, axis=1)
+    
+    unique_noisy_entities_df.sort_values(
+        by='frequency',
+        ascending=False
+    ).to_csv(output_path, sep="\t", index=False)
 
 def create_datasets(input_dir, output_dir, version, assignments_table_path, set="all"):
     
@@ -93,6 +125,19 @@ def create_datasets(input_dir, output_dir, version, assignments_table_path, set=
                         output_dir, version, masked_dataset_name
                     )
                     write_tsv(tsv_data, masked_dataset_path)
+
+                # for each language, read the list of noisy entities
+                # and filter out lines that belong to documents in the test set
+                noisy_entities_mapping_fname = f"ajmc-entity-ocr-correction-{lang}.tsv"
+                noisy_entities_mapping_path = os.path.join(input_dir, "corpus", noisy_entities_mapping_fname)
+                noisy_entities_mapping_release_path = os.path.join(output_dir, version, noisy_entities_mapping_fname)
+                
+                create_entity_ocr_mapping_file(
+                    noisy_entities_mapping_path,
+                    noisy_entities_mapping_release_path,
+                    lang,
+                    assignments_df
+                )
 
 
 def create_dataset(

@@ -60,6 +60,7 @@ publish-corpus-no-test:
 	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-train-de.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/de/
 	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-dev-fr.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/fr/
 	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-train-fr.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/fr/
+	cp $(RELEASE_DIR)/$(HIPE_VERSION)/ajmc-entity-ocr-correction-*.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/
 
 publish-corpus-testset:
 	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-en.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/en/
