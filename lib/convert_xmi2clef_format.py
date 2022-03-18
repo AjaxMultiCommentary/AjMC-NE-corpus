@@ -383,7 +383,7 @@ def extract_noisy_entities(doc: AjmcDocument):
             if mention['levenshtein_norm'] > 0.0:
                 entity_linking_info = doc.links[mention['id']]
                 entities.append({
-                    "orig_token": mention['surface'],
+                    "entity_surface": mention['surface'],
                     "gold_transcript": mention['transcript'],
                     "levenshtein_norm": mention['levenshtein_norm'],
                     "document_id": doc.id,

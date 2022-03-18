@@ -42,18 +42,8 @@ def concat_tsv_files(output_path: str, input_files: List[str]) -> None:
 
 def create_entity_ocr_mapping_file(input_path, output_path, language, annotation_assignments_df):
 
+    unique_fields = ['entity_surface', 'gold_transcript', 'levenshtein_norm']
     noisy_entities_mapping_df = pd.read_csv(input_path, sep='\t')
-    duplicates_df = noisy_entities_mapping_df.groupby(
-        ['orig_token', 'gold_transcript', 'levenshtein_norm'],
-        as_index=False
-    ).size().sort_values(by='size', ascending=False)
-
-    unique_noisy_entities_df = pd.merge(
-        noisy_entities_mapping_df,
-        duplicates_df,
-        how='left',
-        on=['orig_token', 'gold_transcript', 'levenshtein_norm']
-    ).drop_duplicates().rename(columns={'size': 'frequency'})
 
     doc_ids_test_set = [
         p.split('/')[-1].split('.')[0] 
@@ -62,9 +52,23 @@ def create_entity_ocr_mapping_file(input_path, output_path, language, annotation
         ].Path.tolist()
     ]
 
-    unique_noisy_entities_df = unique_noisy_entities_df[
-        ~unique_noisy_entities_df['document_id'].isin(doc_ids_test_set)
+    noisy_entities_mapping_df = noisy_entities_mapping_df[
+        ~noisy_entities_mapping_df['document_id'].isin(doc_ids_test_set)
     ]
+
+    duplicates_df = noisy_entities_mapping_df.groupby(
+        unique_fields,
+        as_index=False
+    ).size().sort_values(by='size', ascending=False)
+
+    unique_noisy_entities_df = pd.merge(
+        noisy_entities_mapping_df,
+        duplicates_df,
+        how='left',
+        on=unique_fields
+    ).drop_duplicates(subset=unique_fields).rename(columns={'size': 'frequency'})
+
+    ipdb.set_trace()
 
     unique_noisy_entities_df.drop('document_id', inplace=True, axis=1)
     
@@ -126,18 +130,18 @@ def create_datasets(input_dir, output_dir, version, assignments_table_path, set=
                     )
                     write_tsv(tsv_data, masked_dataset_path)
 
-                # for each language, read the list of noisy entities
-                # and filter out lines that belong to documents in the test set
-                noisy_entities_mapping_fname = f"ajmc-entity-ocr-correction-{lang}.tsv"
-                noisy_entities_mapping_path = os.path.join(input_dir, "corpus", noisy_entities_mapping_fname)
-                noisy_entities_mapping_release_path = os.path.join(output_dir, version, noisy_entities_mapping_fname)
-                
-                create_entity_ocr_mapping_file(
-                    noisy_entities_mapping_path,
-                    noisy_entities_mapping_release_path,
-                    lang,
-                    assignments_df
-                )
+            # for each language, read the list of noisy entities
+            # and filter out lines that belong to documents in the test set
+            noisy_entities_mapping_fname = f"ajmc-entity-ocr-correction-{lang}.tsv"
+            noisy_entities_mapping_path = os.path.join(input_dir, "corpus", noisy_entities_mapping_fname)
+            noisy_entities_mapping_release_path = os.path.join(output_dir, version, noisy_entities_mapping_fname)
+            
+            create_entity_ocr_mapping_file(
+                noisy_entities_mapping_path,
+                noisy_entities_mapping_release_path,
+                lang,
+                assignments_df
+            )
 
 
 def create_dataset(
