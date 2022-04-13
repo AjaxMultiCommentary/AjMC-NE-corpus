@@ -96,11 +96,33 @@ class Retokenizer:
         with open(self.xmi, "rb") as f:
             self.cas = load_cas_from_xmi(f, typesystem=self.typesystem)
 
+        self.split_off_spaces()
         self.split_off_apostrophes()
         self.split_off_parenthesis()
         self.split_off_hyphens()
         self.split_off_punctuation()
         self.remove_unprintable_tokens()
+        self.remove_empty_tokens()
+
+    def split_off_spaces(self):
+        """
+        Split off spaces when present in a token
+
+        Example:
+        TODO add example
+        """
+
+        cas = self.cas
+        tokenType = self.tokenType
+        splitting_sign = " "
+
+        tokens = []
+        for tok in cas.select(tokenType):
+            tok_text = tok.get_covered_text()
+            if splitting_sign in tok_text and len(tok_text) > 1:
+                tokens += self.splitting_at_symbol(tok, splitting_sign)
+                #ipdb.set_trace()
+        cas.add_all(tokens)
 
     def split_off_apostrophes(self):
         """
@@ -244,6 +266,32 @@ class Retokenizer:
         cas.sofa_string = text_clean
 
         assert len(text) == len(text_clean)
+
+    def remove_empty_tokens(self):
+        """
+        Remove annotations of tokens that contain non-printable characters.
+
+        Non-printable characters are Unicode control sequences which may cause
+        problems when processing further. Non-printable characters are replaced
+        with an underscore in the original text.
+        """
+
+        cas = self.cas
+        tokenType = self.tokenType
+
+        remove_tokens = []
+
+        for i, tok in enumerate(cas.select(tokenType)):
+            tok_text = tok.get_covered_text()
+
+            if tok_text == " ":
+                logging.info(
+                    f"Token '{tok_text}' is a space and will be removed entirely in document: {self.xmi}."
+                )
+                remove_tokens.append(i)
+
+        for idx in reversed(remove_tokens):
+            del cas._current_view.type_index[tokenType][idx]
 
     def splitting_at_symbol(self, tok, symbol: str):
         """Split a token into its subtokens at a particular symbol (e.g., apostroph).
