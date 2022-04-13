@@ -44,6 +44,8 @@ def create_entity_ocr_mapping_file(input_path, output_path, language, annotation
 
     unique_fields = ['entity_surface', 'gold_transcript', 'levenshtein_norm']
     noisy_entities_mapping_df = pd.read_csv(input_path, sep='\t')
+    info_msg = f"OCR/transcript mappings ({language}): {noisy_entities_mapping_df.shape[0]} patterns found"
+    logging.info(info_msg)
 
     doc_ids_test_set = [
         p.split('/')[-1].split('.')[0] 
@@ -68,7 +70,8 @@ def create_entity_ocr_mapping_file(input_path, output_path, language, annotation
         on=unique_fields
     ).drop_duplicates(subset=unique_fields).rename(columns={'size': 'frequency'})
 
-    ipdb.set_trace()
+    info_msg = f"OCR/transcript mappings ({language}): {noisy_entities_mapping_df.shape[0]} unique patterns are kept"
+    logging.info(info_msg)
 
     unique_noisy_entities_df.drop('document_id', inplace=True, axis=1)
     
