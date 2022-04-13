@@ -3,7 +3,7 @@ SHELL:=/bin/bash
 SCHEMA?= data/preparation/TypeSystem.xml
 DATA_DIR?=data/preparation
 RELEASE_DIR?=data/release
-HIPE_VERSION?=v2.0
+HIPE_VERSION?=v2.1
 HIPE_DATA_DIR=/Users/matteo/Documents/HIPE-2022-data
 ASSIGNMENTS_TABLE=document-selection.tsv
 
