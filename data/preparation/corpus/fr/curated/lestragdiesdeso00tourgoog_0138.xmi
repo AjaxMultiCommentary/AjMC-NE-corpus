@@ -340,8 +340,8 @@
     <custom:AjMCNamedEntity xmi:id="3968" sofa="1" begin="673" end="692" is_NIL="false" noisy_ocr="false" value="primary-full"/>
     <custom:AjMCNamedEntity xmi:id="3977" sofa="1" begin="673" end="680" is_NIL="false" noisy_ocr="false" transcript="T. Liv." value="pers.author" wikidata_id="http://www.wikidata.org/entity/Q2039"/>
     <custom:AjMCNamedEntity xmi:id="3986" sofa="1" begin="683" end="692" is_NIL="false" noisy_ocr="true" transcript="XXXVI, 19" value="scope"/>
-    <custom:AjMCNamedEntity xmi:id="3995" sofa="1" begin="694" end="709" is_NIL="false" noisy_ocr="false" value="work.primlit"/>
-    <custom:AjMCNamedEntity xmi:id="4004" sofa="1" begin="694" end="700" is_NIL="false" noisy_ocr="false" value="pers.author" wikidata_id="http://www.wikidata.org/entity/Q47154"/>
+    <custom:AjMCNamedEntity xmi:id="3995" sofa="1" begin="694" end="709" is_NIL="false" noisy_ocr="false" value="primary-full"/>
+    <custom:AjMCNamedEntity xmi:id="4724" sofa="1" begin="694" end="701" is_NIL="false" noisy_ocr="false" value="pers.author" wikidata_id="http://www.wikidata.org/entity/Q47154"/>
     <custom:AjMCNamedEntity xmi:id="4013" sofa="1" begin="702" end="709" is_NIL="false" noisy_ocr="true" transcript="IV, 84" value="scope"/>
     <custom:AjMCNamedEntity xmi:id="4022" sofa="1" begin="728" end="767" is_NIL="false" noisy_ocr="false" value="primary-full"/>
     <custom:AjMCNamedEntity xmi:id="4031" sofa="1" begin="728" end="738" is_NIL="false" noisy_ocr="false" value="pers.author" wikidata_id="http://www.wikidata.org/entity/Q41523"/>
@@ -375,49 +375,49 @@
     <custom:AjMCNamedEntity xmi:id="4283" sofa="1" begin="1394" end="1401" is_NIL="false" noisy_ocr="false" value="work.primlit" wikidata_id="http://www.wikidata.org/entity/Q733444"/>
     <custom:AjMCNamedEntity xmi:id="4292" sofa="1" begin="1403" end="1406" is_NIL="false" noisy_ocr="false" value="scope"/>
     <custom:AjMCNamedEntity xmi:id="4301" sofa="1" begin="1409" end="1420" is_NIL="false" noisy_ocr="false" value="pers.editor" wikidata_id="http://www.wikidata.org/entity/Q70043"/>
-    <type:LayerDefinition xmi:id="4474" name="de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS" uiName="Part of speech"/>
-    <type:LayerDefinition xmi:id="4550" name="webanno.custom.AjMCImages" uiName="AjMC Images"/>
-    <type:LayerDefinition xmi:id="4528" name="de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency" uiName="Dependency"/>
-    <type:LayerDefinition xmi:id="4580" name="webanno.custom.GoldSentences" uiName="Gold Sentences"/>
-    <type:LayerDefinition xmi:id="4521" name="de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.Chunk" uiName="Chunk"/>
-    <type:LayerDefinition xmi:id="4557" name="webanno.custom.AjMCNamedEntity" uiName="AjMC Named Entity"/>
-    <type:LayerDefinition xmi:id="4503" name="de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.SurfaceForm" uiName="Surface form"/>
-    <type:LayerDefinition xmi:id="4510" name="de.tudarmstadt.ukp.dkpro.core.api.semantics.type.SemPred" uiName="SemPred"/>
-    <type:LayerDefinition xmi:id="4456" name="de.tudarmstadt.ukp.dkpro.core.api.coref.type.Coreference" uiName="Coreference"/>
-    <type:LayerDefinition xmi:id="4467" name="de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.morph.MorphologicalFeatures" uiName="Morphological features"/>
-    <type:LayerDefinition xmi:id="4485" name="de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity" uiName="Named entity"/>
-    <type:LayerDefinition xmi:id="4496" name="de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma" uiName="Lemma"/>
-    <type:LayerDefinition xmi:id="4539" name="de.tudarmstadt.ukp.dkpro.core.api.transform.type.SofaChangeAnnotation" uiName="Orthography Correction"/>
-    <type:FeatureDefinition xmi:id="4564" layer="4557" name="noisy_ocr" uiName="noisy_ocr"/>
-    <type:FeatureDefinition xmi:id="4463" layer="4456" name="referenceType" uiName="referenceType"/>
-    <type:FeatureDefinition xmi:id="4587" layer="4580" name="incomplete_continuing" uiName="incomplete_continuing"/>
-    <type:FeatureDefinition xmi:id="4535" layer="4528" name="flavor" uiName="Flavor"/>
-    <type:FeatureDefinition xmi:id="4488" layer="4485" name="identifier" uiName="identifier"/>
-    <type:FeatureDefinition xmi:id="4560" layer="4557" name="is_NIL" uiName="is_NIL"/>
-    <type:FeatureDefinition xmi:id="4572" layer="4557" name="value" uiName="value"/>
-    <type:FeatureDefinition xmi:id="4576" layer="4557" name="wikidata_id" uiName="wikidata_id"/>
-    <type:FeatureDefinition xmi:id="4531" layer="4528" name="DependencyType" uiName="Relation"/>
-    <type:FeatureDefinition xmi:id="4517" layer="4510" name="category" uiName="category"/>
-    <type:FeatureDefinition xmi:id="4553" layer="4550" name="link" uiName="link"/>
-    <type:FeatureDefinition xmi:id="4481" layer="4474" name="coarseValue" uiName="UPOS"/>
-    <type:FeatureDefinition xmi:id="4542" layer="4539" name="operation" uiName="Operation"/>
-    <type:FeatureDefinition xmi:id="4499" layer="4496" name="value" uiName="Lemma"/>
-    <type:FeatureDefinition xmi:id="4513" layer="4510" name="arguments" uiName="arguments"/>
-    <type:FeatureDefinition xmi:id="4524" layer="4521" name="chunkValue" uiName="Tag"/>
-    <type:FeatureDefinition xmi:id="4546" layer="4539" name="value" uiName="Correction"/>
-    <type:FeatureDefinition xmi:id="4506" layer="4503" name="value" uiName="Form"/>
-    <type:FeatureDefinition xmi:id="4568" layer="4557" name="transcript" uiName="transcript"/>
-    <type:FeatureDefinition xmi:id="4459" layer="4456" name="referenceRelation" uiName="referenceRelation"/>
-    <type:FeatureDefinition xmi:id="4470" layer="4467" name="value" uiName="Features"/>
-    <type:FeatureDefinition xmi:id="4492" layer="4485" name="value" uiName="value"/>
-    <type:FeatureDefinition xmi:id="4477" layer="4474" name="PosValue" uiName="XPOS"/>
-    <type:FeatureDefinition xmi:id="4591" layer="4580" name="incomplete_truncated" uiName="incomplete_truncated"/>
-    <type:FeatureDefinition xmi:id="4583" layer="4580" name="corrupted" uiName="corrupted"/>
-    <type3:TagsetDescription xmi:id="4595" sofa="1" begin="0" end="0" layer="webanno.custom.AjMCNamedEntity" name="AjMC Named Entity tags" input="false"/>
-    <type3:TagsetDescription xmi:id="4608" sofa="1" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency" name="UD Universal Dependencies (v2)" input="false"/>
-    <type3:TagsetDescription xmi:id="4621" sofa="1" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity" name="Named Entity tags" input="false"/>
-    <type3:TagsetDescription xmi:id="4634" sofa="1" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.transform.type.SofaChangeAnnotation" name="Operation" input="false"/>
-    <type3:TagsetDescription xmi:id="4647" sofa="1" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS" name="UD Universal POS tags (v2)" input="false"/>
+    <type:LayerDefinition xmi:id="4789" name="de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma" uiName="Lemma"/>
+    <type:LayerDefinition xmi:id="4873" name="webanno.custom.GoldSentences" uiName="Gold Sentences"/>
+    <type:LayerDefinition xmi:id="4814" name="de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.Chunk" uiName="Chunk"/>
+    <type:LayerDefinition xmi:id="4850" name="webanno.custom.AjMCNamedEntity" uiName="AjMC Named Entity"/>
+    <type:LayerDefinition xmi:id="4796" name="de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.SurfaceForm" uiName="Surface form"/>
+    <type:LayerDefinition xmi:id="4760" name="de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.morph.MorphologicalFeatures" uiName="Morphological features"/>
+    <type:LayerDefinition xmi:id="4832" name="de.tudarmstadt.ukp.dkpro.core.api.transform.type.SofaChangeAnnotation" uiName="Orthography Correction"/>
+    <type:LayerDefinition xmi:id="4749" name="de.tudarmstadt.ukp.dkpro.core.api.coref.type.Coreference" uiName="Coreference"/>
+    <type:LayerDefinition xmi:id="4778" name="de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity" uiName="Named entity"/>
+    <type:LayerDefinition xmi:id="4821" name="de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency" uiName="Dependency"/>
+    <type:LayerDefinition xmi:id="4843" name="webanno.custom.AjMCImages" uiName="AjMC Images"/>
+    <type:LayerDefinition xmi:id="4767" name="de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS" uiName="Part of speech"/>
+    <type:LayerDefinition xmi:id="4803" name="de.tudarmstadt.ukp.dkpro.core.api.semantics.type.SemPred" uiName="SemPred"/>
+    <type:FeatureDefinition xmi:id="4810" layer="4803" name="category" uiName="category"/>
+    <type:FeatureDefinition xmi:id="4756" layer="4749" name="referenceType" uiName="referenceType"/>
+    <type:FeatureDefinition xmi:id="4817" layer="4814" name="chunkValue" uiName="Tag"/>
+    <type:FeatureDefinition xmi:id="4763" layer="4760" name="value" uiName="Features"/>
+    <type:FeatureDefinition xmi:id="4752" layer="4749" name="referenceRelation" uiName="referenceRelation"/>
+    <type:FeatureDefinition xmi:id="4835" layer="4832" name="operation" uiName="Operation"/>
+    <type:FeatureDefinition xmi:id="4792" layer="4789" name="value" uiName="Lemma"/>
+    <type:FeatureDefinition xmi:id="4839" layer="4832" name="value" uiName="Correction"/>
+    <type:FeatureDefinition xmi:id="4853" layer="4850" name="is_NIL" uiName="is_NIL"/>
+    <type:FeatureDefinition xmi:id="4828" layer="4821" name="flavor" uiName="Flavor"/>
+    <type:FeatureDefinition xmi:id="4781" layer="4778" name="identifier" uiName="identifier"/>
+    <type:FeatureDefinition xmi:id="4799" layer="4796" name="value" uiName="Form"/>
+    <type:FeatureDefinition xmi:id="4865" layer="4850" name="value" uiName="value"/>
+    <type:FeatureDefinition xmi:id="4869" layer="4850" name="wikidata_id" uiName="wikidata_id"/>
+    <type:FeatureDefinition xmi:id="4884" layer="4873" name="incomplete_truncated" uiName="incomplete_truncated"/>
+    <type:FeatureDefinition xmi:id="4861" layer="4850" name="transcript" uiName="transcript"/>
+    <type:FeatureDefinition xmi:id="4880" layer="4873" name="incomplete_continuing" uiName="incomplete_continuing"/>
+    <type:FeatureDefinition xmi:id="4774" layer="4767" name="coarseValue" uiName="UPOS"/>
+    <type:FeatureDefinition xmi:id="4770" layer="4767" name="PosValue" uiName="XPOS"/>
+    <type:FeatureDefinition xmi:id="4857" layer="4850" name="noisy_ocr" uiName="noisy_ocr"/>
+    <type:FeatureDefinition xmi:id="4785" layer="4778" name="value" uiName="value"/>
+    <type:FeatureDefinition xmi:id="4876" layer="4873" name="corrupted" uiName="corrupted"/>
+    <type:FeatureDefinition xmi:id="4824" layer="4821" name="DependencyType" uiName="Relation"/>
+    <type:FeatureDefinition xmi:id="4846" layer="4843" name="link" uiName="link"/>
+    <type:FeatureDefinition xmi:id="4806" layer="4803" name="arguments" uiName="arguments"/>
+    <type3:TagsetDescription xmi:id="4888" sofa="1" begin="0" end="0" layer="webanno.custom.AjMCNamedEntity" name="AjMC Named Entity tags" input="false"/>
+    <type3:TagsetDescription xmi:id="4901" sofa="1" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency" name="UD Universal Dependencies (v2)" input="false"/>
+    <type3:TagsetDescription xmi:id="4914" sofa="1" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity" name="Named Entity tags" input="false"/>
+    <type3:TagsetDescription xmi:id="4927" sofa="1" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.transform.type.SofaChangeAnnotation" name="Operation" input="false"/>
+    <type3:TagsetDescription xmi:id="4940" sofa="1" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS" name="UD Universal POS tags (v2)" input="false"/>
     <cas:Sofa xmi:id="1" sofaNum="1" sofaID="_InitialView" mimeType="text" sofaString="4166. &quot;AvolGov. Ce mot et ses synu- nymes comportent la méme extension de sens que nos mots français malheureux, misérable. — Ilapwv. Cf. 1434 et la note sur le vers 57. 4168. Οὐδείς ποτε. Tci : Nemo, puto. Voy. Ellendt, tome IT, page 616 et 616. — Môv DviEcuny ; Mäva la même signi- fication que le latin nuin. Le sens est donc : « Ai-je parlé trop peu clairement? » Cf. Antigone, 405 : “Ap’ Eväênda xxi cœpñ Xé- Yw ; Eschyle, Agamemnon, 269 : ”H xo- ρῶς λέγω; 4160. Παρῇ. Cf. 4081. 4168. &quot;Εριδός τις &amp;yov. « Genitivus « additur ad distinguenda varia certumi- « num genera, ut uayns ἀγών apud Eurip. « Androm. 725. Heracl. 798 [et Sophocl. « Trachin. 20]; Certamen pugnæ (T. Liv. « XXXVI, 4v; Lucret. IV, 841); Ἀγὼν « xorépou (Plutarch., Sull. cap. tv, Lu- « cull.xv); Abyæv &amp;yov (Phænic. 944). » (Lobeck.] 1464-1465. Ταχύνας σπεῦσον. CÉ. OEd. Roi, 861 : Πέμψω ταχύνασα. Ta- χύνας σπεῦσον signifie la même chose que ancvëe tayéwoç (Aristophane, Che- valiers, 495; Thesmophoriazusæ, 4177). [Wunder.] Tayüvas et σπεῦσον ϑβϑοπὶ pris tous deux intransitivement. — Ἰδεῖν, comme eûpeïv. Cf. Thévcrite, XV, Q : “Ὅρη δίφρον, Eüvéa, aùré. [Schneidewin.) 4466-1167. &quot;EvOæ... nabéEer, où il aura son tombeau, qui sera à jamais célèbre parmi les hommes. — Evpæwoevra est une épithète de nature, que Pussow rend par » tenebricosum. 4168. Καὶ uñv. Cf. Électre, 78. — I)nolor duit être juint à rapecouv. CÉ, Électre, 640. [Schneidewin.] "/>
-    <cas:View sofa="1" members="8 24 37 50 63 76 89 102 115 128 141 154 167 180 193 206 219 232 245 258 271 284 297 310 323 336 349 362 375 388 401 414 427 440 453 466 479 492 505 518 531 544 557 570 583 596 609 622 635 648 661 674 687 700 713 726 739 752 765 778 791 804 817 830 843 856 869 882 895 908 921 934 947 960 973 986 999 1012 1025 1038 1051 1064 1077 1090 1103 1116 1129 1142 1155 1168 1181 1194 1207 1220 1233 1246 1259 1272 1285 1298 1311 1324 1337 1350 1363 1376 1389 1402 1415 1428 1441 1454 1467 1480 1493 1506 1519 1532 1545 1558 1571 1584 1597 1610 1623 1636 1649 1662 1675 1688 1701 1714 1727 1740 1753 1766 1779 1792 1805 1818 1831 1844 1857 1870 1883 1896 1909 1922 1935 1948 1961 1974 1987 2000 2013 2026 2039 2052 2065 2078 2091 2104 2117 2130 2143 2156 2169 2182 2195 2208 2221 2234 2247 2260 2273 2286 2299 2312 2325 2338 2351 2364 2377 2390 2403 2416 2429 2442 2455 2468 2481 2494 2507 2520 2533 2546 2559 2572 2585 2598 2611 2624 2637 2650 2663 2676 2689 2702 2715 2728 2741 2754 2767 2780 2793 2806 2819 2832 2845 2858 2871 2884 2897 2910 2923 2936 2949 2962 2975 2988 3001 3014 3027 3040 3053 3066 3079 3092 3105 3118 3131 3144 3157 3170 3183 3196 3209 3214 3219 3224 3229 3234 3239 3244 3249 3254 3259 3264 3269 3274 3279 3284 3289 3294 3299 3304 3309 3314 3319 3324 3329 3334 3339 3344 3349 3354 3359 3364 3369 3374 3379 3384 3389 3394 3399 3404 3409 3413 3417 3421 3425 3429 3433 3437 3441 3448 3455 3462 3469 3476 3483 3490 3497 3504 3511 3518 3525 3532 3539 3546 3725 3734 4374 4391 3761 3770 3779 3788 3797 3806 3815 3824 3833 3842 3851 3860 3869 3878 3887 3896 3905 3914 3923 3932 3941 3950 3959 3968 3977 3986 3995 4004 4013 4022 4031 4040 4049 4058 4067 4076 4085 4094 4103 4112 4121 4130 4139 4148 4157 4166 4175 4184 4193 4202 4211 4220 4229 4238 4247 4256 4265 4274 4283 4292 4301 4474 4550 4528 4580 4521 4557 4503 4510 4456 4467 4485 4496 4539 4564 4463 4587 4535 4488 4560 4572 4576 4531 4517 4553 4481 4542 4499 4513 4524 4546 4506 4568 4459 4470 4492 4477 4591 4583 4595 4608 4621 4634 4647"/>
+    <cas:View sofa="1" members="8 24 37 50 63 76 89 102 115 128 141 154 167 180 193 206 219 232 245 258 271 284 297 310 323 336 349 362 375 388 401 414 427 440 453 466 479 492 505 518 531 544 557 570 583 596 609 622 635 648 661 674 687 700 713 726 739 752 765 778 791 804 817 830 843 856 869 882 895 908 921 934 947 960 973 986 999 1012 1025 1038 1051 1064 1077 1090 1103 1116 1129 1142 1155 1168 1181 1194 1207 1220 1233 1246 1259 1272 1285 1298 1311 1324 1337 1350 1363 1376 1389 1402 1415 1428 1441 1454 1467 1480 1493 1506 1519 1532 1545 1558 1571 1584 1597 1610 1623 1636 1649 1662 1675 1688 1701 1714 1727 1740 1753 1766 1779 1792 1805 1818 1831 1844 1857 1870 1883 1896 1909 1922 1935 1948 1961 1974 1987 2000 2013 2026 2039 2052 2065 2078 2091 2104 2117 2130 2143 2156 2169 2182 2195 2208 2221 2234 2247 2260 2273 2286 2299 2312 2325 2338 2351 2364 2377 2390 2403 2416 2429 2442 2455 2468 2481 2494 2507 2520 2533 2546 2559 2572 2585 2598 2611 2624 2637 2650 2663 2676 2689 2702 2715 2728 2741 2754 2767 2780 2793 2806 2819 2832 2845 2858 2871 2884 2897 2910 2923 2936 2949 2962 2975 2988 3001 3014 3027 3040 3053 3066 3079 3092 3105 3118 3131 3144 3157 3170 3183 3196 3209 3214 3219 3224 3229 3234 3239 3244 3249 3254 3259 3264 3269 3274 3279 3284 3289 3294 3299 3304 3309 3314 3319 3324 3329 3334 3339 3344 3349 3354 3359 3364 3369 3374 3379 3384 3389 3394 3399 3404 3409 3413 3417 3421 3425 3429 3433 3437 3441 3448 3455 3462 3469 3476 3483 3490 3497 3504 3511 3518 3525 3532 3539 3546 3725 3734 4374 4391 3761 3770 3779 3788 3797 3806 3815 3824 3833 3842 3851 3860 3869 3878 3887 3896 3905 3914 3923 3932 3941 3950 3959 3968 3977 3986 3995 4724 4013 4022 4031 4040 4049 4058 4067 4076 4085 4094 4103 4112 4121 4130 4139 4148 4157 4166 4175 4184 4193 4202 4211 4220 4229 4238 4247 4256 4265 4274 4283 4292 4301 4789 4873 4814 4850 4796 4760 4832 4749 4778 4821 4843 4767 4803 4810 4756 4817 4763 4752 4835 4792 4839 4853 4828 4781 4799 4865 4869 4884 4861 4880 4774 4770 4857 4785 4876 4824 4846 4806 4888 4901 4914 4927 4940"/>
 </xmi:XMI>
