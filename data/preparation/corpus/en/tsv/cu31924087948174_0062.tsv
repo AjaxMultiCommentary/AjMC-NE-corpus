@@ -7,7 +7,7 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # hipe2022:date = 1881-01-01
 # hipe2022:dataset = ajmc
 # hipe2022:applicable_columns = TOKEN NE-COARSE-LIT NE-FINE-LIT NE-NESTED NEL-LIT MISC
-# ajmc:version = v0.2
+# ajmc:version = v0.3
 # ajmc:title = Sophocles
 # ajmc:publication_place = Oxford
 # ajmc:publication_date = 1881
@@ -176,8 +176,8 @@ cp	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 Eur	B-pers	_	B-pers.author	_	_	O	Q48305	_	InPrimaryReference|NoSpaceAfter|LED0.00
 ,	I-pers	_	I-pers.author	_	_	O	Q48305	_	InPrimaryReference|LED0.00
-Hec	B-work	_	B-work.seclit	_	_	O	Q1115611	_	InPrimaryReference|NoSpaceAfter|LED0.00
-.	I-work	_	I-work.seclit	_	_	O	Q1115611	_	InPrimaryReference|LED0.00
+Hec	B-work	_	B-work.primlit	_	_	O	Q1115611	_	InPrimaryReference|NoSpaceAfter|LED0.00
+.	I-work	_	I-work.primlit	_	_	O	Q1115611	_	InPrimaryReference|LED0.00
 123	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 ,	O	_	O	_	_	O	_	_	_
 Βάκχης	O	_	O	_	_	O	_	_	_

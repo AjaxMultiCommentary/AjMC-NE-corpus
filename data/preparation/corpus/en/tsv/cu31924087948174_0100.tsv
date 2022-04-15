@@ -7,7 +7,7 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # hipe2022:date = 1881-01-01
 # hipe2022:dataset = ajmc
 # hipe2022:applicable_columns = TOKEN NE-COARSE-LIT NE-FINE-LIT NE-NESTED NEL-LIT MISC
-# ajmc:version = v0.2
+# ajmc:version = v0.3
 # ajmc:title = Sophocles
 # ajmc:publication_place = Oxford
 # ajmc:publication_date = 1881
@@ -342,7 +342,7 @@ his	O	_	O	_	_	O	_	_	_
 haunt	O	_	O	_	_	O	_	_	_
 according	O	_	O	_	_	O	_	_	_
 to	O	_	O	_	_	O	_	_	_
-Aeschylus:	B-pers	_	B-pers.author	_	_	O	NIL	_	NoSpaceAfter|LED0.00
+Aeschylus:	B-pers	_	B-pers.author	_	_	O	Q40939	_	NoSpaceAfter|LED0.00
 Pers	B-work	_	B-work.primlit	_	_	O	Q788458	_	InPrimaryReference|NoSpaceAfter|LED0.00
 .	I-work	_	I-work.primlit	_	_	O	Q788458	_	InPrimaryReference|LED0.00
 448	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
@@ -400,10 +400,10 @@ snow	O	_	O	_	_	O	_	_	NoSpaceAfter
 smitten	O	_	O	_	_	O	_	_	_
 ridges	O	_	O	_	_	O	_	_	_
 of	O	_	O	_	_	O	_	_	_
-Cyllene	B-pers	_	B-pers.myth	_	_	O	NIL	_	NoSpaceAfter|LED0.00
+Cyllene	B-loc	_	B-loc	_	_	O	Q1232572	_	NoSpaceAfter|LED0.00
 .	O	_	O	_	_	O	_	_	NoSpaceAfter
 ”	O	_	O	_	_	O	_	_	EndOfSentence
-Cyllene	B-pers	_	B-pers.myth	_	_	O	NIL	_	LED0.00
+Cyllene	B-loc	_	B-loc	_	_	O	Q1232572	_	LED0.00
 is	O	_	O	_	_	O	_	_	_
 clearly	O	_	O	_	_	O	_	_	_
 visible	O	_	O	_	_	O	_	_	_

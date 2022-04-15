@@ -7,7 +7,7 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # hipe2022:date = 1881-01-01
 # hipe2022:dataset = ajmc
 # hipe2022:applicable_columns = TOKEN NE-COARSE-LIT NE-FINE-LIT NE-NESTED NEL-LIT MISC
-# ajmc:version = v0.2
+# ajmc:version = v0.3
 # ajmc:title = Sophocles
 # ajmc:publication_place = Oxford
 # ajmc:publication_date = 1881
@@ -476,8 +476,8 @@ the	I-work	_	I-work.primlit	_	_	O	Q4993655	_	InPrimaryReference|LED0.00
 Isles	I-work	_	I-work.primlit	_	_	O	Q4993655	_	InPrimaryReference|NoSpaceAfter|LED0.00
 .	O	_	O	_	_	O	_	_	EndOfSentence
 Also	O	_	O	_	_	O	_	_	_
-El	B-pers	_	B-pers.author	_	_	O	Q733444	_	InPrimaryReference|NoSpaceAfter|LED0.00
-.	I-pers	_	I-pers.author	_	_	O	Q733444	_	InPrimaryReference|LED0.00
+El	B-work	_	B-work.primlit	_	_	O	Q733444	_	InPrimaryReference|NoSpaceAfter|LED0.00
+.	I-work	_	I-work.primlit	_	_	O	Q733444	_	InPrimaryReference|LED0.00
 1483	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.14
 ,	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|LED0.14
 6	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.14

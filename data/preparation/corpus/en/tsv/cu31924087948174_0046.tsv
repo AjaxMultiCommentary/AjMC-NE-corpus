@@ -7,7 +7,7 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # hipe2022:date = 1881-01-01
 # hipe2022:dataset = ajmc
 # hipe2022:applicable_columns = TOKEN NE-COARSE-LIT NE-FINE-LIT NE-NESTED NEL-LIT MISC
-# ajmc:version = v0.2
+# ajmc:version = v0.3
 # ajmc:title = Sophocles
 # ajmc:publication_place = Oxford
 # ajmc:publication_date = 1881
@@ -75,7 +75,7 @@ like	O	_	O	_	_	O	_	_	_
 ,	O	_	O	_	_	O	_	_	_
 infr	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-31	O	_	O	_	_	O	_	_	NoSpaceAfter
+31	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 .	O	_	O	_	_	O	_	_	EndOfSentence
 27	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
@@ -128,9 +128,9 @@ to	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 infr	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-232	O	_	O	_	_	O	_	_	NoSpaceAfter
-,	O	_	O	_	_	O	_	_	_
-360	O	_	O	_	_	O	_	_	NoSpaceAfter
+232	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
+,	O	_	O	_	_	O	_	_	InPrimaryReference
+360	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 ,	O	_	O	_	_	O	_	_	_
 and	O	_	O	_	_	O	_	_	_
 was	O	_	O	_	_	O	_	_	_
@@ -208,7 +208,7 @@ Tecmessa	B-pers	_	B-pers.myth	_	_	O	Q10796858	_	NoSpaceAfter|LED0.00
 ,	O	_	O	_	_	O	_	_	_
 infr	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-297	O	_	O	_	_	O	_	_	NoSpaceAfter
+297	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 ,	O	_	O	_	_	O	_	_	_
 but	O	_	O	_	_	O	_	_	_
 are	O	_	O	_	_	O	_	_	_
@@ -258,10 +258,10 @@ p	B-scope	_	B-scope	_	_	O	_	_	InSecondaryReference|NoSpaceAfter|LED0.00
 and	O	_	O	_	_	O	_	_	_
 cp	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-O	B-work	_	B-work.seclit	_	_	O	Q148643	_	InPrimaryReference|NoSpaceAfter|LED0.00
-.	I-work	_	I-work.seclit	_	_	O	Q148643	_	InPrimaryReference|NoSpaceAfter|LED0.00
-T	I-work	_	I-work.seclit	_	_	O	Q148643	_	InPrimaryReference|NoSpaceAfter|LED0.00
-.	I-work	_	I-work.seclit	_	_	O	Q148643	_	InPrimaryReference|LED0.00
+O	B-work	_	B-work.primlit	_	_	O	Q148643	_	InPrimaryReference|NoSpaceAfter|LED0.00
+.	I-work	_	I-work.primlit	_	_	O	Q148643	_	InPrimaryReference|NoSpaceAfter|LED0.00
+T	I-work	_	I-work.primlit	_	_	O	Q148643	_	InPrimaryReference|NoSpaceAfter|LED0.00
+.	I-work	_	I-work.primlit	_	_	O	Q148643	_	InPrimaryReference|LED0.00
 25	O	_	O	_	_	O	_	_	InPrimaryReference|NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 φθίνουσα	O	_	O	_	_	O	_	_	_
@@ -330,7 +330,7 @@ cp	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 infr	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-772	O	_	O	_	_	O	_	_	NoSpaceAfter
+772	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 )	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
 might	O	_	O	_	_	O	_	_	_
@@ -394,7 +394,7 @@ Cp	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 infr	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-379	O	_	O	_	_	O	_	_	NoSpaceAfter
+379	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 ,	O	_	O	_	_	O	_	_	_
 Phil	B-work	_	B-work.primlit	_	_	O	Q1415903	_	InPrimaryReference|NoSpaceAfter|LED0.00
 .	I-work	_	I-work.primlit	_	_	O	Q1415903	_	InPrimaryReference|LED0.00
@@ -537,9 +537,9 @@ e	O	_	O	_	_	O	_	_	NoSpaceAfter
 οὐκ	O	_	O	_	_	O	_	_	_
 ἔνδον	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-1	O	_	O	_	_	O	_	_	NoSpaceAfter
-.	O	_	O	_	_	O	_	_	_
-7	O	_	O	_	_	O	_	_	NoSpaceAfter
+1	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.25
+.	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|LED0.25
+7	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.25
 ,	O	_	O	_	_	O	_	_	_
 supr	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	NoSpaceAfter

@@ -7,7 +7,7 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # hipe2022:date = 1881-01-01
 # hipe2022:dataset = ajmc
 # hipe2022:applicable_columns = TOKEN NE-COARSE-LIT NE-FINE-LIT NE-NESTED NEL-LIT MISC
-# ajmc:version = v0.2
+# ajmc:version = v0.3
 # ajmc:title = Sophocles
 # ajmc:publication_place = Oxford
 # ajmc:publication_date = 1881
@@ -198,7 +198,7 @@ Cp	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 infr	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
-1297	O	_	_	_	_	_	_	_	NoSpaceAfter
+1297	B-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 ,	O	_	_	_	_	_	_	_	_
 ἐφῆκεν	O	_	_	_	_	_	_	_	_
 ἐλλοῖς	O	_	_	_	_	_	_	_	_
@@ -490,15 +490,15 @@ in	O	_	_	_	_	_	_	_	_
 Demosthenes	O	_	_	_	_	_	_	_	NoSpaceAfter|LED0.00
 .	O	_	_	_	_	_	_	_	EndOfSentence
 See	O	_	_	_	_	_	_	_	_
-L	B-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|NoSpaceAfter|LED0.11
-.	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|LED0.11
-and	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|LED0.11
-5	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|NoSpaceAfter|LED0.11
-.	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|LED0.11
-5	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|NoSpaceAfter
-.	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference
-v	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|NoSpaceAfter
-.	I-secondary-partial	_	_	_	_	_	_	_	EndOfSentence|InSecondaryReference
+L	B-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|NoSpaceAfter|LED0.00
+.	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|LED0.00
+and	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference
+5	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|NoSpaceAfter|LED0.50
+.	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|LED0.50
+5	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|NoSpaceAfter|LED0.00
+.	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|LED0.00
+v	I-secondary-partial	_	_	_	_	_	_	_	InSecondaryReference|NoSpaceAfter|LED0.00
+.	I-secondary-partial	_	_	_	_	_	_	_	EndOfSentence|InSecondaryReference|LED0.00
 504	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 κἀμὲ	O	_	_	_	_	_	_	_	_

@@ -395,7 +395,8 @@
     <custom:AjMCNamedEntity xmi:id="6288" sofa="1" begin="223" end="226" is_NIL="false" noisy_ocr="false" value="scope"/>
     <custom:AjMCNamedEntity xmi:id="4670" sofa="1" begin="542" end="557" is_NIL="false" noisy_ocr="false" value="primary-full"/>
     <custom:AjMCNamedEntity xmi:id="4679" sofa="1" begin="542" end="546" is_NIL="false" noisy_ocr="false" value="pers.author" wikidata_id="http://www.wikidata.org/entity/Q134929"/>
-    <custom:AjMCNamedEntity xmi:id="4688" sofa="1" begin="548" end="551" is_NIL="false" noisy_ocr="true" transcript="Ol." value="pers.author" wikidata_id="http://www.wikidata.org/entity/Q18146776"/>
+    <custom:AjMCNamedEntity xmi:id="4688" sofa="1" begin="548" end="551" is_NIL="false" noisy_ocr="true" transcript="Ol." value="work.primlit" wikidata_id="http://www.wikidata.org/entity/Q18146776"/>
+    <custom:AjMCNamedEntity xmi:id="7419" sofa="1" begin="552" end="557" is_NIL="false" noisy_ocr="false" value="scope"/>
     <custom:AjMCNamedEntity xmi:id="6419" sofa="1" begin="745" end="750" is_NIL="false" noisy_ocr="true" transcript="l. 84" value="scope"/>
     <custom:AjMCNamedEntity xmi:id="6436" sofa="1" begin="745" end="750" is_NIL="false" noisy_ocr="false" value="primary-partial"/>
     <custom:AjMCNamedEntity xmi:id="4715" sofa="1" begin="779" end="790" is_NIL="false" noisy_ocr="false" value="primary-full"/>
@@ -447,49 +448,49 @@
     <custom:GoldHyphenation xmi:id="5987" sofa="1" begin="1280" end="1295"/>
     <custom:GoldHyphenation xmi:id="5991" sofa="1" begin="1430" end="1440"/>
     <custom:GoldHyphenation xmi:id="5995" sofa="1" begin="1610" end="1619"/>
-    <type:LayerDefinition xmi:id="7071" name="webanno.custom.GoldSentences" uiName="Gold Sentences"/>
-    <type:LayerDefinition xmi:id="6958" name="de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.morph.MorphologicalFeatures" uiName="Morphological features"/>
-    <type:LayerDefinition xmi:id="6987" name="de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma" uiName="Lemma"/>
-    <type:LayerDefinition xmi:id="7041" name="webanno.custom.AjMCImages" uiName="AjMC Images"/>
-    <type:LayerDefinition xmi:id="6994" name="de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.SurfaceForm" uiName="Surface form"/>
-    <type:LayerDefinition xmi:id="7048" name="webanno.custom.AjMCNamedEntity" uiName="AjMC Named Entity"/>
-    <type:LayerDefinition xmi:id="7030" name="de.tudarmstadt.ukp.dkpro.core.api.transform.type.SofaChangeAnnotation" uiName="Orthography Correction"/>
-    <type:LayerDefinition xmi:id="7019" name="de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency" uiName="Dependency"/>
-    <type:LayerDefinition xmi:id="6947" name="de.tudarmstadt.ukp.dkpro.core.api.coref.type.Coreference" uiName="Coreference"/>
-    <type:LayerDefinition xmi:id="6965" name="de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS" uiName="Part of speech"/>
-    <type:LayerDefinition xmi:id="7012" name="de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.Chunk" uiName="Chunk"/>
-    <type:LayerDefinition xmi:id="7001" name="de.tudarmstadt.ukp.dkpro.core.api.semantics.type.SemPred" uiName="SemPred"/>
-    <type:LayerDefinition xmi:id="6976" name="de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity" uiName="Named entity"/>
-    <type:FeatureDefinition xmi:id="6983" layer="6976" name="value" uiName="value"/>
-    <type:FeatureDefinition xmi:id="6972" layer="6965" name="coarseValue" uiName="UPOS"/>
-    <type:FeatureDefinition xmi:id="7015" layer="7012" name="chunkValue" uiName="Tag"/>
-    <type:FeatureDefinition xmi:id="7059" layer="7048" name="transcript" uiName="transcript"/>
-    <type:FeatureDefinition xmi:id="7082" layer="7071" name="incomplete_truncated" uiName="incomplete_truncated"/>
-    <type:FeatureDefinition xmi:id="7022" layer="7019" name="DependencyType" uiName="Relation"/>
-    <type:FeatureDefinition xmi:id="7055" layer="7048" name="noisy_ocr" uiName="noisy_ocr"/>
-    <type:FeatureDefinition xmi:id="7051" layer="7048" name="is_NIL" uiName="is_NIL"/>
-    <type:FeatureDefinition xmi:id="7067" layer="7048" name="wikidata_id" uiName="wikidata_id"/>
-    <type:FeatureDefinition xmi:id="6961" layer="6958" name="value" uiName="Features"/>
-    <type:FeatureDefinition xmi:id="7037" layer="7030" name="value" uiName="Correction"/>
-    <type:FeatureDefinition xmi:id="7074" layer="7071" name="corrupted" uiName="corrupted"/>
-    <type:FeatureDefinition xmi:id="7044" layer="7041" name="link" uiName="link"/>
-    <type:FeatureDefinition xmi:id="6950" layer="6947" name="referenceRelation" uiName="referenceRelation"/>
-    <type:FeatureDefinition xmi:id="6968" layer="6965" name="PosValue" uiName="XPOS"/>
-    <type:FeatureDefinition xmi:id="7063" layer="7048" name="value" uiName="value"/>
-    <type:FeatureDefinition xmi:id="6954" layer="6947" name="referenceType" uiName="referenceType"/>
-    <type:FeatureDefinition xmi:id="6979" layer="6976" name="identifier" uiName="identifier"/>
-    <type:FeatureDefinition xmi:id="6997" layer="6994" name="value" uiName="Form"/>
-    <type:FeatureDefinition xmi:id="7004" layer="7001" name="arguments" uiName="arguments"/>
-    <type:FeatureDefinition xmi:id="7026" layer="7019" name="flavor" uiName="Flavor"/>
-    <type:FeatureDefinition xmi:id="7008" layer="7001" name="category" uiName="category"/>
-    <type:FeatureDefinition xmi:id="7078" layer="7071" name="incomplete_continuing" uiName="incomplete_continuing"/>
-    <type:FeatureDefinition xmi:id="6990" layer="6987" name="value" uiName="Lemma"/>
-    <type:FeatureDefinition xmi:id="7033" layer="7030" name="operation" uiName="Operation"/>
-    <type3:TagsetDescription xmi:id="7086" sofa="1" begin="0" end="0" layer="webanno.custom.AjMCNamedEntity" name="AjMC Named Entity tags" input="false"/>
-    <type3:TagsetDescription xmi:id="7099" sofa="1" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency" name="UD Universal Dependencies (v2)" input="false"/>
-    <type3:TagsetDescription xmi:id="7112" sofa="1" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity" name="Named Entity tags" input="false"/>
-    <type3:TagsetDescription xmi:id="7125" sofa="1" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.transform.type.SofaChangeAnnotation" name="Operation" input="false"/>
-    <type3:TagsetDescription xmi:id="7138" sofa="1" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS" name="UD Universal POS tags (v2)" input="false"/>
+    <type:LayerDefinition xmi:id="8039" name="de.tudarmstadt.ukp.dkpro.core.api.transform.type.SofaChangeAnnotation" uiName="Orthography Correction"/>
+    <type:LayerDefinition xmi:id="7974" name="de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS" uiName="Part of speech"/>
+    <type:LayerDefinition xmi:id="8080" name="webanno.custom.GoldSentences" uiName="Gold Sentences"/>
+    <type:LayerDefinition xmi:id="8050" name="webanno.custom.AjMCImages" uiName="AjMC Images"/>
+    <type:LayerDefinition xmi:id="8057" name="webanno.custom.AjMCNamedEntity" uiName="AjMC Named Entity"/>
+    <type:LayerDefinition xmi:id="7985" name="de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity" uiName="Named entity"/>
+    <type:LayerDefinition xmi:id="8010" name="de.tudarmstadt.ukp.dkpro.core.api.semantics.type.SemPred" uiName="SemPred"/>
+    <type:LayerDefinition xmi:id="8028" name="de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency" uiName="Dependency"/>
+    <type:LayerDefinition xmi:id="7967" name="de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.morph.MorphologicalFeatures" uiName="Morphological features"/>
+    <type:LayerDefinition xmi:id="7956" name="de.tudarmstadt.ukp.dkpro.core.api.coref.type.Coreference" uiName="Coreference"/>
+    <type:LayerDefinition xmi:id="8021" name="de.tudarmstadt.ukp.dkpro.core.api.syntax.type.chunk.Chunk" uiName="Chunk"/>
+    <type:LayerDefinition xmi:id="8003" name="de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.SurfaceForm" uiName="Surface form"/>
+    <type:LayerDefinition xmi:id="7996" name="de.tudarmstadt.ukp.dkpro.core.api.segmentation.type.Lemma" uiName="Lemma"/>
+    <type:FeatureDefinition xmi:id="7981" layer="7974" name="coarseValue" uiName="UPOS"/>
+    <type:FeatureDefinition xmi:id="8042" layer="8039" name="operation" uiName="Operation"/>
+    <type:FeatureDefinition xmi:id="8006" layer="8003" name="value" uiName="Form"/>
+    <type:FeatureDefinition xmi:id="8035" layer="8028" name="flavor" uiName="Flavor"/>
+    <type:FeatureDefinition xmi:id="8017" layer="8010" name="category" uiName="category"/>
+    <type:FeatureDefinition xmi:id="8064" layer="8057" name="noisy_ocr" uiName="noisy_ocr"/>
+    <type:FeatureDefinition xmi:id="8072" layer="8057" name="value" uiName="value"/>
+    <type:FeatureDefinition xmi:id="7970" layer="7967" name="value" uiName="Features"/>
+    <type:FeatureDefinition xmi:id="8076" layer="8057" name="wikidata_id" uiName="wikidata_id"/>
+    <type:FeatureDefinition xmi:id="7963" layer="7956" name="referenceType" uiName="referenceType"/>
+    <type:FeatureDefinition xmi:id="8013" layer="8010" name="arguments" uiName="arguments"/>
+    <type:FeatureDefinition xmi:id="7988" layer="7985" name="identifier" uiName="identifier"/>
+    <type:FeatureDefinition xmi:id="8060" layer="8057" name="is_NIL" uiName="is_NIL"/>
+    <type:FeatureDefinition xmi:id="7992" layer="7985" name="value" uiName="value"/>
+    <type:FeatureDefinition xmi:id="8031" layer="8028" name="DependencyType" uiName="Relation"/>
+    <type:FeatureDefinition xmi:id="8053" layer="8050" name="link" uiName="link"/>
+    <type:FeatureDefinition xmi:id="8091" layer="8080" name="incomplete_truncated" uiName="incomplete_truncated"/>
+    <type:FeatureDefinition xmi:id="8068" layer="8057" name="transcript" uiName="transcript"/>
+    <type:FeatureDefinition xmi:id="8046" layer="8039" name="value" uiName="Correction"/>
+    <type:FeatureDefinition xmi:id="8083" layer="8080" name="corrupted" uiName="corrupted"/>
+    <type:FeatureDefinition xmi:id="7959" layer="7956" name="referenceRelation" uiName="referenceRelation"/>
+    <type:FeatureDefinition xmi:id="8024" layer="8021" name="chunkValue" uiName="Tag"/>
+    <type:FeatureDefinition xmi:id="7999" layer="7996" name="value" uiName="Lemma"/>
+    <type:FeatureDefinition xmi:id="7977" layer="7974" name="PosValue" uiName="XPOS"/>
+    <type:FeatureDefinition xmi:id="8087" layer="8080" name="incomplete_continuing" uiName="incomplete_continuing"/>
+    <type3:TagsetDescription xmi:id="8095" sofa="1" begin="0" end="0" layer="webanno.custom.AjMCNamedEntity" name="AjMC Named Entity tags" input="false"/>
+    <type3:TagsetDescription xmi:id="8108" sofa="1" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.syntax.type.dependency.Dependency" name="UD Universal Dependencies (v2)" input="false"/>
+    <type3:TagsetDescription xmi:id="8121" sofa="1" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.ner.type.NamedEntity" name="Named Entity tags" input="false"/>
+    <type3:TagsetDescription xmi:id="8134" sofa="1" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.transform.type.SofaChangeAnnotation" name="Operation" input="false"/>
+    <type3:TagsetDescription xmi:id="8147" sofa="1" begin="0" end="0" layer="de.tudarmstadt.ukp.dkpro.core.api.lexmorph.type.pos.POS" name="UD Universal POS tags (v2)" input="false"/>
     <cas:Sofa xmi:id="1" sofaNum="1" sofaID="_InitialView" mimeType="text" sofaString="the former (1), but it makes better sense to join the adverb here with the whole expression ; i.e. not, ‘You shrink from seeing a man who is clearly insane,” but, “You shrink from seeing plainly a man’s madness.” Cp. infr. 229, περίφαντος. The same meaning may be obtained, however, by supposing the adverb in (1) to be used proleptically, (3) ‘You shrink from seeing a man’s madness clearly shown. 84. ὀφθαλμοῖς ye] γε adds emphasis; i.e. though his mind is alienated, he curely has not changed eyes. ' 85. kai δεδορκότα] καὶ -- καίπερ. Cp. Pind. ΟἹ. 7. 55, αἱ δὲ φρενῶν ταραχαὶ παρέπλαγξαν καὶ σοφόν. 86. pévrdv] © Well, after all,’ μέντοι admits and enforces the correcting statement, which it sets over against that which is corrected, viz. 1. 84. For γένοιτ᾽ ἂν... πᾶν, cp. Hdt. 4. 105, εἴη δ᾽ ἂν πᾶν. 88. μένοιμ᾽ dv] “1 shall have to stay. ἐκτός] Out of the way, as in ἐκτὸς κλαυμάτων, πημάτων (‘out of harm’s way’). See L.and 5, 5, v. go. Athena affects to rally Ajax for disregarding her help on this occasion, as he had before scornfully rejected it. Cp. infr. 774, 5. This helps to bring out his unconsciousness of her dis- pleasure. THis συμμάχου] Cp. l. 60. ΟἹ foll. Ajax enters with the scourge in his hand. It is from this scene that the play takes its name of Αἴας μαστι- yopbpos. Ll. 91-3 may be contrasted with 176 [0]. Ajax is not by nature impious, although in the pride of his youth he may have been guilty of im- piety; buthe speaks to the goddess with the blunt familiarity of a comrade in arms. kal in 1. 092 has an encouraging, almost patronizing, sound. 93. στέψω] “1 will grace’ or ‘ hon- our’ thee. 94. ἐκεῖνο] ‘ That other thing.” Fora similar emphatic use of the pronoun (with comic exaggeration), cp. Aristoph. Nub. 655-7, οὐ γάρ, φζυρέ, | τούτων ἐπιθυμῶ μανθάνειν οὐδέν. ΣΩ. τί δαί; | ZT. ἐκεῖν᾽ ἐκεῖνο, τὸν ἀδικώτερον λόγον. "/>
-    <cas:View sofa="1" members="8 24 37 50 63 76 89 102 115 128 141 154 167 180 193 206 219 232 245 258 271 284 297 310 323 336 349 362 375 388 401 414 427 440 453 466 479 492 505 518 531 544 557 570 583 596 609 622 635 648 661 674 687 700 713 726 739 752 765 778 791 804 817 830 843 856 869 882 895 908 921 934 947 960 973 986 999 1012 1025 1038 1051 1064 1077 1090 1103 1116 1129 1142 1155 1168 1181 1194 1207 1220 1233 1246 1259 1272 1285 1298 1311 1324 1337 1350 1363 1376 1389 1402 1415 1428 1441 1454 1467 1480 1493 1506 1519 1532 1545 1558 1571 1584 1597 1610 1623 1636 1649 1662 1675 1688 1701 1714 1727 1740 1753 1766 1779 1792 1805 1818 1831 1844 1857 1870 1883 1896 1909 1922 1935 1948 1961 1974 1987 2000 2013 2026 2039 2052 2065 2078 2091 2104 2117 2130 2143 2156 2169 2182 2195 2208 2221 2234 2247 2260 2273 2286 2299 2312 2325 2338 2351 2364 2377 2390 2403 2416 2429 2442 2455 2468 2481 2494 2507 2520 2533 2546 2559 2572 2585 2598 2611 2624 2637 2650 2663 2676 2689 2702 2715 2728 2741 2754 2767 2780 2793 2806 2819 2832 2845 2858 2871 2884 2897 2910 2923 2936 2949 2962 2975 2988 3001 3014 3027 3040 3053 3066 3079 3092 3105 3118 3131 3144 3157 3170 3183 3196 3209 3222 3235 3248 3261 3274 3287 3300 3313 3326 3339 3352 3365 3378 3391 3404 3417 3430 3443 3456 3469 3482 3495 3508 3521 3534 3547 3560 3573 3586 3599 3612 3625 3638 3651 3664 3677 3690 3703 3716 3729 3742 3755 3768 3781 3794 3807 3820 3833 3846 3859 3872 3885 3898 3911 3924 3937 3950 3963 3976 3989 4002 4015 4028 4041 4054 4067 4080 4093 4106 4119 4132 4145 4158 4171 4184 4197 4210 4223 4236 4249 4262 4275 4288 4301 4314 4327 4340 4353 4366 4379 4392 4405 4410 4415 4420 4425 4430 4435 4440 4445 4450 4455 4460 4465 4470 4475 4480 4485 4490 4495 4500 4505 4510 4515 4520 4525 4530 4535 4540 4545 4550 4555 4560 4565 4570 4575 4580 4585 4590 4595 4600 4605 4610 4615 4620 4625 4630 4635 4640 4645 4650 4655 4660 4665 6271 6288 4670 4679 4688 6419 6436 4715 4724 6517 6550 4751 6616 6575 4769 4778 6731 6697 6714 6756 6773 4787 6798 6815 4796 6840 4805 6881 6906 4814 4823 4832 4841 5754 5761 5768 5775 5782 5789 5796 5803 5810 5817 5824 5831 5838 5845 5852 5859 5866 5873 5880 5983 5987 5991 5995 7071 6958 6987 7041 6994 7048 7030 7019 6947 6965 7012 7001 6976 6983 6972 7015 7059 7082 7022 7055 7051 7067 6961 7037 7074 7044 6950 6968 7063 6954 6979 6997 7004 7026 7008 7078 6990 7033 7086 7099 7112 7125 7138"/>
+    <cas:View sofa="1" members="8 24 37 50 63 76 89 102 115 128 141 154 167 180 193 206 219 232 245 258 271 284 297 310 323 336 349 362 375 388 401 414 427 440 453 466 479 492 505 518 531 544 557 570 583 596 609 622 635 648 661 674 687 700 713 726 739 752 765 778 791 804 817 830 843 856 869 882 895 908 921 934 947 960 973 986 999 1012 1025 1038 1051 1064 1077 1090 1103 1116 1129 1142 1155 1168 1181 1194 1207 1220 1233 1246 1259 1272 1285 1298 1311 1324 1337 1350 1363 1376 1389 1402 1415 1428 1441 1454 1467 1480 1493 1506 1519 1532 1545 1558 1571 1584 1597 1610 1623 1636 1649 1662 1675 1688 1701 1714 1727 1740 1753 1766 1779 1792 1805 1818 1831 1844 1857 1870 1883 1896 1909 1922 1935 1948 1961 1974 1987 2000 2013 2026 2039 2052 2065 2078 2091 2104 2117 2130 2143 2156 2169 2182 2195 2208 2221 2234 2247 2260 2273 2286 2299 2312 2325 2338 2351 2364 2377 2390 2403 2416 2429 2442 2455 2468 2481 2494 2507 2520 2533 2546 2559 2572 2585 2598 2611 2624 2637 2650 2663 2676 2689 2702 2715 2728 2741 2754 2767 2780 2793 2806 2819 2832 2845 2858 2871 2884 2897 2910 2923 2936 2949 2962 2975 2988 3001 3014 3027 3040 3053 3066 3079 3092 3105 3118 3131 3144 3157 3170 3183 3196 3209 3222 3235 3248 3261 3274 3287 3300 3313 3326 3339 3352 3365 3378 3391 3404 3417 3430 3443 3456 3469 3482 3495 3508 3521 3534 3547 3560 3573 3586 3599 3612 3625 3638 3651 3664 3677 3690 3703 3716 3729 3742 3755 3768 3781 3794 3807 3820 3833 3846 3859 3872 3885 3898 3911 3924 3937 3950 3963 3976 3989 4002 4015 4028 4041 4054 4067 4080 4093 4106 4119 4132 4145 4158 4171 4184 4197 4210 4223 4236 4249 4262 4275 4288 4301 4314 4327 4340 4353 4366 4379 4392 4405 4410 4415 4420 4425 4430 4435 4440 4445 4450 4455 4460 4465 4470 4475 4480 4485 4490 4495 4500 4505 4510 4515 4520 4525 4530 4535 4540 4545 4550 4555 4560 4565 4570 4575 4580 4585 4590 4595 4600 4605 4610 4615 4620 4625 4630 4635 4640 4645 4650 4655 4660 4665 6271 6288 4670 4679 4688 7419 6419 6436 4715 4724 6517 6550 4751 6616 6575 4769 4778 6731 6697 6714 6756 6773 4787 6798 6815 4796 6840 4805 6881 6906 4814 4823 4832 4841 5754 5761 5768 5775 5782 5789 5796 5803 5810 5817 5824 5831 5838 5845 5852 5859 5866 5873 5880 5983 5987 5991 5995 8039 7974 8080 8050 8057 7985 8010 8028 7967 7956 8021 8003 7996 7981 8042 8006 8035 8017 8064 8072 7970 8076 7963 8013 7988 8060 7992 8031 8053 8091 8068 8046 8083 7959 8024 7999 7977 8087 8095 8108 8121 8134 8147"/>
 </xmi:XMI>

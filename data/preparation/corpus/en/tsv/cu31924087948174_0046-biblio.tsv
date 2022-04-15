@@ -7,7 +7,7 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # hipe2022:date = 1881-01-01
 # hipe2022:dataset = ajmc
 # hipe2022:applicable_columns = TOKEN NE-COARSE-LIT NE-FINE-LIT NE-NESTED NEL-LIT MISC
-# ajmc:version = v0.2
+# ajmc:version = v0.3
 # ajmc:title = Sophocles
 # ajmc:publication_place = Oxford
 # ajmc:publication_date = 1881
@@ -75,7 +75,7 @@ like	O	_	_	_	_	_	_	_	_
 ,	O	_	_	_	_	_	_	_	_
 infr	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
-31	O	_	_	_	_	_	_	_	NoSpaceAfter
+31	B-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 .	O	_	_	_	_	_	_	_	EndOfSentence
 27	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
@@ -128,9 +128,9 @@ to	O	_	_	_	_	_	_	_	NoSpaceAfter
 ,	O	_	_	_	_	_	_	_	_
 infr	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
-232	O	_	_	_	_	_	_	_	NoSpaceAfter
-,	O	_	_	_	_	_	_	_	_
-360	O	_	_	_	_	_	_	_	NoSpaceAfter
+232	B-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
+,	I-primary-partial	_	_	_	_	_	_	_	InPrimaryReference
+360	I-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 ,	O	_	_	_	_	_	_	_	_
 and	O	_	_	_	_	_	_	_	_
 was	O	_	_	_	_	_	_	_	_
@@ -208,7 +208,7 @@ Tecmessa	O	_	_	_	_	_	_	_	NoSpaceAfter|LED0.00
 ,	O	_	_	_	_	_	_	_	_
 infr	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
-297	O	_	_	_	_	_	_	_	NoSpaceAfter
+297	B-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 ,	O	_	_	_	_	_	_	_	_
 but	O	_	_	_	_	_	_	_	_
 are	O	_	_	_	_	_	_	_	_
@@ -330,7 +330,7 @@ cp	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 infr	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
-772	O	_	_	_	_	_	_	_	NoSpaceAfter
+772	B-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 )	O	_	_	_	_	_	_	_	NoSpaceAfter
 ,	O	_	_	_	_	_	_	_	_
 might	O	_	_	_	_	_	_	_	_
@@ -394,7 +394,7 @@ Cp	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
 infr	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	_
-379	O	_	_	_	_	_	_	_	NoSpaceAfter
+379	B-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 ,	O	_	_	_	_	_	_	_	_
 Phil	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 .	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|LED0.00
@@ -537,9 +537,9 @@ e	O	_	_	_	_	_	_	_	NoSpaceAfter
 οὐκ	O	_	_	_	_	_	_	_	_
 ἔνδον	O	_	_	_	_	_	_	_	_
 (	O	_	_	_	_	_	_	_	NoSpaceAfter
-1	O	_	_	_	_	_	_	_	NoSpaceAfter
-.	O	_	_	_	_	_	_	_	_
-7	O	_	_	_	_	_	_	_	NoSpaceAfter
+1	B-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|LED0.25
+.	I-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|LED0.25
+7	I-primary-partial	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|LED0.25
 ,	O	_	_	_	_	_	_	_	_
 supr	O	_	_	_	_	_	_	_	NoSpaceAfter
 .	O	_	_	_	_	_	_	_	NoSpaceAfter
