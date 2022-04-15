@@ -45,7 +45,7 @@ COL_LABELS = [
     "MISC",
 ]
 
-DATASET_VERSION = 'v0.2'
+DATASET_VERSION = 'v0.3'
 
 NON_LINKABLE_ENTITY_TYPES = ['scope', 'date', 'object']
 
