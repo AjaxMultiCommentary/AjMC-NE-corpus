@@ -110,7 +110,8 @@ def create_datasets(input_dir, output_dir, version, assignments_table_path, set=
 
         else:
             for split in splits:
-                # dev/test for all languages
+                # dev/train for all languages
+                
                 document_paths = list(
                     assignments_df[
                         (assignments_df.split == split)
@@ -123,10 +124,20 @@ def create_datasets(input_dir, output_dir, version, assignments_table_path, set=
                 )
 
                 if split == "test":
-                    # generate a version of the test dataset with ground truth values masked out
+                    # generate a version of the test dataset with all ground truth values masked out
                     tsv_data = parse_tsv(dataset_path, mask_nerc=True, mask_nel=True)
                     masked_dataset_name = os.path.basename(dataset_path).replace(
-                        "-test", "-test-masked"
+                        "-test_unmasked", "-test-allmasked"
+                    )
+                    masked_dataset_path = os.path.join(
+                        output_dir, version, masked_dataset_name
+                    )
+                    write_tsv(tsv_data, masked_dataset_path)
+
+                    # generate a version of the test dataset with EL ground truth values masked out
+                    tsv_data = parse_tsv(dataset_path, mask_nerc=False, mask_nel=True)
+                    masked_dataset_name = os.path.basename(dataset_path).replace(
+                        "-test_unmasked", "-test-ELmasked"
                     )
                     masked_dataset_path = os.path.join(
                         output_dir, version, masked_dataset_name
@@ -155,7 +166,11 @@ def create_dataset(
     else:
         name = DATASET_NAME
     
-    tsv_filename = f"HIPE-2022-{version}-{name}-{split}-{language}.tsv"
+    if split != 'test':
+        tsv_filename = f"HIPE-2022-{version}-{name}-{split}-{language}.tsv"
+    else:
+        tsv_filename = f"HIPE-2022-{version}-{name}-{split}_unmasked-{language}.tsv"
+    
     basedir = os.path.join(output_dir, version)
 
     if not os.path.exists(basedir):
