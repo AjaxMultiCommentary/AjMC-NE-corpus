@@ -26,6 +26,7 @@ retokenize-corpus: retokenize-corpus-fr retokenize-corpus-de retokenize-corpus-e
 download-corpus-%:
 	python scripts/inception/download_curated.py --project-name=ajmc-corpus-$* --output-dir=$(DATA_DIR)/corpus/$*/curated/
 	python scripts/inception/download_curated.py --project-name=ajmc-miniref-$* --output-dir=$(DATA_DIR)/corpus/$*/curated/
+	python scripts/inception/download_curated.py --project-name=ajmc-doubleannot-$* --output-dir=$(DATA_DIR)/corpus/$*/curated/
 
 retokenize-corpus-%: 
 	python lib/retokenization.py -i $(DATA_DIR)/corpus/$*/curated/ \
