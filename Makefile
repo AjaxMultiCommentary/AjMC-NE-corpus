@@ -3,9 +3,8 @@ SHELL:=/bin/bash
 SCHEMA?= data/preparation/TypeSystem.xml
 DATA_DIR?=data/preparation
 RELEASE_DIR?=data/release
-HIPE_VERSION?=v2.1
+HIPE_VERSION?=v3.0
 HIPE_DATA_DIR=/Users/matteo/Documents/HIPE-2022-data
-HIPE_EVALPERIOD_DIR=/Users/matteo/Documents/HIPE-2022-internal
 ASSIGNMENTS_TABLE=document-selection.tsv
 
 ##########################################
@@ -49,15 +48,12 @@ release-corpus-%:
 	--data-version=$(HIPE_VERSION) \
 	--assignments-table=$(ASSIGNMENTS_TABLE)
 
+publish-all: create-corpus-folders publish-corpus-no-test publish-corpus-testset-unmasked publish-corpus-testset-masked-bundle-1-4 publish-corpus-testset-masked-bundle-5
 
 create-corpus-folders:
 	mkdir -p $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/en/
 	mkdir -p $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/de/
 	mkdir -p $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/fr/
-
-	mkdir -p $(HIPE_EVALPERIOD_DIR)/data/release/$(HIPE_VERSION)/ajmc/fr/
-	mkdir -p $(HIPE_EVALPERIOD_DIR)/data/release/$(HIPE_VERSION)/ajmc/de/
-	mkdir -p $(HIPE_EVALPERIOD_DIR)/data/release/$(HIPE_VERSION)/ajmc/en/
 
 publish-corpus-no-test:
 	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-dev-en.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/en/
@@ -70,18 +66,19 @@ publish-corpus-no-test:
 	cp $(DATA_DIR)/corpus/README-ajmc.md $(HIPE_DATA_DIR)/documentation/
 
 publish-corpus-testset-unmasked:
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test_unmasked-en.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/en/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test_unmasked-de.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/de/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test_unmasked-fr.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/fr/
+	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-en.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/en/
+	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-de.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/de/
+	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-fr.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/fr/
 
-publish-corpus-testset-masked:
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-allmasked-en.tsv $(HIPE_EVALPERIOD_DIR)/data/release/$(HIPE_VERSION)/ajmc/en/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-allmasked-de.tsv $(HIPE_EVALPERIOD_DIR)/data/release/$(HIPE_VERSION)/ajmc/de/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-allmasked-fr.tsv $(HIPE_EVALPERIOD_DIR)/data/release/$(HIPE_VERSION)/ajmc/fr/
+publish-corpus-testset-masked-bundle-1-4:
+	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test_allmasked-en.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/en/
+	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test_allmasked-de.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/de/
+	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test_allmasked-fr.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/fr/
 
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-ELmasked-en.tsv $(HIPE_EVALPERIOD_DIR)/data/release/$(HIPE_VERSION)/ajmc/en/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-ELmasked-de.tsv $(HIPE_EVALPERIOD_DIR)/data/release/$(HIPE_VERSION)/ajmc/de/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-ELmasked-fr.tsv $(HIPE_EVALPERIOD_DIR)/data/release/$(HIPE_VERSION)/ajmc/fr/
+publish-corpus-testset-masked-bundle-5:
+	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-ELmasked-en.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/en/
+	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-ELmasked-de.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/de/
+	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-ELmasked-fr.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/fr/
 
 
 ##########################################

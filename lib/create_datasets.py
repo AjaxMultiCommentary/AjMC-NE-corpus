@@ -127,7 +127,7 @@ def create_datasets(input_dir, output_dir, version, assignments_table_path, set=
                     # generate a version of the test dataset with all ground truth values masked out
                     tsv_data = parse_tsv(file_path=dataset_path, mask_nerc=True, mask_nel=True)
                     masked_dataset_name = os.path.basename(dataset_path).replace(
-                        "-test", "-test-allmasked"
+                        "-test", "-test_allmasked"
                     )
                     masked_dataset_path = os.path.join(
                         output_dir, version, masked_dataset_name

@@ -11,7 +11,7 @@
 | **Annotation tool**     | [INCEpTION](https://inception-project.github.io/) |
 | **Original format and tagging scheme** |`.tsv, IOB` |
 | **Annotations**          | NERC, EL (towards Wikidata) |
-| **Version (used in HIPE-2022)**   | `v0.2` |
+| **Version (used in HIPE-2022)**   | `v0.3` |
 | **Related publication**               | – |
 | **License** | [![License: CC BY 4.0](https://img.shields.io/badge/License-CC_BY_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/) |
 
@@ -61,6 +61,9 @@ The *ajmc* dataset can be used for:
 - **Sentence splitting:** annotated manually (see Guidelines, section 4).
 
 ### Data release notes
+
+**HIPE-2022-data v2.1**
+- Thorough data cleaning: added missing OCR transcriptions, added some missing Wikidata IDs, fixed some erroneous entity types, added some missing mentions.
 
 **HIPE-2022-data v2.0**
 - This release contains dev and train set for all languages (EN, DE, FR). 
