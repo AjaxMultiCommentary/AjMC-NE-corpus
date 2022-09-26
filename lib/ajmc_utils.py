@@ -49,6 +49,12 @@ METADATA = {
         "title": "Sophocles: The Plays and Fragments",
         "publication_date": "1896",
         "publication_place": "London"
+    },
+    "lestragdiesdeso00tourgoog":{
+        "author": "Tournier, Édouard",
+        "title": "Les tragédies de Sophocle",
+        "publication_date": "1886",
+        "publication_place": "Paris"
     }
 }
 
