@@ -48,13 +48,6 @@ Not available yet.
 
 The digitized commentaries are available in the Internet Archive and released in the Public Domain. This annotated dataset is published under a [Creative Commons CC BY license (v. 4.0)](https://creativecommons.org/licenses/by/4.0/). 
 
-## Domain specificity
-
-This dataset raises some challenges for NER and EL that are related to its domain-specific nature: 
-
-- *data sparsity*: the fact that some entity types are under-represented in this dataset (e.g. `date`) calls for approaches to deal with data sparsity (e.g. data augmentation, meta-learning);
-- *dependance on context*: the overall context of a commentary has a direct impact on how entity mentions are crafted, especially in terms of conciseness of the referents. This is especially relevant for EL as capturing the global document context becomes essential to select the correct linking candidate. To give a concrete example, a scholar commenting on a tragedy by Sophocles will probably omit the ancient author's name when referring to other works by Sophocles. To refer to a line of Sophocles' play *Philoctetes* she may write "*Ph.* 100" instead of the more easily intelligible "Soph. *Philoct.* 110".
-
 ## Related resources
 
 **Hucitlib Knowledge Base.** Commentators make abundant use of very concise abbreviations when referring e.g. to ancient authors (`pers.author`) and their works (`work.primlit`). Such abbreviations constitute a substantial challenge, especially for entity linking. An external resource that can be used in this respect is the [`hucitlib` knowledge base](https://hucitlib.readthedocs.io/) which is partially linked to Wikidata and provides abbreviations and variant names/titles for classical authors and their works.  
