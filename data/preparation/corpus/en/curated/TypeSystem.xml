@@ -2601,6 +2601,134 @@
                 
         <typeDescription>
                         
+            <name>org.dkpro.core.api.pdf.type.PdfChunk</name>
+                        
+            <description/>
+                        
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+                        
+            <features>
+                                
+                <featureDescription>
+                                        
+                    <name>d</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.Float</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>x</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.Float</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>y</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.Float</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>w</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.Float</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>h</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.Float</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>c</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.IntegerArray</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>g</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.FloatArray</rangeTypeName>
+                                    
+                </featureDescription>
+                            
+            </features>
+                    
+        </typeDescription>
+                
+        <typeDescription>
+                        
+            <name>org.dkpro.core.api.pdf.type.PdfPage</name>
+                        
+            <description/>
+                        
+            <supertypeName>uima.tcas.Annotation</supertypeName>
+                        
+            <features>
+                                
+                <featureDescription>
+                                        
+                    <name>width</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.Float</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>height</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.Float</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>pageNumber</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.Integer</rangeTypeName>
+                                    
+                </featureDescription>
+                            
+            </features>
+                    
+        </typeDescription>
+                
+        <typeDescription>
+                        
             <name>org.dkpro.core.api.xml.type.XmlAttribute</name>
                         
             <description/>
@@ -2680,6 +2808,20 @@
                     <description/>
                                         
                     <rangeTypeName>org.dkpro.core.api.xml.type.XmlElement</rangeTypeName>
+                                    
+                </featureDescription>
+                                
+                <featureDescription>
+                                        
+                    <name>captureRoots</name>
+                                        
+                    <description/>
+                                        
+                    <rangeTypeName>uima.cas.FSArray</rangeTypeName>
+                                        
+                    <elementType>org.dkpro.core.api.xml.type.XmlNode</elementType>
+                                        
+                    <multipleReferencesAllowed>true</multipleReferencesAllowed>
                                     
                 </featureDescription>
                             

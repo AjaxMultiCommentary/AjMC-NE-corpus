@@ -1,5 +1,5 @@
 TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NESTED	NEL-LIT	NEL-METO	MISC
-# hipe2022:original_source = data/preparation/corpus/de/retokenized/Wecklein1894_0102.xmi
+# hipe2022:original_source = data/preparation_new/corpus/de/retokenized/Wecklein1894_0102.xmi
 # hipe2022:license = CC-BY
 # hipe2022:language = de
 # hipe2022:document_type = commentary
@@ -13,7 +13,7 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # ajmc:publication_date = 1894
 # ajmc:page = 102
 # ajmc:author = Wecklein, Nikolaus
-495	O	_	O	_	_	O	_	_	NoSpaceAfter
+495	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 .	O	_	O	_	_	O	_	_	EndOfSentence
 1323	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_

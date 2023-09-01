@@ -1,5 +1,5 @@
 TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NESTED	NEL-LIT	NEL-METO	MISC
-# hipe2022:original_source = data/preparation/corpus/de/retokenized/sophokle1v3soph_0130.xmi
+# hipe2022:original_source = data/preparation_new/corpus/de/retokenized/sophokle1v3soph_0130.xmi
 # hipe2022:license = CC-BY
 # hipe2022:language = de
 # hipe2022:document_type = commentary
@@ -41,8 +41,8 @@ Vgl	O	_	_	_	_	_	_	_	NoSpaceAfter
 Phil	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 .	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|LED0.00
 1090	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|LED0.00
-f	O	_	_	_	_	_	_	_	NoSpaceAfter
-.	O	_	_	_	_	_	_	_	EndOfSentence
+f	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
+.	I-primary-full	_	_	_	_	_	_	_	EndOfSentence|InPrimaryReference|LED0.00
 Die	O	_	_	_	_	_	_	_	_
 Jahre	O	_	_	_	_	_	_	_	_
 heissen	O	_	_	_	_	_	_	_	_

@@ -1,5 +1,5 @@
 TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NESTED	NEL-LIT	NEL-METO	MISC
-# hipe2022:original_source = data/preparation/corpus/de/retokenized/sophokle1v3soph_0032.xmi
+# hipe2022:original_source = data/preparation_new/corpus/de/retokenized/sophokle1v3soph_0032.xmi
 # hipe2022:license = CC-BY
 # hipe2022:language = de
 # hipe2022:document_type = commentary
@@ -75,11 +75,11 @@ Selbstmord	O	_	O	_	_	O	_	_	_
 selbst	O	_	O	_	_	O	_	_	_
 aber	O	_	O	_	_	O	_	_	_
 führte	O	_	O	_	_	O	_	_	_
-Sophokles	O	_	O	_	_	O	_	_	NoSpaceAfter
+Sophokles	B-pers	_	B-pers.other	_	_	O	Q11950683	_	NoSpaceAfter|LED0.00
 ,	O	_	O	_	_	O	_	_	_
 abweichend	O	_	O	_	_	O	_	_	NoSpaceAfter
 von	O	_	O	_	_	O	_	_	_
-Aeschylos	B-pers	_	B-pers.author	_	_	O	Q40939	_	NoSpaceAfter|LED0.00
+Aeschylos	B-pers	_	B-pers.other	_	_	O	Q40939	_	NoSpaceAfter|LED0.00
 ,	O	_	O	_	_	O	_	_	_
 den	O	_	O	_	_	O	_	_	_
 Augen	O	_	O	_	_	O	_	_	_
