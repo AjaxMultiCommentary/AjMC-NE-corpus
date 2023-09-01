@@ -122,6 +122,10 @@ def create_datasets(input_dir, output_dir, version, assignments_table_path, set=
                 dataset_path = create_dataset(
                     document_paths, lang, split, version, output_dir
                 )
+
+                dataset_path = create_dataset(
+                    document_paths, lang, split, version, output_dir, biblio_layer=True
+                )
                     
 
             # for each language, read the list of noisy entities
@@ -146,7 +150,7 @@ def create_dataset(
     else:
         name = DATASET_NAME
     
-    tsv_filename = f"HIPE-2022-{version}-{name}-{split}-{language}.tsv"
+    tsv_filename = f"{name}-{version}-{split}-{language}.tsv"
     
     basedir = os.path.join(output_dir, version)
 
