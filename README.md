@@ -11,7 +11,7 @@ This dataset consists of named entity-annotated historical commentaries in the f
 | **Languages**           | English, French,  German, Ancient Greek, Latin |
 | **Annotation guidelines** |[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3585750.svg)](https://doi.org/10.5281/zenodo.3585750)|
 | **Annotation tool**     | [INCEpTION](https://inception-project.github.io/) |
-| **Original format and tagging scheme** |`.conllp, IOB` |
+| **Original format and tagging scheme** |`HIPE TSV format, IOB` |
 | **Annotations**          | NERC, EL (towards Wikidata) |
 | **Version**   | `v0.4` |
 | **Related publication**               |TBD|
