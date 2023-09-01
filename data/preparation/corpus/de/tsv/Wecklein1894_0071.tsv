@@ -7,7 +7,7 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # hipe2022:date = 1894-01-01
 # hipe2022:dataset = ajmc
 # hipe2022:applicable_columns = TOKEN NE-COARSE-LIT NE-FINE-LIT NE-NESTED NEL-LIT MISC
-# ajmc:version = v0.3
+# ajmc:version = v0.4
 # ajmc:title = Sophokleus Aias
 # ajmc:publication_place = München
 # ajmc:publication_date = 1894
@@ -168,14 +168,14 @@ ohne	O	_	O	_	_	O	_	_	_
 ἄν	O	_	O	_	_	O	_	_	NoSpaceAfter
 :	O	_	O	_	_	O	_	_	_
 zu	O	_	O	_	_	O	_	_	_
-761	B-scope	_	B-scope	_	_	O	_	_	InSecondaryReference|NoSpaceAfter|LED0.00
+761	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 .	O	_	O	_	_	O	_	_	_
 813	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 ἕτοιμος	O	_	O	_	_	O	_	_	NoSpaceAfter
 :	O	_	O	_	_	O	_	_	_
 zu	O	_	O	_	_	O	_	_	_
-399	B-scope	_	B-scope	_	_	O	_	_	InSecondaryReference|NoSpaceAfter|LED0.00
+399	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 .	O	_	O	_	_	O	_	_	EndOfSentence
 814	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
@@ -308,7 +308,7 @@ fällt	O	_	O	_	_	O	_	_	NoSpaceAfter
 —	O	_	O	_	_	O	_	_	_
 μὲν	O	_	O	_	_	O	_	_	_
 wird	O	_	O	_	_	O	_	_	_
-823	O	_	O	_	_	O	_	_	_
+823	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|LED0.00
 mit	O	_	O	_	_	O	_	_	_
 οὕτω	O	_	O	_	_	O	_	_	_
 μέν	O	_	O	_	_	O	_	_	_
@@ -339,13 +339,13 @@ drei	O	_	O	_	_	O	_	_	_
 weitere	O	_	O	_	_	O	_	_	_
 Gründe	O	_	O	_	_	O	_	_	_
 (	O	_	O	_	_	O	_	_	NoSpaceAfter
-819	B-scope	_	B-scope	_	_	O	_	_	InSecondaryReference|NoSpaceAfter|LED0.00
-,	O	_	O	_	_	O	_	_	InSecondaryReference
-820	B-scope	_	B-scope	_	_	O	_	_	InSecondaryReference|NoSpaceAfter|LED0.00
-,	O	_	O	_	_	O	_	_	InSecondaryReference
-821	B-scope	_	B-scope	_	_	O	_	_	InSecondaryReference|LED0.00
-f	I-scope	_	I-scope	_	_	O	_	_	InSecondaryReference|NoSpaceAfter|LED0.00
-.	I-scope	_	I-scope	_	_	O	_	_	InSecondaryReference|NoSpaceAfter|LED0.00
+819	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
+,	O	_	O	_	_	O	_	_	InPrimaryReference
+820	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
+,	O	_	O	_	_	O	_	_	InPrimaryReference
+821	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|LED0.00
+f	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
+.	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 )	O	_	O	_	_	O	_	_	_
 folgen	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence

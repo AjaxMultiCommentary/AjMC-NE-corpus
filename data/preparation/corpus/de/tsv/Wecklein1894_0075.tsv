@@ -7,7 +7,7 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # hipe2022:date = 1894-01-01
 # hipe2022:dataset = ajmc
 # hipe2022:applicable_columns = TOKEN NE-COARSE-LIT NE-FINE-LIT NE-NESTED NEL-LIT MISC
-# ajmc:version = v0.3
+# ajmc:version = v0.4
 # ajmc:title = Sophokleus Aias
 # ajmc:publication_place = München
 # ajmc:publication_date = 1894
@@ -165,9 +165,9 @@ V	O	_	O	_	_	O	_	_	_
 —	O	_	O	_	_	O	_	_	_
 —	O	_	O	_	_	O	_	_	_
 —	O	_	O	_	_	O	_	_	_
-890	O	_	O	_	_	O	_	_	NoSpaceAfter
-,	O	_	O	_	_	O	_	_	_
-936	O	_	O	_	_	O	_	_	EndOfSentence
+890	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
+,	O	_	O	_	_	O	_	_	InPrimaryReference
+936	B-scope	_	B-scope	_	_	O	_	_	EndOfSentence|InPrimaryReference|LED0.00
 880	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 τίς	O	_	O	_	_	O	_	_	_
@@ -259,9 +259,9 @@ des	O	_	O	_	_	O	_	_	_
 Aias	B-pers	_	B-pers.myth	_	_	O	Q172725	_	LED0.00
 denken	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
-882	O	_	O	_	_	O	_	_	_
-f	O	_	O	_	_	O	_	_	NoSpaceAfter
-.	O	_	O	_	_	O	_	_	_
+882	B-scope	_	B-scope	_	_	O	_	_	InPrimaryReference|LED0.00
+f	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
+.	I-scope	_	I-scope	_	_	O	_	_	InPrimaryReference|LED0.00
 ᾿Ολυμπιάδων	O	_	O	_	_	O	_	_	_
 ϑεᾶν	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_

@@ -4,9 +4,15 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # hipe2022:language = fr
 # hipe2022:document_type = commentary
 # hipe2022:document_id = lestragdiesdeso00tourgoog_0024
+# hipe2022:date = 1886-01-01
 # hipe2022:dataset = ajmc
 # hipe2022:applicable_columns = TOKEN NE-COARSE-LIT NE-FINE-LIT NE-NESTED NEL-LIT MISC
-# ajmc:version = v0.3
+# ajmc:version = v0.4
+# ajmc:title = Les tragédies de Sophocle
+# ajmc:publication_place = Paris
+# ajmc:publication_date = 1886
+# ajmc:page = 24
+# ajmc:author = Tournier, Édouard
 L	O	_	O	_	_	O	_	_	NoSpaceAfter
 '	O	_	O	_	_	O	_	_	NoSpaceAfter
 objet	O	_	O	_	_	O	_	_	_
@@ -117,7 +123,7 @@ publiée	O	_	O	_	_	O	_	_	_
 par	O	_	O	_	_	O	_	_	_
 Elmsley	B-pers	_	B-pers.editor	_	_	O	Q7173848	_	LED0.00
 et	O	_	O	_	_	O	_	_	_
-Gaisford	B-pers	_	B-pers.editor	_	_	O	Q2424118	_	NoSpaceAfter|LED0.00
+Gaisford	B-pers	_	B-pers.editor	_	_	O	NIL	_	NoSpaceAfter|LED0.00
 ,	O	_	O	_	_	O	_	_	_
 en	O	_	O	_	_	O	_	_	_
 1825	B-date	_	B-date	_	_	O	_	_	NoSpaceAfter|LED0.00
@@ -228,8 +234,8 @@ qui	O	_	O	_	_	O	_	_	_
 vivait	O	_	O	_	_	O	_	_	_
 au	O	_	O	_	_	O	_	_	_
 quatorzième	B-date	_	B-date	_	_	O	_	_	LED0.00
-ou	O	_	O	_	_	O	_	_	_
-quinzième	B-date	_	B-date	_	_	O	_	_	LED0.00
+ou	I-date	_	I-date	_	_	O	_	_	LED0.00
+quinzième	I-date	_	I-date	_	_	O	_	_	LED0.00
 siècle	I-date	_	I-date	_	_	O	_	_	NoSpaceAfter|LED0.00
 .	O	_	O	_	_	O	_	_	EndOfSentence
 Parmi	O	_	O	_	_	O	_	_	_
@@ -256,7 +262,7 @@ l	O	_	O	_	_	O	_	_	NoSpaceAfter
 édition	O	_	O	_	_	O	_	_	_
 de	O	_	O	_	_	O	_	_	_
 M	O	_	O	_	_	O	_	_	NoSpaceAfter
-.	O	_	O	_	_	O	_	_	EndOfSentence
+.	O	_	O	_	_	O	_	_	_
 Dindorf,	B-pers	_	B-pers.editor	_	_	O	Q67533	_	NoSpaceAfter|LED0.00
 celle	O	_	O	_	_	O	_	_	_
 de	O	_	O	_	_	O	_	_	_
@@ -267,11 +273,11 @@ par	O	_	O	_	_	O	_	_	_
 M	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
 Nauck	B-pers	_	B-pers.editor	_	_	O	Q95964	_	NoSpaceAfter|LED0.00
-.	O	_	O	_	_	O	_	_	_
+.	O	_	O	_	_	O	_	_	EndOfSentence
 Le	O	_	O	_	_	O	_	_	_
 commentaire	O	_	O	_	_	O	_	_	NoSpaceAfter
 de	O	_	O	_	_	O	_	_	_
-Schneidewin	B-pers	_	B-pers.editor	_	_	O	Q70043	_	LED0.00
+Schneidewin	B-pers	_	B-pers.author	_	_	O	Q70043	_	LED0.00
 se	O	_	O	_	_	O	_	_	_
 recommandait	O	_	O	_	_	O	_	_	_
 par	O	_	O	_	_	O	_	_	_
@@ -394,7 +400,6 @@ l	O	_	O	_	_	O	_	_	NoSpaceAfter
 ’	O	_	O	_	_	O	_	_	NoSpaceAfter
 érudition	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	EndOfSentence
-En	O	_	O	_	_	O	_	_	_
 même	O	_	O	_	_	O	_	_	_
 temps	O	_	O	_	_	O	_	_	NoSpaceAfter
 ,	O	_	O	_	_	O	_	_	_
@@ -428,12 +433,12 @@ l	O	_	O	_	_	O	_	_	NoSpaceAfter
 '	O	_	O	_	_	O	_	_	NoSpaceAfter
 ouvrage	O	_	O	_	_	O	_	_	_
 de	O	_	O	_	_	O	_	_	_
-Schneidewin	B-pers	_	B-pers.editor	_	_	O	Q70043	_	NoSpaceAfter|LED0.00
+Schneidewin	B-pers	_	B-pers.author	_	_	O	Q70043	_	NoSpaceAfter|LED0.00
 ,	O	_	O	_	_	O	_	_	_
 quand	O	_	O	_	_	O	_	_	_
 M	O	_	O	_	_	O	_	_	NoSpaceAfter
 .	O	_	O	_	_	O	_	_	_
-Nauck	B-pers	_	B-pers.editor	_	_	O	Q95964	_	LED0.00
+Nauck	B-pers	_	B-pers.author	_	_	O	Q95964	_	LED0.00
 a	O	_	O	_	_	O	_	_	_
 été	O	_	O	_	_	O	_	_	_
 chargé	O	_	O	_	_	O	_	_	_

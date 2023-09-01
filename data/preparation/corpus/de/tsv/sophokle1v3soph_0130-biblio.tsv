@@ -7,7 +7,7 @@ TOKEN	NE-COARSE-LIT	NE-COARSE-METO	NE-FINE-LIT	NE-FINE-METO	NE-FINE-COMP	NE-NEST
 # hipe2022:date = 1853-01-01
 # hipe2022:dataset = ajmc
 # hipe2022:applicable_columns = TOKEN NE-COARSE-LIT NE-FINE-LIT NE-NESTED NEL-LIT MISC
-# ajmc:version = v0.3
+# ajmc:version = v0.4
 # ajmc:title = Sophokles, erklärt
 # ajmc:publication_place = Leipzig
 # ajmc:publication_date = 1853
@@ -41,8 +41,8 @@ Vgl	O	_	_	_	_	_	_	_	NoSpaceAfter
 Phil	B-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
 .	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|LED0.00
 1090	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|LED0.00
-f	O	_	_	_	_	_	_	_	NoSpaceAfter
-.	O	_	_	_	_	_	_	_	EndOfSentence
+f	I-primary-full	_	_	_	_	_	_	_	InPrimaryReference|NoSpaceAfter|LED0.00
+.	I-primary-full	_	_	_	_	_	_	_	EndOfSentence|InPrimaryReference|LED0.00
 Die	O	_	_	_	_	_	_	_	_
 Jahre	O	_	_	_	_	_	_	_	_
 heissen	O	_	_	_	_	_	_	_	_

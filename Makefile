@@ -1,11 +1,10 @@
 SHELL:=/bin/bash
 
-SCHEMA?= data/preparation/TypeSystem.xml
 DATA_DIR?=data/preparation
 RELEASE_DIR?=data/release
-HIPE_VERSION?=v3.0
-HIPE_DATA_DIR=/Users/matteo/Documents/HIPE-2022-data
+DATA_VERSION?=v0.4
 ASSIGNMENTS_TABLE=document-selection.tsv
+SCHEMA?= data/preparation/TypeSystem.xml
 
 ##########################################
 # Make commands for full corpus release  #
@@ -45,79 +44,8 @@ release-corpus-%:
 	--log-file=$(DATA_DIR)/logs/release-$*.log \
 	--input-dir=$(DATA_DIR) \
 	--output-dir=data/release/ \
-	--data-version=$(HIPE_VERSION) \
+	--data-version=$(DATA_VERSION) \
 	--assignments-table=$(ASSIGNMENTS_TABLE)
 
-publish-all: create-corpus-folders publish-corpus-no-test publish-corpus-testset-unmasked publish-corpus-testset-masked-bundle-1-4 publish-corpus-testset-masked-bundle-5
-
-create-corpus-folders:
-	mkdir -p $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/en/
-	mkdir -p $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/de/
-	mkdir -p $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/fr/
-
-publish-corpus-no-test:
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-dev-en.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/en/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-train-en.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/en/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-dev-de.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/de/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-train-de.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/de/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-dev-fr.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/fr/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-train-fr.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/fr/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/ajmc-entity-ocr-correction-*.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/
-	cp $(DATA_DIR)/corpus/README-ajmc.md $(HIPE_DATA_DIR)/documentation/
-
-publish-corpus-testset-unmasked:
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-en.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/en/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-de.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/de/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-fr.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/fr/
-
-publish-corpus-testset-masked-bundle-1-4:
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test_allmasked-en.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/en/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test_allmasked-de.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/de/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test_allmasked-fr.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/fr/
-
-publish-corpus-testset-masked-bundle-5:
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-ELmasked-en.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/en/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-ELmasked-de.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/de/
-	cp $(RELEASE_DIR)/$(HIPE_VERSION)/*-test-ELmasked-fr.tsv $(HIPE_DATA_DIR)/data/$(HIPE_VERSION)/ajmc/fr/
-
-
-##########################################
-# Make commands for sample data release  #
-##########################################
-
-miniref: download-miniref retokenize-miniref export-miniref release-miniref
-
-clear-miniref:
-	rm -r $(DATA_DIR)/minireference/*/curated/*
-	rm -r $(DATA_DIR)/minireference/*/retokenized/*
-	rm -r $(DATA_DIR)/minireference/*/tsv/*
-
-download-miniref: download-miniref-en download-miniref-de 
-
-download-miniref-%:
-	python scripts/inception/download_curated.py --project-name=ajmc-miniref-$* --output-dir=$(DATA_DIR)/minireference/$*/curated/ 
-
-export-miniref: export-miniref-de export-miniref-en 
-
-retokenize-miniref: retokenize-miniref-de retokenize-miniref-en
-
-retokenize-miniref-%: 
-	python lib/retokenization.py -i $(DATA_DIR)/minireference/$*/curated/ \
-	-o $(DATA_DIR)/minireference/$*/retokenized/ -s $(SCHEMA) \
-	-l data/preparation/logs/retokenization-miniref-$*.log
-
-export-miniref-%:
-	python lib/convert_xmi2clef_format.py -i $(DATA_DIR)/minireference/$*/retokenized/ \
-	-o $(DATA_DIR)/minireference/$*/tsv/ \
-	-s $(SCHEMA) \
-	-l $(DATA_DIR)/logs/export-annotated-$*.log \
-
-release-%:
-	@$(eval SET=$(shell if [ "miniref" == $* ]; then echo sample; fi))
-	python lib/create_datasets.py \
-	--set=$(SET) \
-	--log-file=$(DATA_DIR)/logs/release-$*.log \
-	--input-dir=$(DATA_DIR) \
-	--output-dir=data/release/ \
-	--data-version=$(VERSION) \
-	--assignments-table=$(ASSIGNMENTS_TABLE)
+# The part of this Makefile related to the HIPE-2022 data release was removed,
+# but it can be found in earlier GH releases. 
