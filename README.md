@@ -1,12 +1,11 @@
 # AjMC NE corpus
 
-This dataset consists of named entity-annotated historical commentaries in the field of Classics. The annotated Knowledge Entities (KEs) feature a few domain-specific entity types such as works, material objects (e.g. manuscripts) and bibliographic references, in addition to more universal named entities like persons, locations, organizations and dates.
+This dataset consists of named entity-annotated historical commentaries in the field of Classics. The annotated entities feature a few domain-specific entity types such as works, material objects (e.g. manuscripts) and bibliographic references, in addition to more universal named entities like persons, locations, organizations and dates.
 
 ## Dataset profile
 
 | <!-- -->    | <!-- -->    |
 |-------------|-------------|
-| **Original dataset**    | TODO: add DOI |
 | **Document type**       | scholarly commentaries (19C) |
 | **Languages**           | English, French,  German, Ancient Greek, Latin |
 | **Annotation guidelines** |[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3585750.svg)](https://doi.org/10.5281/zenodo.3585750)|
@@ -14,7 +13,7 @@ This dataset consists of named entity-annotated historical commentaries in the f
 | **Original format and tagging scheme** |`HIPE TSV format, IOB` |
 | **Annotations**          | NERC, EL (towards Wikidata) |
 | **Version**   | `v0.4` |
-| **Related publication**               |TBD|
+| **Related publication**               |[A Named Entity-Annotated Corpus of 19<sup>th</sup> Century Classical Commentaries](http://dx.doi.org/10.5334/johd.150)|
 | **License** | [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)|
 
 ## Entity tagset
